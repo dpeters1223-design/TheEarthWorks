@@ -87,12 +87,26 @@ def analyze_tile(tile_path: Path) -> dict:
 
 # ---------- MAIN ----------
 if __name__ == "__main__":
+    import json
+
     if not Path(IMAGE_PATH).exists():
         raise FileNotFoundError(f"Image not found: {IMAGE_PATH}")
 
     tiles = tile_image(IMAGE_PATH, TILES_DIR, TILE_SIZE, OVERLAP)
-    print(f"Generated {len(tiles)} tiles")
+    print(f"\nGenerated {len(tiles)} tiles\n")
 
-    test_tile = tiles[0]
-    result = analyze_tile(test_tile)
-    print(result)
+    results = []
+
+    for tile in tiles:
+        print(f"Analyzing {tile.name}")
+        tile_result = analyze_tile(tile)
+        tile_result["tile_id"] = tile.stem
+        results.append(tile_result)
+
+    output_path = Path("outputs")
+    output_path.mkdir(exist_ok=True)
+
+    with open(output_path / "tiles.json", "w") as f:
+        json.dump(results, f, indent=2)
+
+    print("\nWrote outputs/tiles.json\n")
