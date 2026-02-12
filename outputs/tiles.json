@@ -1,0 +1,1614 @@
+[
+  {
+    "tile_id": "tile_0_0",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.1,
+    "assumptions": [
+      "No visible contour lines or elevation markers.",
+      "No visible grading symbols or annotations indicating cut or fill.",
+      "Tile ID not visible in provided image portion."
+    ]
+  },
+  {
+    "tile_id": "tile_896_0",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.3,
+    "assumptions": [
+      "Tile ID derived from visible text on the plan",
+      "No contour lines or cut/fill symbols visible in this portion",
+      "Insufficient detail to estimate contour interval or depth",
+      "Only a portion of the entire plan is shown"
+    ]
+  },
+  {
+    "tile_id": "tile_1792_0",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.1,
+    "assumptions": [
+      "No visible contour lines to estimate contour interval.",
+      "No clear cut or fill areas marked in this portion.",
+      "No depth markers or elevation changes visible."
+    ]
+  },
+  {
+    "tile_id": "tile_2688_0",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "No elevation numbers or contour labels are visible in the image",
+      "No color or shading indicative of cut or fill areas is present",
+      "The portion shows lines that do not clearly indicate grading changes"
+    ]
+  },
+  {
+    "tile_id": "tile_3584_0",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": true,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": [
+      0,
+      2
+    ],
+    "confidence": 0.6,
+    "assumptions": [
+      "Tile_id assumed from large number '2' at top left corner.",
+      "Fill present inferred from hatching and contour lines near bottom.",
+      "Contour interval not visible on this portion of the plan.",
+      "Cut not observed as no descending contour patterns seen.",
+      "Estimated fill depth small based on hatch density and line spacing."
+    ]
+  },
+  {
+    "tile_id": "tile_4480_0",
+    "contour_interval": "2 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour interval is taken from the scale provided on plan (2 ft).",
+      "Cut and fill symbols are assumed from standard civil grading hatching patterns.",
+      "Depth estimates are inferred from visual hatching density and typical site grading depths."
+    ]
+  },
+  {
+    "tile_id": "tile_5376_0",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.1,
+    "assumptions": [
+      "Tile ID not visible in the portion of the plan shown.",
+      "Contour interval not shown in the visible area.",
+      "No evident cut or fill markings in the visible area.",
+      "Text partially visible but no specific grading depth information available."
+    ]
+  },
+  {
+    "tile_id": "tile_6272_0",
+    "contour_interval": "1 FT",
+    "cut_present": false,
+    "fill_present": true,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": [
+      0,
+      4
+    ],
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour interval of 1 FT is based on labeled contour information",
+      "Fill presence is determined by '1' slope symbol indicating cut/fill slopes and labeled contours",
+      "Cut not explicitly identified within visible portion",
+      "Estimated fill depth is inferred from contour labels and slope symbols",
+      "Limited portion of full sheet visible for analysis"
+    ]
+  },
+  {
+    "tile_id": "tile_7168_0",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": true,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "confidence": 0.6,
+    "assumptions": [
+      "The dashed lines represent contour lines but interval is not marked.",
+      "The symbols resembling arcs indicate fill areas.",
+      "Depth estimate is approximate based on typical symbol sizes."
+    ]
+  },
+  {
+    "tile_id": "tile_8064_0",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.3,
+    "assumptions": [
+      "No contour lines or spot elevations are visible in the image.",
+      "No clear indications of cut or fill areas are present.",
+      "Scale shows a distance notation but no elevation data."
+    ]
+  },
+  {
+    "tile_id": "tile_8960_0",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "Image is a company logo and contact information, no site grading data visible",
+      "No contour lines or elevation data present in image"
+    ]
+  },
+  {
+    "tile_id": "tile_9856_0",
+    "contour_interval": "2 FEET",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      6
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      6
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Contour lines are at 2-foot intervals as labeled.",
+      "Cut and fill zones are labeled on the grading map.",
+      "Depth estimates are based on typical grading scale and visible contour line differences."
+    ]
+  },
+  {
+    "tile_id": "tile_0_896",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0,
+    "assumptions": [
+      "No site grading or contour lines are visible in the image portion.",
+      "No elevation change indication is present to suggest cut or fill."
+    ]
+  },
+  {
+    "tile_id": "tile_896_896",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.1,
+    "assumptions": [
+      "No visible contour lines observed to estimate interval",
+      "No visible shading or contours indicating cut or fill areas",
+      "No labels or annotations providing depth information"
+    ]
+  },
+  {
+    "tile_id": "tile_1792_896",
+    "contour_interval": "5 ft",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      1,
+      5
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "Contours are labeled with approximate 5 ft intervals based on 1325 elevation labeling.",
+      "Cut is present along the side of Route 371 due to grading difference shown in the contour lines.",
+      "No indications of fill areas are visible in this portion of the site grading plan."
+    ]
+  },
+  {
+    "tile_id": "tile_2688_896",
+    "contour_interval": null,
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      5,
+      10
+    ],
+    "fill_depth_estimate_ft": [
+      5,
+      10
+    ],
+    "confidence": 0.7,
+    "assumptions": [
+      "Proposed access road likely involves cut and fill",
+      "Contour numbers suggest elevation changes around road",
+      "Exact contour interval not visible but typical civil plans range 1-5 ft"
+    ]
+  },
+  {
+    "tile_id": "tile_3584_896",
+    "contour_interval": "5",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      5,
+      30
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "Contour lines represent elevation in feet.",
+      "Contour interval is approximated as 5 feet based on visible labels.",
+      "Cuts are present where contour lines are closely spaced and elevation decreases.",
+      "Fill areas are not clearly indicated in the visible portion.",
+      "Depth estimates are derived from elevation differences between contour lines."
+    ]
+  },
+  {
+    "tile_id": "tile_4480_896",
+    "contour_interval": "5",
+    "cut_present": false,
+    "fill_present": true,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": [
+      5,
+      20
+    ],
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour lines are labeled incrementally by 5 units",
+      "Fill is indicated by the dashed hatching pattern",
+      "Cut areas are not visible in the image",
+      "Tile ID is not visible in the image"
+    ]
+  },
+  {
+    "tile_id": "tile_5376_896",
+    "contour_interval": "5 ft",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      5,
+      15
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour lines shown at 5 ft intervals based on labels (1460, 1465, 1470, etc.)",
+      "Steeper contour spacing and thick black lines on left suggest significant cut",
+      "No visible indicators such as hatch or different shading for fill areas"
+    ]
+  },
+  {
+    "tile_id": "tile_6272_896",
+    "contour_interval": "5",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      10,
+      30
+    ],
+    "fill_depth_estimate_ft": [
+      5,
+      15
+    ],
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour lines labeled in increments of approximately 5 ft",
+      "Close spacing of contour lines indicates areas of cut or fill",
+      "Black solid lines and markings may indicate grading boundaries",
+      "Cut and fill depths estimated by difference between highest and lowest visible contour values",
+      "Tile ID not visible in image"
+    ]
+  },
+  {
+    "tile_id": "tile_7168_896",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.4,
+    "assumptions": [
+      "No contour elevation values or grading labels are visible to determine contour interval.",
+      "No typical cut or fill symbols or hatch patterns are visible in this portion of the plan.",
+      "Cut and fill depths cannot be estimated without further referencing spot elevations or grading notes."
+    ]
+  },
+  {
+    "tile_id": "tile_8064_896",
+    "contour_interval": null,
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      0.5,
+      2
+    ],
+    "confidence": 0.4,
+    "assumptions": [
+      "Blue line likely represents cut area",
+      "Green shaded area likely represents fill area",
+      "Depth estimates based on typical grading features",
+      "Tile ID not visible in the image",
+      "Contour interval not visible in the portion shown"
+    ]
+  },
+  {
+    "tile_id": "tile_8960_896",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "No contour lines or grading information visible in the image portion.",
+      "Image shows only a professional engineer seal and contact information.",
+      "No evidence of cut or fill areas based on the visible image."
+    ]
+  },
+  {
+    "tile_id": "tile_9856_896",
+    "contour_interval": "1 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      1
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      1
+    ],
+    "confidence": 0.85,
+    "assumptions": [
+      "Scale of grading contours is 1 ft as indicated on the plan",
+      "Cut and fill symbols and areas are identified as 'CUT' and 'FILL' on the plan",
+      "Depth estimates are based on relative elevation changes of contour lines"
+    ]
+  },
+  {
+    "tile_id": "tile_0_1792",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.1,
+    "assumptions": [
+      "No contours or grading details visible in the image",
+      "No evidence of cut or fill areas",
+      "Unable to identify tile ID from the image"
+    ]
+  },
+  {
+    "tile_id": "tile_896_1792",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "No contour lines or elevation changes visible",
+      "Only utility poles and related infrastructure noted",
+      "No visible grading or earthwork indicators"
+    ]
+  },
+  {
+    "tile_id": "tile_1792_1792",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.5,
+    "assumptions": [
+      "No contour elevation labels found to determine contour interval.",
+      "No clear indications of cut or fill areas visible in this portion.",
+      "The portion shows proposed elements but no grading depth details."
+    ]
+  },
+  {
+    "tile_id": "tile_2688_1792",
+    "contour_interval": null,
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.6,
+    "assumptions": [
+      "Hachures along contour lines indicate cut areas.",
+      "Fill areas identified by contour adjustments and shading.",
+      "Exact contour interval and depth data not visible in image."
+    ]
+  },
+  {
+    "tile_id": "tile_3584_1792",
+    "contour_interval": "5",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      5,
+      10
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour interval assumed to be 5 based on visible elevation labels",
+      "Cut is present due to close spacing and shape of contour lines near proposed contract stockpile area",
+      "No clear evidence of fill areas visible in this portion of the plan"
+    ]
+  },
+  {
+    "tile_id": "tile_4480_1792",
+    "contour_interval": "5 ft",
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour interval assumed based on consistent 5 ft elevation labeling",
+      "No explicit cut or fill areas marked in the visible portion of the plan",
+      "Depth estimates not possible without cut or fill delineation"
+    ]
+  },
+  {
+    "tile_id": "tile_5376_1792",
+    "contour_interval": "5 ft",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      10,
+      20
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour interval derived from labeled contour elevation difference between adjacent thick contour lines.",
+      "Cut presence assumed due to contour lines indicating downward slope from around 1485 to 1450 elevation.",
+      "No fill assumed as there is no clear evidence of upward grading in the visible area.",
+      "Cut depth estimated by approximate elevation difference observable in image."
+    ]
+  },
+  {
+    "tile_id": "tile_6272_1792",
+    "contour_interval": "5",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      0,
+      20
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "Contour lines are labeled in feet and have a consistent 5 ft interval",
+      "Cut areas are identified by descending contour elevations adjacent to planned construction lines",
+      "No visible indication of fill zones within this portion of the plan",
+      "Estimation of cut depth based on difference between highest and lowest contour lines near construction boundary"
+    ]
+  },
+  {
+    "tile_id": "tile_7168_1792",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": true,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": [
+      0,
+      10
+    ],
+    "confidence": 0.6,
+    "assumptions": [
+      "Green shaded area indicates fill",
+      "No visible contour lines indicating cut",
+      "Thick blue line represents boundary of fill",
+      "Fill depth estimated based on typical grading practices"
+    ]
+  },
+  {
+    "tile_id": "tile_8064_1792",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": true,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": [
+      0,
+      5
+    ],
+    "confidence": 0.6,
+    "assumptions": [
+      "Tile ID is not visible on the image.",
+      "Contour interval is not shown in the visible portion of the image.",
+      "No cut areas (excavation) are visible, only fill areas (highlighted in green).",
+      "Fill depths are estimated based on typical grading plan color coding and typical fill thickness ranges.",
+      "Confidence is moderate due to limited visible information."
+    ]
+  },
+  {
+    "tile_id": "tile_8960_1792",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "This is a logo section of the plan with no contour or grading information",
+      "No elevation or grading symbols are present"
+    ]
+  },
+  {
+    "tile_id": "tile_9856_1792",
+    "contour_interval": "2 ft",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "Depth estimates are based on contour lines spacing.",
+      "No fill areas are identifiable on this portion of the plan.",
+      "Cut and fill are interpreted based on typical grading plan symbols and colors."
+    ]
+  },
+  {
+    "tile_id": "tile_0_2688",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "Tile ID likely corresponds to the letter 'B' visible on the image",
+      "No contour lines or elevation changes indicating cut or fill present in visible portion",
+      "Compass symbol does not provide information on cut or fill depths"
+    ]
+  },
+  {
+    "tile_id": "tile_896_2688",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "No visible contour lines to determine interval or grading cut/fill",
+      "Labels indicate proposed construction features but no grading depth information",
+      "Absence of contour lines suggests minimal or no cut/fill in this portion"
+    ]
+  },
+  {
+    "tile_id": "tile_1792_2688",
+    "contour_interval": null,
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      0,
+      2
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "Contours labeled '1340' likely represent elevation levels in feet.",
+      "Cut may be present based on arrows pointing inward and hatch patterns.",
+      "No evidence of fill areas visible in this portion of the plan."
+    ]
+  },
+  {
+    "tile_id": "tile_2688_2688",
+    "contour_interval": "5 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      5
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      10
+    ],
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour lines are labeled with elevation values increasing by 5 ft increments.",
+      "Cut areas are where contour lines form inward curves with decreasing elevation.",
+      "Fill areas are where contour lines form outward bulges with increasing elevation.",
+      "No explicit cut/fill lines or labels are visible, estimates are based on contour patterns."
+    ]
+  },
+  {
+    "tile_id": "tile_3584_2688",
+    "contour_interval": "5 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      5,
+      15
+    ],
+    "fill_depth_estimate_ft": [
+      5,
+      10
+    ],
+    "confidence": 0.75,
+    "assumptions": [
+      "Contour lines labeled every 5 feet",
+      "Areas with closer contour lines indicate cut or fill",
+      "Dark shading represents cut or fill areas",
+      "Cut depth estimated from elevation difference between higher elevation and lower elevation contour lines",
+      "Fill depth estimated similarly from elevation differences",
+      "Tile ID not visible in image"
+    ]
+  },
+  {
+    "tile_id": "tile_4480_2688",
+    "contour_interval": "5",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      5,
+      15
+    ],
+    "fill_depth_estimate_ft": [
+      5,
+      10
+    ],
+    "confidence": 0.8,
+    "assumptions": [
+      "Contour lines are spaced by 5 feet interval based on elevation labels such as 1415, 1420, 1425, etc.",
+      "Cut areas are identified by cross-hatched shading representing excavation below existing grade.",
+      "Fill areas are assumed to be present due to raised grade contours around the construction area visible by higher elevation marks.",
+      "Depth estimates are approximate based on relative differences in contour elevations within cut and fill zones."
+    ]
+  },
+  {
+    "tile_id": "tile_5376_2688",
+    "contour_interval": "5 ft",
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "Contour lines show consistent 5 ft elevation intervals",
+      "No significant cut or fill slopes (no typical hatch patterns or labels seen)",
+      "Tile ID not visible in the provided image portion"
+    ]
+  },
+  {
+    "tile_id": "tile_6272_2688",
+    "contour_interval": "5 ft",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      5,
+      15
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "Contour interval assumed to be 5 ft based on elevation increments",
+      "Cuts indicated by thick black lines along contours",
+      "No fill patterns or hatching visible",
+      "Cut depth estimated from elevation differences between contours"
+    ]
+  },
+  {
+    "tile_id": "tile_7168_2688",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.3,
+    "assumptions": [
+      "No contour lines or elevations visible to estimate cut or fill.",
+      "Green shaded area likely indicates a wetland area, not a grading cut or fill.",
+      "Blue and green lines appear to be boundary lines, not grading contours."
+    ]
+  },
+  {
+    "tile_id": "tile_8064_2688",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.6,
+    "assumptions": [
+      "No contour lines are visible in the image.",
+      "No grading cut or fill indications are visible in the image.",
+      "The image shows a plan tile labeled 'B' and text related to wetlands, with no grading information."
+    ]
+  },
+  {
+    "tile_id": "tile_8960_2688",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Only title block information is visible, no contour lines or grading indications present",
+      "No visible cut or fill symbols or labels",
+      "Tile ID inferred from corner label in image"
+    ]
+  },
+  {
+    "tile_id": "tile_9856_2688",
+    "contour_interval": "2 FT.",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      5
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      10
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Cut depths assumed based on contour line density and labeled cut slopes.",
+      "Fill depths estimated from fill slope labels and contour line spacing.",
+      "Tile ID taken from bottom right corner label."
+    ]
+  },
+  {
+    "tile_id": "tile_0_3584",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "No contour lines or elevation annotations visible to estimate cut or fill.",
+      "No symbols or shading indicating cut or fill areas."
+    ]
+  },
+  {
+    "tile_id": "tile_896_3584",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.3,
+    "assumptions": [
+      "The image shows a portion of a site plan with proposed features but no visible contour lines or grading cut/fill indications.",
+      "Text references proposed road features but does not provide elevation or grading info.",
+      "No contour interval or cut/fill shading or hatch patterns visible in this portion."
+    ]
+  },
+  {
+    "tile_id": "tile_1792_3584",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "No contour lines provided to determine contour interval.",
+      "No visible grading contours indicating cut or fill.",
+      "Text mentions 'PROPOSED UNDERGROUND ELECTRIC' and access, but no cut/fill depths shown."
+    ]
+  },
+  {
+    "tile_id": "tile_2688_3584",
+    "contour_interval": "1 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      5,
+      15
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      10
+    ],
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour interval is assumed to be 1 ft based on elevation labels (355, 360, 365, 370).",
+      "Cut and fill presence inferred from closely spaced contour lines indicating slope changes and earthwork.",
+      "Cut depth estimated from differences between higher and lower elevation contours in steep areas.",
+      "Fill depth estimated where contours show elevation increase towards a flat area.",
+      "Tile ID is not visible in provided image."
+    ]
+  },
+  {
+    "tile_id": "tile_3584_3584",
+    "contour_interval": "5",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      5,
+      15
+    ],
+    "fill_depth_estimate_ft": [
+      2,
+      10
+    ],
+    "confidence": 0.8,
+    "assumptions": [
+      "Contour interval inferred based on labels ranging across approximately 30 feet",
+      "Cut and fill presence inferred from elevation changes and grading symbols",
+      "Depth estimates approximated from contour spacing and elevation changes",
+      "Tile ID not visible in provided image portion"
+    ]
+  },
+  {
+    "tile_id": "tile_4480_3584",
+    "contour_interval": "5",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      5,
+      10
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "The contour lines with intervals of 5 feet are inferred from elevation labels (1435, 1430, 1425, etc.)",
+      "Presence of cut inferred from downward slope and reduction in contour elevation",
+      "No obvious fill areas or contour indications of fill present",
+      "Depth estimates based on vertical difference between contour lines",
+      "Tile ID is not visible on this portion of the map"
+    ]
+  },
+  {
+    "tile_id": "tile_5376_3584",
+    "contour_interval": "5",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      5,
+      15
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "Contour interval assumed from labeled contours (1435, 1440, 1445, 1450 etc.)",
+      "Cut is present where contours are closely spaced and form a depression or excavation area",
+      "No fill terraces or mounds visually identified in this portion of the plan",
+      "Depth estimates based on difference in contour elevations"
+    ]
+  },
+  {
+    "tile_id": "tile_6272_3584",
+    "contour_interval": "5",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      5,
+      10
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour lines show elevation difference of 5 feet between intervals",
+      "Shaded area with contour labels indicates cut",
+      "No fill area is demarcated in this portion of the plan"
+    ]
+  },
+  {
+    "tile_id": "tile_7168_3584",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.5,
+    "assumptions": [
+      "No contour lines or elevation labels visible in the provided portion",
+      "No visible cut or fill hatching or symbols",
+      "Stream indicated, but no grading information shown here"
+    ]
+  },
+  {
+    "tile_id": "tile_8064_3584",
+    "contour_interval": null,
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      0,
+      1
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.6,
+    "assumptions": [
+      "Cut depth estimated based on the marking of 0\" in cut area",
+      "Fill area not detected in this portion",
+      "Tile ID not visible in the image"
+    ]
+  },
+  {
+    "tile_id": "tile_8960_3584",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.3,
+    "assumptions": [
+      "Tile ID derived from visible text",
+      "No contour lines or grading information visible",
+      "No cut or fill indications present in the visible portion"
+    ]
+  },
+  {
+    "tile_id": "tile_9856_3584",
+    "contour_interval": "2'",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      8
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      6
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Depth estimates based on contour line differences.",
+      "Cut and fill presence inferred from grading notes and typical site grading context.",
+      "Contour interval assumed to be 2 feet as marked."
+    ]
+  },
+  {
+    "tile_id": "tile_0_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "No contour lines or elevation details visible in this portion",
+      "No grading or earthwork information shown in this portion",
+      "Tile ID derived from text on left margin"
+    ]
+  },
+  {
+    "tile_id": "tile_896_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.6,
+    "assumptions": [
+      "Tile ID is interpreted from the visible number '30'.",
+      "No contour interval is visible in the image.",
+      "No visible indication of cut or fill in this portion of the plan."
+    ]
+  },
+  {
+    "tile_id": "tile_1792_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.2,
+    "assumptions": [
+      "No contour lines visible to determine contour interval",
+      "No clear indications of cut or fill areas on this portion",
+      "No depth measurements or markings related to grading",
+      "Tile ID not visible in this portion of the plan"
+    ]
+  },
+  {
+    "tile_id": "tile_2688_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.1,
+    "assumptions": [
+      "No grading contour lines are visible in the provided image portion",
+      "The text refers to a door swing detail, not site grading",
+      "No cut or fill areas are identifiable in the image"
+    ]
+  },
+  {
+    "tile_id": "tile_3584_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.3,
+    "assumptions": [
+      "No contour lines or grading symbols visible to indicate cut or fill.",
+      "Only the property line label is visible in this portion of the plan."
+    ]
+  },
+  {
+    "tile_id": "tile_4480_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.1,
+    "assumptions": [
+      "The image does not display contour lines or elevation numbers.",
+      "No grading cuts or fills are visually indicated.",
+      "Tile ID is not visible in the image portion provided."
+    ]
+  },
+  {
+    "tile_id": "tile_5376_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.1,
+    "assumptions": [
+      "No visible contour lines or elevation data present",
+      "No cut or fill symbols or labels visible",
+      "Partial text present but not related to contour or grading depth"
+    ]
+  },
+  {
+    "tile_id": "tile_6272_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": true,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.5,
+    "assumptions": [
+      "Assumed fill is related to the proposed equipment pad.",
+      "No direct contour interval visible in the image.",
+      "Cut presence assumed false due to lack of cut indicators."
+    ]
+  },
+  {
+    "tile_id": "tile_7168_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "No contour lines or cut/fill markers visible in this portion of the plan",
+      "Image shows a label for streams, no grading details present"
+    ]
+  },
+  {
+    "tile_id": "tile_8064_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.5,
+    "assumptions": [
+      "No contour lines are visible to determine contour interval.",
+      "No clear indications of cut or fill areas in the visible portion.",
+      "Tile ID inferred from the letter 'A' present in the corner."
+    ]
+  },
+  {
+    "tile_id": "tile_8960_4480",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "No contour interval is visible in the provided image portion.",
+      "No cut or fill information or symbols are visible in the provided image portion."
+    ]
+  },
+  {
+    "tile_id": "tile_9856_4480",
+    "contour_interval": "2 FT",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      4
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      5
+    ],
+    "confidence": 0.8,
+    "assumptions": [
+      "Contours with cut/fill symbols indicate areas of earth cutting and filling.",
+      "Depth estimates based on contour intervals and relative elevation markers.",
+      "Tile ID inferred from title block notation."
+    ]
+  },
+  {
+    "tile_id": "tile_0_5376",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "No contours or elevation changes visible in shown portion",
+      "No cut or fill labels or markings visible",
+      "Tile id taken from label in bottom left corner"
+    ]
+  },
+  {
+    "tile_id": "tile_896_5376",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "Tile ID assumed from partial visible text 'ACK'",
+      "No contour lines or cut/fill symbols visible in given portion",
+      "No depth values visible in the image"
+    ]
+  },
+  {
+    "tile_id": "tile_1792_5376",
+    "contour_interval": "1' (1 foot)",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      3
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Contour interval is based on the provided plan scale and interval note.",
+      "Cut and fill presence is interpreted from the labeled cut slopes and fill slopes.",
+      "Depth estimates are approximations from contour elevation differences near slopes.",
+      "Tile ID is extracted from the text near the bottom left corner."
+    ]
+  },
+  {
+    "tile_id": "tile_2688_5376",
+    "contour_interval": "1 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      2
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      2
+    ],
+    "confidence": 0.85,
+    "assumptions": [
+      "Contour lines are in feet based on scale",
+      "Cut and fill colors follow typical conventions",
+      "Depth estimates are based on color shading and contour spacing"
+    ]
+  },
+  {
+    "tile_id": "tile_3584_5376",
+    "contour_interval": "2 feet",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      4
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      4
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Depth estimate based on slope arrows and contour intervals",
+      "Both cut and fill shown using appropriate hatching",
+      "Contour interval is consistent across the tile"
+    ]
+  },
+  {
+    "tile_id": "tile_4480_5376",
+    "contour_interval": "2 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      4
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      6
+    ],
+    "confidence": 0.8,
+    "assumptions": [
+      "Cut and fill areas indicated by shading and annotations",
+      "Cut and fill depths estimated from contour elevation differences",
+      "Contour interval derived from legend describing 2 ft intervals"
+    ]
+  },
+  {
+    "tile_id": "tile_5376_5376",
+    "contour_interval": "5 FT",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      3
+    ],
+    "confidence": 0.85,
+    "assumptions": [
+      "Contour lines are spaced 5 feet apart as indicated on the plan.",
+      "Cut and fill areas are identified with respective labels and shading.",
+      "Depth estimates are approximated from topographic changes between contour lines."
+    ]
+  },
+  {
+    "tile_id": "tile_6272_5376",
+    "contour_interval": "2",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "confidence": 0.85,
+    "assumptions": [
+      "Contour lines marked with elevation indicate 2 ft intervals.",
+      "Cut and fill areas represented in shades of gray showing elevation changes.",
+      "Estimated depth based on contour spacing and elevation differences.",
+      "Tile ID derived from title block at top right."
+    ]
+  },
+  {
+    "tile_id": "tile_7168_5376",
+    "contour_interval": "1 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      5
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      5
+    ],
+    "confidence": 0.85,
+    "assumptions": [
+      "Contour interval assumed based on plan legend",
+      "Cut and fill presence inferred from color shading and labeled cross-sections",
+      "Depth estimates based on contour line elevation differences"
+    ]
+  },
+  {
+    "tile_id": "tile_8064_5376",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "No contours or elevation changes visible indicating cut or fill",
+      "Scale bar used to estimate distances",
+      "Tile ID read from corner label"
+    ]
+  },
+  {
+    "tile_id": "tile_8960_5376",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile only shows title information with no site grading details",
+      "No contour lines or elevation data visible in portion shown"
+    ]
+  },
+  {
+    "tile_id": "tile_9856_5376",
+    "contour_interval": "5ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      10
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      10
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Elevation values are derived from contour lines and spot grades",
+      "Cut and fill areas inferred from elevation differences relative to existing grades"
+    ]
+  },
+  {
+    "tile_id": "tile_0_6272",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.5,
+    "assumptions": [
+      "Tile ID is extracted from the corner label 'A1'.",
+      "Contour interval information is not visible in the image portion provided.",
+      "No visible contour lines or grading details to infer cut or fill presence or depth."
+    ]
+  },
+  {
+    "tile_id": "tile_896_6272",
+    "contour_interval": "1'",
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.7,
+    "assumptions": [
+      "Tile ID is not visible in the image.",
+      "No clear cut or fill markings are visible in the provided portion.",
+      "Contour interval is assumed to be 1 foot based on the visible number '1' and context."
+    ]
+  },
+  {
+    "tile_id": "tile_1792_6272",
+    "contour_interval": "2 FT",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      4
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      4
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Cut and fill areas are discerned based on shading patterns and contour labels.",
+      "Contour interval taken directly from visible label on plan.",
+      "Depth ranges are approximations based on contour differences and shading extent."
+    ]
+  },
+  {
+    "tile_id": "tile_2688_6272",
+    "contour_interval": "1.0 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      1
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      1
+    ],
+    "confidence": 0.8,
+    "assumptions": [
+      "Interpreted contour intervals based on evenly spaced elevation labels",
+      "Presence of cut and fill inferred from annotation notes and contour shapes",
+      "Depth estimates assume the contour interval provided applies uniformly"
+    ]
+  },
+  {
+    "tile_id": "tile_3584_6272",
+    "contour_interval": "1 FT",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      10
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Contour interval is 1 FT as marked on the map.",
+      "Cut and fill areas are indicated by brown fill and blue fill respectively.",
+      "Depth estimates are approximate based on contour elevation differences and color depth.",
+      "Tile ID based on sheet numbering visible in the corner."
+    ]
+  },
+  {
+    "tile_id": "tile_4480_6272",
+    "contour_interval": "5 ft",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      0,
+      5
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Contour lines are spaced at 5 ft intervals as noted in the plan.",
+      "Cut areas are represented by the blue shading and elevation changes downward.",
+      "No fill areas are apparent in the visible portion of the plan."
+    ]
+  },
+  {
+    "tile_id": "tile_5376_6272",
+    "contour_interval": "3",
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.3,
+    "assumptions": [
+      "Tile ID is not visible in the image",
+      "Contour interval is interpreted as 3 based on the visible number",
+      "No information on cut or fill presence visible",
+      "No depth estimates visible"
+    ]
+  },
+  {
+    "tile_id": "tile_6272_6272",
+    "contour_interval": "2'",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      6
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      8
+    ],
+    "confidence": 0.7,
+    "assumptions": [
+      "Contour interval is assumed from visible notes on the grading plan.",
+      "Cut and fill presence assumed from the color-coded areas where yellow and blue lines indicate cut and fill zones.",
+      "Depth estimates are based on observed contour elevations with change of up to 6-8 feet.",
+      "Tile ID inferred from the text label in the bottom right corner."
+    ]
+  },
+  {
+    "tile_id": "tile_7168_6272",
+    "contour_interval": "1'",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0.5,
+      2
+    ],
+    "fill_depth_estimate_ft": [
+      0.5,
+      2
+    ],
+    "confidence": 0.8,
+    "assumptions": [
+      "Contour interval of 1' identified from title block",
+      "Cut and fill are inferred from color-coded areas labeled 'CUT' and 'FILL'",
+      "Depth estimates are based on contour spacing and typical site grading practice"
+    ]
+  },
+  {
+    "tile_id": "tile_8064_6272",
+    "contour_interval": "5 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "confidence": 0.8,
+    "assumptions": [
+      "Contour interval is based on the legend showing 5 ft",
+      "Cut and fill areas are identified by grading patterns and spot elevations",
+      "Estimated cut and fill depths are derived from slope and elevation data",
+      "Tile ID is not visible in the provided image"
+    ]
+  },
+  {
+    "tile_id": "tile_8960_6272",
+    "contour_interval": "5 FT",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      2
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "The darker shaded areas represent cut zones",
+      "The lighter shaded areas represent fill zones",
+      "Contour lines clearly show elevation differences at 5 FT intervals"
+    ]
+  },
+  {
+    "tile_id": "tile_9856_6272",
+    "contour_interval": "1 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      6
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      6
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Contour interval is read from the plan legend.",
+      "Cut and fill depths estimated based on contour difference around proposed site and existing ground.",
+      "Cut and fill presence inferred from grading hatching and contour elevation changes."
+    ]
+  }
+]
