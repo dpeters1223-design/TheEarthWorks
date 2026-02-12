@@ -1,28 +1,46 @@
 {
-  "contour_interval": "5 ft",
+  "contour_interval": "5",
+  "contour_interval_distribution": {
+    "1 FT": 3,
+    "2 ft": 8,
+    "5": 11,
+    "2ft": 1,
+    "5 ft": 7,
+    "2 feet": 1,
+    "5ft": 1,
+    "2.00 ft": 1,
+    "2'": 1,
+    "1.0'": 1,
+    "2": 2,
+    "1": 1,
+    "1 ft": 1,
+    "1.00": 1,
+    "unknown": 56
+  },
+  "contour_interval_conflict": true,
   "cut_present": true,
   "fill_present": true,
   "cut_depth_estimate_ft": [
     0,
-    30
+    35
   ],
   "fill_depth_estimate_ft": [
     0,
-    20
+    15
   ],
-  "confidence": 0.657,
+  "confidence": 0.676,
   "assumptions": [
-    "cut_present (97)",
-    "no_contours (37)",
-    "fill_present (32)",
-    "interval_unknown (26)",
-    "interval_5ft (17)",
-    "limited_visibility (11)",
-    "interval_2ft (4)",
-    "interval_1ft (4)",
-    "scale_used (4)",
-    "legend_used (2)",
-    "other (82)"
+    "cut_present (102)",
+    "no_contours (41)",
+    "fill_present (33)",
+    "interval_unknown (19)",
+    "interval_5ft (14)",
+    "limited_visibility (12)",
+    "interval_2ft (7)",
+    "legend_used (3)",
+    "scale_used (3)",
+    "interval_1ft (2)",
+    "other (96)"
   ],
   "tile_count": 96
 }

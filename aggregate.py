@@ -1,3 +1,5 @@
+# aggregate.py
+
 import json
 from pathlib import Path
 from collections import Counter
@@ -43,15 +45,42 @@ def reduce_assumptions(assumptions, top_n=12):
     return summary
 
 
-def aggregate_tiles(tiles):
-    contour_vals = [t["contour_interval"] for t in tiles if t["contour_interval"]]
-    contour_interval = Counter(contour_vals).most_common(1)[0][0] if contour_vals else None
+def contour_interval_stats(tiles):
+    """
+    Returns:
+      - mode_interval: most common non-null interval or None
+      - distribution: dict of interval -> count, including "unknown"
+      - conflict: True if more than one distinct non-null interval is present
+    """
+    vals = []
+    unknown = 0
 
-    cut_present = any(t["cut_present"] for t in tiles)
-    fill_present = any(t["fill_present"] for t in tiles)
+    for t in tiles:
+        v = t.get("contour_interval")
+        if v:
+            vals.append(v)
+        else:
+            unknown += 1
+
+    counts = Counter(vals)
+    distribution = dict(counts)
+    if unknown:
+        distribution["unknown"] = unknown
+
+    mode_interval = counts.most_common(1)[0][0] if counts else None
+    conflict = len(counts.keys()) > 1
+
+    return mode_interval, distribution, conflict
+
+
+def aggregate_tiles(tiles):
+    mode_interval, interval_distribution, interval_conflict = contour_interval_stats(tiles)
+
+    cut_present = any(t.get("cut_present", False) for t in tiles)
+    fill_present = any(t.get("fill_present", False) for t in tiles)
 
     def range_union(key):
-        ranges = [t[key] for t in tiles if t[key]]
+        ranges = [t.get(key) for t in tiles if t.get(key)]
         if not ranges:
             return None
         mins = [r[0] for r in ranges]
@@ -61,13 +90,15 @@ def aggregate_tiles(tiles):
     cut_depth = range_union("cut_depth_estimate_ft")
     fill_depth = range_union("fill_depth_estimate_ft")
 
-    confidence = sum(t["confidence"] for t in tiles) / len(tiles) if tiles else 0.0
+    confidence = sum(t.get("confidence", 0.0) for t in tiles) / len(tiles) if tiles else 0.0
 
-    raw_assumptions = [a for t in tiles for a in t["assumptions"]]
+    raw_assumptions = [a for t in tiles for a in t.get("assumptions", [])]
     assumptions = reduce_assumptions(raw_assumptions)
 
     return {
-        "contour_interval": contour_interval,
+        "contour_interval": mode_interval,
+        "contour_interval_distribution": interval_distribution,
+        "contour_interval_conflict": interval_conflict,
         "cut_present": cut_present,
         "fill_present": fill_present,
         "cut_depth_estimate_ft": cut_depth,
@@ -86,3 +117,4 @@ if __name__ == "__main__":
     OUTPUT_PATH.write_text(json.dumps(summary, indent=2))
 
     print("Wrote outputs/site_summary.json")
+
