@@ -3,3 +3,4 @@
 tiles/
 __pycache__/
 *.pyc
+.idea/
