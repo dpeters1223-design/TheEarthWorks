@@ -44,7 +44,9 @@ def tile_image(image_path: str, output_dir: str, tile_size: int, overlap: int):
     return tiles
 
 # ---------- OPENAI ANALYSIS ----------
-def analyze_tile(tile_path: Path) -> str:
+def analyze_tile(tile_path: Path) -> dict:
+    import json
+
     image_data_url = encode_image_to_data_url(tile_path)
 
     response = client.responses.create(
@@ -56,10 +58,20 @@ def analyze_tile(tile_path: Path) -> str:
                     {
                         "type": "input_text",
                         "text": (
-                            "Analyze this portion of a civil site grading plan. "
-                            "Identify cut vs fill areas, contour spacing, "
-                            "and estimate average depth differences if visible. "
-                            "State assumptions clearly."
+                            "Analyze this portion of a civil site grading plan and respond ONLY with "
+                            "valid JSON matching this schema:\n\n"
+                            "{\n"
+                            '  "tile_id": string,\n'
+                            '  "contour_interval": string or null,\n'
+                            '  "cut_present": boolean,\n'
+                            '  "fill_present": boolean,\n'
+                            '  "cut_depth_estimate_ft": [number, number] or null,\n'
+                            '  "fill_depth_estimate_ft": [number, number] or null,\n'
+                            '  "confidence": number between 0 and 1,\n'
+                            '  "assumptions": array of strings\n'
+                            "}\n\n"
+                            "Do not include explanations, markdown, or extra text. "
+                            "Use null where information is not visible."
                         ),
                     },
                     {
@@ -71,7 +83,7 @@ def analyze_tile(tile_path: Path) -> str:
         ],
     )
 
-    return response.output_text
+    return json.loads(response.output_text)
 
 # ---------- MAIN ----------
 if __name__ == "__main__":
@@ -79,8 +91,8 @@ if __name__ == "__main__":
         raise FileNotFoundError(f"Image not found: {IMAGE_PATH}")
 
     tiles = tile_image(IMAGE_PATH, TILES_DIR, TILE_SIZE, OVERLAP)
-    print(f"\nGenerated {len(tiles)} tiles\n")
+    print(f"Generated {len(tiles)} tiles")
 
-    for tile in tiles:
-        print(f"\n--- ANALYZING {tile.name} ---\n")
-        print(analyze_tile(tile))
+    test_tile = tiles[0]
+    result = analyze_tile(test_tile)
+    print(result)
