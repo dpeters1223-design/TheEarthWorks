@@ -1,55 +1,55 @@
 {
-  "contour_interval": "2 ft",
+  "contour_interval": "5",
   "cut_present": true,
   "fill_present": true,
   "cut_depth_estimate_ft": {
     "weighted_range": [
-      0.46,
-      5.2
+      2.59,
+      14.56
     ],
     "raw_union": [
       0,
-      10
+      35
     ],
-    "tiles_used": 11,
-    "tiles_excluded_low_conf": 2
+    "tiles_used": 18,
+    "tiles_excluded_low_conf": 4
   },
   "fill_depth_estimate_ft": {
     "weighted_range": [
-      0.51,
-      5.02
+      2.57,
+      11.3
     ],
     "raw_union": [
       0,
-      8
+      40
     ],
-    "tiles_used": 10,
-    "tiles_excluded_low_conf": 2
+    "tiles_used": 7,
+    "tiles_excluded_low_conf": 0
   },
-  "confidence": 0.885,
+  "confidence": 0.779,
   "assumptions": [
-    "Contour lines visible with elevation labels (1)",
-    "Red and green shading indicate cut and fill areas respectively (1)",
-    "Scale indicates approx depth for cut and fill zones (1)",
-    "Tile is from a civil grading plan (1)",
-    "Contours represent elevation changes for grading (1)",
-    "Cut and fill areas identified by color coding (blue for cut, red for fill) (1)",
-    "Depth estimates based on contour elevation differences and color intensity (1)",
-    "Contours are evenly spaced suggesting a 1-foot interval (1)",
-    "Cut and fill are identified by negative and positive elevation changes respectively (1)",
-    "Depth estimates derived from visible contour labels and grading symbols (1)",
-    "Contour lines and labels in feet indicate elevation changes. (1)",
-    "Cut and fill areas are marked with distinct hatching and annotations. (1)"
+    "This tile contains contour lines indicating grading. (1)",
+    "No explicit contour interval is visible. (1)",
+    "No clear cut or fill area can be identified from this tile. (1)",
+    "Contour lines labeled 1340 represent elevation in feet (1)",
+    "Hatching and arrows indicate areas of cut and fill (1)",
+    "Depth estimates are rough based on contour spacing and site features (1)",
+    "Tile edges may cut off some feature details (1)",
+    "Contours with elevation labels 14 to 19 indicate grading information (1)",
+    "Shaded areas labeled as CUT and FILL mark earthwork zones (1)",
+    "Contour intervals appear consistent between 1 and 2 feet (1)",
+    "Presence of contour lines suggests grading (1)",
+    "No visible signs of cut or fill depth indicated (1)"
   ],
   "tile_counts_by_class": {
-    "empty": 32,
-    "legend": 12,
-    "non_grading": 13,
-    "title_block": 30,
-    "grading": 13
+    "empty": 28,
+    "legend": 10,
+    "title_block": 16,
+    "non_grading": 11,
+    "grading": 31
   },
-  "grading_tile_count": 13,
-  "total_tile_count": 100,
+  "grading_tile_count": 31,
+  "total_tile_count": 96,
   "confidence_threshold": 0.6,
   "trim_percent": 0.1
 }

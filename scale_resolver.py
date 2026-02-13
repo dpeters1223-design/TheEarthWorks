@@ -18,6 +18,21 @@ def centroid_from_bbox(b):
         (b["y1"] + b["y2"]) / 2,
     ]
 
+def centroid_from_scale_bar(bar):
+    if "bar_bbox" in bar:
+        b = bar["bar_bbox"]
+    elif "bbox_px" in bar:
+        b = bar["bbox_px"]
+    elif "geometry" in bar and "bbox_px" in bar["geometry"]:
+        b = bar["geometry"]["bbox_px"]
+    else:
+        raise KeyError(f"Scale bar missing bbox: {bar.keys()}")
+
+    return [
+        (b["x1"] + b["x2"]) / 2,
+        (b["y1"] + b["y2"]) / 2
+    ]
+
 
 with open(FEATURES_IN) as f:
     groups = json.load(f)
@@ -53,14 +68,14 @@ for group in groups:
             bars,
             key=lambda b: dist(
                 f_centroid,
-                centroid_from_bbox(b["bbox_px"])
+                centroid_from_scale_bar(b)
             )
         )
 
         f_out["scale"] = {
-            "ratio": nearest["ratio"],
-            "units": nearest["units"],
-            "source_id": nearest["id"],
+            "ratio": nearest["feet_per_pixel"],
+            "units": "ft",
+            "source_id": nearest.get("id", "scale_bar")
         }
         f_out["scale_status"] = "resolved"
 
