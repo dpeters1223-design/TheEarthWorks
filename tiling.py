@@ -3,19 +3,23 @@
 from PIL import Image
 from pathlib import Path
 
+TILE_SIZE = 1024
+OVERLAP = 128
+
+PAGES_DIR = Path("pages")
+OUT_DIR = Path("tiles")
+
 def tile_image(
-    image_path: str,
-    output_dir: str = "tiles",
-    tile_size: int = 1024,
-    overlap: int = 128
+    image_path: Path,
+    output_dir: Path,
+    tile_size: int,
+    overlap: int,
+    prefix: str,
 ):
-    """
-    Split image into overlapping tiles for better vision analysis.
-    """
-    img = Image.open(image_path)
+    img = Image.open(image_path).convert("RGB")
     width, height = img.size
 
-    Path(output_dir).mkdir(exist_ok=True)
+    output_dir.mkdir(exist_ok=True)
 
     tiles = []
     step = tile_size - overlap
@@ -25,10 +29,32 @@ def tile_image(
             box = (x, y, x + tile_size, y + tile_size)
             tile = img.crop(box)
 
-            tile_name = f"tile_{x}_{y}.png"
-            tile_path = Path(output_dir) / tile_name
+            tile_name = f"{prefix}tile_{x}_{y}.png"
+            tile_path = output_dir / tile_name
             tile.save(tile_path)
 
             tiles.append(tile_path)
 
     return tiles
+
+def main():
+    page_files = sorted(PAGES_DIR.glob("page_*.png"))
+    if not page_files:
+        raise FileNotFoundError("No page_*.png files found in pages/")
+
+    total = 0
+    for page in page_files:
+        prefix = page.stem + "__"
+        tiles = tile_image(
+            image_path=page,
+            output_dir=OUT_DIR,
+            tile_size=TILE_SIZE,
+            overlap=OVERLAP,
+            prefix=prefix,
+        )
+        total += len(tiles)
+
+    print(f"Tiled {len(page_files)} pages into {total} tiles")
+
+if __name__ == "__main__":
+    main()

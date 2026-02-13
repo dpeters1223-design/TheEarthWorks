@@ -1,55 +1,49 @@
 {
-  "contour_interval": "5",
+  "contour_interval": "1.0 ft",
   "cut_present": true,
   "fill_present": true,
   "cut_depth_estimate_ft": {
     "weighted_range": [
-      2.52,
-      10.84
+      0.0,
+      8.0
     ],
     "raw_union": [
       0,
-      30
+      8
     ],
-    "tiles_used": 24,
-    "tiles_excluded_low_conf": 6
+    "tiles_used": 1,
+    "tiles_excluded_low_conf": 0
   },
   "fill_depth_estimate_ft": {
     "weighted_range": [
-      1.6,
-      7.15
+      0.0,
+      6.0
     ],
     "raw_union": [
       0,
-      20
+      6
     ],
-    "tiles_used": 12,
-    "tiles_excluded_low_conf": 2
+    "tiles_used": 1,
+    "tiles_excluded_low_conf": 0
   },
-  "confidence": 0.771,
+  "confidence": 0.725,
   "assumptions": [
-    "Green shaded area represents fill. (2)",
-    "Section shows graded surface with contour lines and hatching indicating cut and fill areas. (1)",
-    "Depths are estimated visually based on typical grading symbols and are approximate. (1)",
-    "Contour interval not explicitly mentioned in this tile. (1)",
-    "Contour lines visible with typical contour labels indicating elevation (1)",
-    "No visible cut or fill patterns or hatch marks indicating changes (1)",
-    "Contour interval assumed from typical engineering contour spacing (1)",
-    "Contour lines represent elevation changes in feet (1)",
-    "Cut areas correspond to lower elevation adjacent to higher contour lines (1)",
-    "Fill areas correspond to higher elevation adjacent to lower contour lines (1)",
-    "Contour interval assumed to be 5 ft based on typical engineering standards (1)",
-    "Contour lines are labeled in 5 ft increments (1)"
+    "Tile contains contour lines indicating grading (1)",
+    "No explicit cut or fill areas visible (1)",
+    "No contour interval legend visible in this tile (1)",
+    "The contours marked with elevations indicate cut and fill areas. (1)",
+    "Depth estimates are based on maximum and minimum elevation differences visible on the tile. (1)",
+    "Contour interval is identified next to the scale bar as 1.0 ft. (1)"
   ],
   "tile_counts_by_class": {
-    "empty": 26,
-    "non_grading": 13,
-    "grading": 34,
-    "title_block": 13,
-    "legend": 10
+    "empty": 14,
+    "non_grading": 4,
+    "grading": 2,
+    "legend": 1,
+    "title_block": 4
   },
-  "grading_tile_count": 34,
-  "total_tile_count": 96,
+  "grading_tile_count": 2,
+  "total_tile_count": 25,
   "confidence_threshold": 0.6,
   "trim_percent": 0.1
 }
