@@ -1,6 +1,7 @@
-# EarthWorksTest/main.py
+# main.py
 
 import base64
+import os
 from pathlib import Path
 from openai import OpenAI
 from PIL import Image
@@ -15,6 +16,7 @@ IMAGE_PATH = "input/site_plan.png"
 TILES_DIR = "tiles"
 TILE_SIZE = 1024
 OVERLAP = 128
+MAX_TILES = os.getenv("MAX_TILES")  # optional, for low-power testing
 
 # ---------- CLIENT ----------
 client = OpenAI()
@@ -58,10 +60,11 @@ def analyze_tile(tile_path: Path) -> dict:
                     {
                         "type": "input_text",
                         "text": (
-                            "Analyze this portion of a civil site grading plan and respond ONLY with "
-                            "valid JSON matching this schema:\n\n"
+                            "Analyze this tile from a civil site plan and respond ONLY with valid JSON.\n\n"
+                            "Schema:\n"
                             "{\n"
                             '  "tile_id": string,\n'
+                            '  "tile_class": one of ["grading","legend","title_block","empty","non_grading"],\n'
                             '  "contour_interval": string or null,\n'
                             '  "cut_present": boolean,\n'
                             '  "fill_present": boolean,\n'
@@ -70,8 +73,11 @@ def analyze_tile(tile_path: Path) -> dict:
                             '  "confidence": number between 0 and 1,\n'
                             '  "assumptions": array of strings\n'
                             "}\n\n"
-                            "Do not include explanations, markdown, or extra text. "
-                            "Use null where information is not visible."
+                            "Rules:\n"
+                            "- Use tile_class to describe what this tile primarily contains.\n"
+                            "- Only set cut or fill info if tile_class is grading.\n"
+                            "- Use null where information is not visible.\n"
+                            "- No prose, no markdown, JSON only."
                         ),
                     },
                     {
@@ -93,7 +99,10 @@ if __name__ == "__main__":
         raise FileNotFoundError(f"Image not found: {IMAGE_PATH}")
 
     tiles = tile_image(IMAGE_PATH, TILES_DIR, TILE_SIZE, OVERLAP)
-    print(f"\nGenerated {len(tiles)} tiles\n")
+
+    if MAX_TILES:
+        tiles = tiles[: int(MAX_TILES)]
+        print(f"Limiting run to first {len(tiles)} tiles (MAX_TILES)")
 
     results = []
 
@@ -109,4 +118,4 @@ if __name__ == "__main__":
     with open(output_path / "tiles.json", "w") as f:
         json.dump(results, f, indent=2)
 
-    print("\nWrote outputs/tiles.json\n")
+    print("Wrote outputs/tiles.json")
