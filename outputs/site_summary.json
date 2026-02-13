@@ -1,49 +1,55 @@
 {
-  "contour_interval": "1.0 ft",
+  "contour_interval": "2 ft",
   "cut_present": true,
   "fill_present": true,
   "cut_depth_estimate_ft": {
     "weighted_range": [
-      0.0,
-      8.0
+      0.46,
+      5.2
+    ],
+    "raw_union": [
+      0,
+      10
+    ],
+    "tiles_used": 11,
+    "tiles_excluded_low_conf": 2
+  },
+  "fill_depth_estimate_ft": {
+    "weighted_range": [
+      0.51,
+      5.02
     ],
     "raw_union": [
       0,
       8
     ],
-    "tiles_used": 1,
-    "tiles_excluded_low_conf": 0
+    "tiles_used": 10,
+    "tiles_excluded_low_conf": 2
   },
-  "fill_depth_estimate_ft": {
-    "weighted_range": [
-      0.0,
-      6.0
-    ],
-    "raw_union": [
-      0,
-      6
-    ],
-    "tiles_used": 1,
-    "tiles_excluded_low_conf": 0
-  },
-  "confidence": 0.725,
+  "confidence": 0.885,
   "assumptions": [
-    "Tile contains contour lines indicating grading (1)",
-    "No explicit cut or fill areas visible (1)",
-    "No contour interval legend visible in this tile (1)",
-    "The contours marked with elevations indicate cut and fill areas. (1)",
-    "Depth estimates are based on maximum and minimum elevation differences visible on the tile. (1)",
-    "Contour interval is identified next to the scale bar as 1.0 ft. (1)"
+    "Contour lines visible with elevation labels (1)",
+    "Red and green shading indicate cut and fill areas respectively (1)",
+    "Scale indicates approx depth for cut and fill zones (1)",
+    "Tile is from a civil grading plan (1)",
+    "Contours represent elevation changes for grading (1)",
+    "Cut and fill areas identified by color coding (blue for cut, red for fill) (1)",
+    "Depth estimates based on contour elevation differences and color intensity (1)",
+    "Contours are evenly spaced suggesting a 1-foot interval (1)",
+    "Cut and fill are identified by negative and positive elevation changes respectively (1)",
+    "Depth estimates derived from visible contour labels and grading symbols (1)",
+    "Contour lines and labels in feet indicate elevation changes. (1)",
+    "Cut and fill areas are marked with distinct hatching and annotations. (1)"
   ],
   "tile_counts_by_class": {
-    "empty": 14,
-    "non_grading": 4,
-    "grading": 2,
-    "legend": 1,
-    "title_block": 4
+    "empty": 32,
+    "legend": 12,
+    "non_grading": 13,
+    "title_block": 30,
+    "grading": 13
   },
-  "grading_tile_count": 2,
-  "total_tile_count": 25,
+  "grading_tile_count": 13,
+  "total_tile_count": 100,
   "confidence_threshold": 0.6,
   "trim_percent": 0.1
 }

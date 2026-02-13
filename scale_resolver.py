@@ -1,47 +1,72 @@
 # scale_resolver.py
-# Select the correct scale bar for a feature based on spatial proximity
-
+import json
 import math
+from pathlib import Path
 
-def bbox_center(bbox):
-    x = (bbox["x1"] + bbox["x2"]) / 2
-    y = (bbox["y1"] + bbox["y2"]) / 2
-    return x, y
+FEATURES_IN = Path("outputs/features_grouped.json")
+SCALES_IN = Path("outputs/page_scale.json")
+OUT = Path("outputs/features_with_scale.json")
 
-def distance(p1, p2):
-    return math.sqrt((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2)
 
-def resolve_scale_for_feature(feature_bbox, page_scale_entry, min_confidence=0.85):
-    """
-    feature_bbox: {"x1":..., "y1":..., "x2":..., "y2":...}
-    page_scale_entry: one page object from page_scale.json
+def dist(a, b):
+    return math.hypot(a[0] - b[0], a[1] - b[1])
 
-    returns feet_per_pixel or None
-    """
 
-    scale_bars = page_scale_entry.get("scale_bars", [])
-    if not scale_bars:
-        return None
+def centroid_from_bbox(b):
+    return [
+        (b["x1"] + b["x2"]) / 2,
+        (b["y1"] + b["y2"]) / 2,
+    ]
 
-    feature_center = bbox_center(feature_bbox)
 
-    best = None
-    best_dist = None
+with open(FEATURES_IN) as f:
+    groups = json.load(f)
 
-    for bar in scale_bars:
-        if bar.get("confidence", 0) < min_confidence:
+with open(SCALES_IN) as f:
+    page_scales = json.load(f)
+
+# index scale bars by page
+scale_bars_by_page = {}
+for page in page_scales:
+    bars = page.get("scale_bars", [])
+    if bars:
+        scale_bars_by_page.setdefault(page["page"], []).extend(bars)
+
+resolved = []
+
+for group in groups:
+    page = group["page"]
+    bars = scale_bars_by_page.get(page, [])
+
+    for feature in group["features"]:
+        f_out = feature.copy()
+
+        if not bars:
+            f_out["scale"] = None
+            f_out["scale_status"] = "unresolved"
+            resolved.append(f_out)
             continue
-        if bar.get("feet_per_pixel") is None:
-            continue
 
-        bar_center = bbox_center(bar["bar_bbox"])
-        d = distance(feature_center, bar_center)
+        f_centroid = feature["geometry"]["centroid_px"]
 
-        if best is None or d < best_dist:
-            best = bar
-            best_dist = d
+        nearest = min(
+            bars,
+            key=lambda b: dist(
+                f_centroid,
+                centroid_from_bbox(b["bbox_px"])
+            )
+        )
 
-    if best is None:
-        return None
+        f_out["scale"] = {
+            "ratio": nearest["ratio"],
+            "units": nearest["units"],
+            "source_id": nearest["id"],
+        }
+        f_out["scale_status"] = "resolved"
 
-    return best["feet_per_pixel"]
+        resolved.append(f_out)
+
+with open(OUT, "w") as f:
+    json.dump(resolved, f, indent=2)
+
+print(f"Scale resolution complete → {OUT}")

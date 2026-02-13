@@ -9,7 +9,7 @@
     "fill_depth_estimate_ft": null,
     "confidence": 1,
     "assumptions": [
-      "The tile appears to be blank with no visible content."
+      "The tile contains only a partial border and a small design, with no grading or legend information visible."
     ]
   },
   {
@@ -22,7 +22,7 @@
     "fill_depth_estimate_ft": null,
     "confidence": 1,
     "assumptions": [
-      "Tile appears blank with no visible features or annotations."
+      "Tile mostly blank, no visible grading or text elements"
     ]
   },
   {
@@ -33,24 +33,24 @@
     "fill_present": false,
     "cut_depth_estimate_ft": null,
     "fill_depth_estimate_ft": null,
-    "confidence": 1,
+    "confidence": 0.9,
     "assumptions": [
-      "Tile is completely blank with no visible grading or legend elements",
-      "No contour lines or color coding visible indicating cut or fill"
+      "Tile contains no visible content or grading information.",
+      "No contour lines, cut or fill symbols visible."
     ]
   },
   {
     "tile_id": "page_001__tile_0_3584",
-    "tile_class": "non_grading",
+    "tile_class": "legend",
     "contour_interval": null,
     "cut_present": false,
     "fill_present": false,
     "cut_depth_estimate_ft": null,
     "fill_depth_estimate_ft": null,
-    "confidence": 0.9,
+    "confidence": 0.8,
     "assumptions": [
-      "The tile primarily contains textual directions and some color blocks.",
-      "No grading features such as contour lines or cut/fill information visible."
+      "The tile primarily contains text with directions to the site, typical of a legend or notes section.",
+      "No visible grading contours or cut/fill markings present."
     ]
   },
   {
@@ -63,24 +63,24 @@
     "fill_depth_estimate_ft": null,
     "confidence": 0.9,
     "assumptions": [
-      "Tile shows a map without any visible contour lines",
-      "No grading or elevation details are present",
-      "Main content is non-grading like roads and boundaries"
+      "This tile appears to be a map section with roads and rail lines, not showing contour lines or grading information.",
+      "No grading symbols, cut or fill marks are visible.",
+      "No legend or title block information is present in this tile."
     ]
   },
   {
     "tile_id": "page_001__tile_0_5376",
-    "tile_class": "grading",
+    "tile_class": "empty",
     "contour_interval": null,
     "cut_present": false,
     "fill_present": false,
     "cut_depth_estimate_ft": null,
     "fill_depth_estimate_ft": null,
-    "confidence": 0.6,
+    "confidence": 0.9,
     "assumptions": [
-      "Tile contains contour lines indicating grading",
-      "No explicit cut or fill areas visible",
-      "No contour interval legend visible in this tile"
+      "Tile appears mostly blank with no visible grading features.",
+      "No contour lines or elevations visible.",
+      "No indication of cut or fill areas."
     ]
   },
   {
@@ -93,7 +93,7 @@
     "fill_depth_estimate_ft": null,
     "confidence": 1,
     "assumptions": [
-      "Tile shows no content or markings"
+      "Tile appears to contain no visible content"
     ]
   },
   {
@@ -104,10 +104,9 @@
     "fill_present": false,
     "cut_depth_estimate_ft": null,
     "fill_depth_estimate_ft": null,
-    "confidence": 0.9,
+    "confidence": 1,
     "assumptions": [
-      "Tile shows mostly white space with a partial yellow graphic",
-      "No grading or civil plan elements visible"
+      "Tile contains no visible drawing or information"
     ]
   },
   {
@@ -118,9 +117,9 @@
     "fill_present": false,
     "cut_depth_estimate_ft": null,
     "fill_depth_estimate_ft": null,
-    "confidence": 1,
+    "confidence": 0.9,
     "assumptions": [
-      "No visible content in the tile"
+      "Tile is completely blank with no visible features or markings"
     ]
   },
   {
@@ -131,9 +130,10 @@
     "fill_present": false,
     "cut_depth_estimate_ft": null,
     "fill_depth_estimate_ft": null,
-    "confidence": 1,
+    "confidence": 0.95,
     "assumptions": [
-      "Tile contains no visible data or markings, only a solid color."
+      "Tile is mostly empty with a uniform color.",
+      "No visible information related to grading, legend, or title block."
     ]
   },
   {
@@ -146,13 +146,13 @@
     "fill_depth_estimate_ft": null,
     "confidence": 0.9,
     "assumptions": [
-      "Tile appears to be mostly blank with no contour lines or markings",
-      "No visible grading features, cuts, or fills"
+      "Tile shows mostly a plain area with no visible grading marks or contours.",
+      "Minimal thin blue line is assumed to be a minor feature, not related to grading."
     ]
   },
   {
     "tile_id": "page_001__tile_1792_3584",
-    "tile_class": "non_grading",
+    "tile_class": "legend",
     "contour_interval": null,
     "cut_present": false,
     "fill_present": false,
@@ -160,8 +160,9 @@
     "fill_depth_estimate_ft": null,
     "confidence": 0.9,
     "assumptions": [
-      "Tile contains text with directions, likely part of a legend or notes section",
-      "No visible grading or contour lines present"
+      "Tile contains text indicating directions rather than grading details",
+      "No visible contour lines or elevation data",
+      "Presence of explanatory instructions suggests legend or note section"
     ]
   },
   {
@@ -174,29 +175,14 @@
     "fill_depth_estimate_ft": null,
     "confidence": 0.9,
     "assumptions": [
-      "No contour lines or grading symbols visible",
-      "Tile only shows a base map with roads and boundaries",
-      "No indication of cut or fill activity"
+      "Tile shows a map with minimal details and no visible grading features",
+      "No contour lines or elevation changes are displayed",
+      "No grading symbols or annotations present"
     ]
   },
   {
     "tile_id": "page_001__tile_1792_5376",
-    "tile_class": "legend",
-    "contour_interval": null,
-    "cut_present": false,
-    "fill_present": false,
-    "cut_depth_estimate_ft": null,
-    "fill_depth_estimate_ft": null,
-    "confidence": 0.8,
-    "assumptions": [
-      "The presence of a large 'X' with an arrow likely indicates a legend or key information.",
-      "No visible grading lines or contour labels detected.",
-      "Text cut off at bottom suggests part of a title or legend."
-    ]
-  },
-  {
-    "tile_id": "page_001__tile_1792_6272",
-    "tile_class": "title_block",
+    "tile_class": "non_grading",
     "contour_interval": null,
     "cut_present": false,
     "fill_present": false,
@@ -204,8 +190,23 @@
     "fill_depth_estimate_ft": null,
     "confidence": 0.9,
     "assumptions": [
-      "Tile contains no grading or contour lines",
-      "Content is mostly text and lines typical of a title block"
+      "The image shows a basic map with field boundaries and roads.",
+      "No contour lines or grading symbols are visible indicating cut or fill areas.",
+      "The partial text suggests it may be part of a map or legend but lacks grading info."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_1792_6272",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "Tile image contains only partial text 'Y MAP' and large blank areas",
+      "No grading, legend, or title block information is visible"
     ]
   },
   {
@@ -216,9 +217,10 @@
     "fill_present": false,
     "cut_depth_estimate_ft": null,
     "fill_depth_estimate_ft": null,
-    "confidence": 1,
+    "confidence": 0.95,
     "assumptions": [
-      "Tile primarily contains partial text and logo with no visible civil site plan elements."
+      "Tile contains only a partial logo and text unrelated to site plan details",
+      "No grading or technical information visible"
     ]
   },
   {
@@ -231,7 +233,8 @@
     "fill_depth_estimate_ft": null,
     "confidence": 1,
     "assumptions": [
-      "Tile is completely blank with no visible information"
+      "No visible content in the tile",
+      "No grading or legend elements present"
     ]
   },
   {
@@ -242,9 +245,10 @@
     "fill_present": false,
     "cut_depth_estimate_ft": null,
     "fill_depth_estimate_ft": null,
-    "confidence": 1,
+    "confidence": 0.9,
     "assumptions": [
-      "Tile contains only a north arrow and large empty space, no grading or other details visible"
+      "Tile only contains a north arrow symbol.",
+      "No grading lines, legend, or title block visible."
     ]
   },
   {
@@ -257,9 +261,8 @@
     "fill_depth_estimate_ft": null,
     "confidence": 0.95,
     "assumptions": [
-      "The tile primarily contains text boxes for project identification typical of a title block.",
-      "No grading features like contours or elevation changes are visible.",
-      "No cut or fill markings are present."
+      "The tile primarily contains project information and property owner details",
+      "No grading, contour, cut or fill information visible"
     ]
   },
   {
@@ -270,11 +273,11 @@
     "fill_present": false,
     "cut_depth_estimate_ft": null,
     "fill_depth_estimate_ft": null,
-    "confidence": 0.95,
+    "confidence": 0.9,
     "assumptions": [
-      "Tile contains project information and zoning data",
-      "No visible grading or contour lines present",
-      "No cut or fill areas identifiable in text or visuals"
+      "Text primarily contains project and zoning information typical of a title block",
+      "No grading or contour lines visible",
+      "No visible cut or fill areas"
     ]
   },
   {
@@ -287,14 +290,14 @@
     "fill_depth_estimate_ft": null,
     "confidence": 0.9,
     "assumptions": [
-      "This tile contains contact information and title block elements.",
-      "No grading or contour interval information is visible.",
-      "No cut or fill depth information is present."
+      "Presence of contact information and phone numbers typical of a title block",
+      "No visible contours or grading information",
+      "North arrow present, common in title blocks"
     ]
   },
   {
     "tile_id": "page_001__tile_2688_5376",
-    "tile_class": "non_grading",
+    "tile_class": "legend",
     "contour_interval": null,
     "cut_present": false,
     "fill_present": false,
@@ -302,9 +305,8 @@
     "fill_depth_estimate_ft": null,
     "confidence": 0.9,
     "assumptions": [
-      "The tile contains text instructions and a logo related to Dig Safe New York.",
-      "No contour lines or grading information is visible.",
-      "The tile is part of informational or legend section, not the main grading plan."
+      "The tile contains informational text and contact details rather than grading contours or title block information",
+      "No contour lines or grading symbols are visible in this tile"
     ]
   },
   {
@@ -315,30 +317,33 @@
     "fill_present": false,
     "cut_depth_estimate_ft": null,
     "fill_depth_estimate_ft": null,
-    "confidence": 1,
+    "confidence": 0.9,
     "assumptions": [
-      "No visible content or markings indicating grading, legend, or title block."
+      "The tile is mostly blank and contains no discernible markings or grading information.",
+      "No contours or elevation information is visible.",
+      "No text or legend indicating fill or cut is present."
     ]
   },
   {
     "tile_id": "page_001__tile_2688_896",
     "tile_class": "grading",
-    "contour_interval": "1.0 ft",
+    "contour_interval": "1 ft",
     "cut_present": true,
     "fill_present": true,
     "cut_depth_estimate_ft": [
-      0,
-      8
+      1,
+      3
     ],
     "fill_depth_estimate_ft": [
-      0,
-      6
+      1,
+      3
     ],
-    "confidence": 0.85,
+    "confidence": 0.95,
     "assumptions": [
-      "The contours marked with elevations indicate cut and fill areas.",
-      "Depth estimates are based on maximum and minimum elevation differences visible on the tile.",
-      "Contour interval is identified next to the scale bar as 1.0 ft."
+      "Contour lines visible with elevation labels",
+      "Red and green shading indicate cut and fill areas respectively",
+      "Scale indicates approx depth for cut and fill zones",
+      "Tile is from a civil grading plan"
     ]
   },
   {
@@ -351,7 +356,1170 @@
     "fill_depth_estimate_ft": null,
     "confidence": 1,
     "assumptions": [
-      "Tile is completely blank with no visible features or text."
+      "Tile is completely blank with no content visible"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_3584_1792",
+    "tile_class": "grading",
+    "contour_interval": "1'",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      4
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      4
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Contours represent elevation changes for grading",
+      "Cut and fill areas identified by color coding (blue for cut, red for fill)",
+      "Depth estimates based on contour elevation differences and color intensity"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_3584_2688",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "Tile primarily contains project information and owner address",
+      "No grading contour or depth information visible"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_3584_3584",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "This tile primarily contains project directory and site identification information",
+      "No grading or contour information is visible in the tile",
+      "No cut or fill data is discernible"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_3584_4480",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "Tile contains contact information and company details consistent with title block content",
+      "No visible contour lines or grading details present"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_3584_5376",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile contains general notes and safety instructions",
+      "No contour lines or grading information present",
+      "No indication of cut or fill areas"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_3584_6272",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "No visible content on tile",
+      "No grading information present"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_3584_896",
+    "tile_class": "grading",
+    "contour_interval": "1 feet",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      5
+    ],
+    "confidence": 0.8,
+    "assumptions": [
+      "Contours are evenly spaced suggesting a 1-foot interval",
+      "Cut and fill are identified by negative and positive elevation changes respectively",
+      "Depth estimates derived from visible contour labels and grading symbols"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_4480_0",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.99,
+    "assumptions": [
+      "No visible features or content on the tile",
+      "Appears completely blank or white"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_4480_1792",
+    "tile_class": "grading",
+    "contour_interval": "2 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      4
+    ],
+    "confidence": 0.85,
+    "assumptions": [
+      "Contour lines and labels in feet indicate elevation changes.",
+      "Cut and fill areas are marked with distinct hatching and annotations.",
+      "Depth estimates are based on contour label differences and section markings.",
+      "Tile ID is not visible in the provided image."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_4480_2688",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile contains text typically found in title blocks.",
+      "No contour lines or grading marks visible.",
+      "No evidence of cut or fill information."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_4480_3584",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "This tile contains text usually found in a title block such as project name and locations.",
+      "No contour lines or grading information are visible."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_4480_4480",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "The tile contains typical title block information such as sheet numbers and drawing titles.",
+      "No contour lines, grading symbols, or depth information visible."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_4480_5376",
+    "tile_class": "legend",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "Text content indicates instructions or notes typical of a legend or information block",
+      "No visible contour markings or grading information present",
+      "No visible graphical features indicating earthwork grading"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_4480_6272",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "Tile contains no visible information or markings except tile ID"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_4480_896",
+    "tile_class": "grading",
+    "contour_interval": "2'",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      6
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      7
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "The measurement unit '2'' refers to 2 feet contour interval",
+      "Contours with numbers above ground level show cut depths",
+      "Contours with numbers below ground level show fill depths",
+      "Depth estimates are based on visible contour labels and elevation differences"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_5376_0",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "The tile contains no visible content or markings."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_5376_1792",
+    "tile_class": "grading",
+    "contour_interval": "1 FT",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      5
+    ],
+    "confidence": 0.85,
+    "assumptions": [
+      "Contour lines represent elevation changes",
+      "Cut areas are marked with hatching or shading",
+      "Fill areas are marked with different hatching or shading",
+      "Depth estimates based on contour line values and notes",
+      "Contour interval is explicitly shown in legend"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_5376_2688",
+    "tile_class": "grading",
+    "contour_interval": "5 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      7
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      8
+    ],
+    "confidence": 0.95,
+    "assumptions": [
+      "Contours with elevational annotations represent grading",
+      "Cut and fill areas indicated by hatches and labeled zones",
+      "Contour interval derived from labeled contour lines",
+      "Depth estimates based on relative contour elevations in cut/fill zones"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_5376_3584",
+    "tile_class": "grading",
+    "contour_interval": "1 foot",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      3
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      2
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Contour lines with elevation labels are visible indicating grading.",
+      "Cut and fill areas identified by contour depressions and elevations.",
+      "Cut depth estimated from contours labeled 48 to 50 and hachures.",
+      "Fill depth estimated from contours labeled 54 to 56."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_5376_4480",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "This tile contains primarily the title sheet/drawing list information.",
+      "No grading or contour data is visible.",
+      "No cut or fill information is present."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_5376_5376",
+    "tile_class": "legend",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "The tile appears to be a listing or table of contents rather than a map or drawing.",
+      "There are no visible contour lines or grading symbols.",
+      "The text relates to various plan sections rather than elevation data."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_5376_6272",
+    "tile_class": "legend",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile contains graphical symbols and text typical of a legend",
+      "No visible contour lines or grading information",
+      "Texts such as 'EROSION AND SEDIME' suggest section heading for legend or notes"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_5376_896",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "Tile is recognized as a title block based on visible text and layout elements at the bottom right corner of the plan."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_6272_0",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "The tile is completely blank with no visible information."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_6272_1792",
+    "tile_class": "grading",
+    "contour_interval": "1' (one foot)",
+    "cut_present": true,
+    "fill_present": false,
+    "cut_depth_estimate_ft": [
+      0,
+      6
+    ],
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.8,
+    "assumptions": [
+      "Topographic lines and elevation markers indicate grading information",
+      "Red highlighted areas infer cut or excavation zones",
+      "Text showing slopes and elevations support cut depth estimates",
+      "No visible fill zones or fill-related markings detected"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_6272_2688",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "Tile contains no visible information.",
+      "Classified as empty due to complete white space."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_6272_3584",
+    "tile_class": "legend",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "The tile shows symbols and line types used in the grading plan",
+      "No contour lines or grading details are visible in this tile"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_6272_4480",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "The image contains text similar to a sheet title block from a site plan",
+      "No grading or contour information visible",
+      "No cut or fill related markings observed"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_6272_5376",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "The tile contains text related to sediment control plans and details, indicating it is not focused on grading or contour information.",
+      "No visible contour lines or grading data are present."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_6272_6272",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "The tile contains text related to sediment control details, which is typically administrative or informational.",
+      "No contour lines or grading symbols are visible.",
+      "No indication of cuts or fills in the image."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_6272_896",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile shows large text likely from title block area",
+      "No grading or contour information visible"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_7168_0",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "The tile is visually empty with no features or markings visible",
+      "No grading, legend, or title block content is present"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_7168_1792",
+    "tile_class": "grading",
+    "contour_interval": "2 feet",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      8
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      6
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Contour lines and existing vs. proposed elevations indicate cut and fill areas.",
+      "Cut and fill depth estimates derived from spot elevation differences.",
+      "Contour interval clearly labeled as 2 feet on plan."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_7168_2688",
+    "tile_class": "grading",
+    "contour_interval": "2ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      0,
+      8
+    ],
+    "fill_depth_estimate_ft": [
+      0,
+      4
+    ],
+    "confidence": 0.95,
+    "assumptions": [
+      "Contour lines and elevation labels represent cut/fill areas",
+      "Darker and denser contour lines and hachures indicate cut zones",
+      "Lighter or bolder contour lines and shading indicate fill zones",
+      "Cut and fill depths are estimated based on contour intervals and shading"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_7168_3584",
+    "tile_class": "grading",
+    "contour_interval": "2 feet",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      6,
+      10
+    ],
+    "fill_depth_estimate_ft": [
+      4,
+      8
+    ],
+    "confidence": 0.85,
+    "assumptions": [
+      "Contour lines with elevation labels indicate grading.",
+      "Cut and fill areas identified based on shading and labels.",
+      "Depth estimates based on contour elevation differences."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_7168_4480",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "This tile mainly contains tabular data typical of a title block or revision block in a civil site plan.",
+      "No grading contour lines or elevation data are visible.",
+      "No visual indicators of cut or fill areas or depths are present."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_7168_5376",
+    "tile_class": "legend",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile shows a table with text 'CUT' and 'FILL' indicating it is a legend or key for the site plan.",
+      "No contour lines or grading information visible.",
+      "No numerical cut or fill depth data presented here, just labels and symbols."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_7168_6272",
+    "tile_class": "legend",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Contains typical symbols and line types used in civil plans",
+      "No topographic contours or grading information visible"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_7168_896",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile contains large text typical of a title block",
+      "No visible grading features such as contours or cut/fill markings"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8064_0",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "Tile contains mostly blank space",
+      "No grading or legend elements visible"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8064_1792",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "The tile contains large, stylized text typical of a title or project name",
+      "No grading lines or contour intervals visible",
+      "No earthwork or depth information presented"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8064_2688",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "No visible grading or map features detected",
+      "Tile contains mostly blank or white space with partial text"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8064_3584",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "Tile shows only white space with no visible content."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8064_4480",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Presence of repetitive date fields typical in title blocks",
+      "No visible grading or contour data",
+      "No symbols or lines indicative of grading"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8064_5376",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "The tile contains text related to project certification and compliance, typical of a title block.",
+      "No contour lines or grading details visible to indicate grading information.",
+      "Presence of multiple date stamps suggests administrative or approval information."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8064_6272",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "The tile contains a date and boxed formatting typical of a title block section on plans.",
+      "No contour or grading information is visible.",
+      "No visible cut or fill indications nor topographic lines present."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8064_896",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "The visible content resembles title text typically found in title blocks.",
+      "No grading, contour lines, or cut/fill markers are visible in the tile.",
+      "No legend symbols or empty space indicating other tile types."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8960_0",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "Tile shows an office or company logo",
+      "No grading or site plan features visible"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8960_1792",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "Tile primarily contains large text fragments without visible site plan elements",
+      "No grading or legend elements are present"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8960_2688",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "The tile contains a project title block with project number and location",
+      "No grading contours, cuts or fills are visible",
+      "The primary purpose is identifying project information"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8960_3584",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Only the text 'JULY 2023' is visible with no grading or civil elements",
+      "No contours, cut, or fill information present"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8960_4480",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "The image shows a professional engineer's seal which is typically found on the title block of civil plans",
+      "No contour lines or grading information is visible in the image"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8960_5376",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "Text includes a project compliance statement typical of title blocks.",
+      "No visible grading features or contour lines.",
+      "Tile ID format consistent with title block naming conventions."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8960_6272",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "Tile contains project title details and sheet number",
+      "No grading or contour details visible"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_8960_896",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Text indicates this tile is likely a title block or introductory information section.",
+      "No contour or grading information visible.",
+      "No cut or fill information apparent from this tile."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_896_0",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "No grading features, legends, or title block present in the image",
+      "Tile appears to be empty with no relevant civil site plan data"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_896_1792",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "No visible markings or features indicating grading or legend information"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_896_2688",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "This tile shows a project location on a map.",
+      "No grading information such as contour lines or cut/fill markings are visible."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_896_3584",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "Tile contains text-based directions to a site",
+      "No grading contours or elevation information present",
+      "No cutting or filling details visible"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_896_4480",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "This tile shows a map indicating project location.",
+      "No grading information or contour lines are visible.",
+      "No cut or fill depths or intervals are indicated."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_896_5376",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "This tile is a map showing roads and a recreation area",
+      "No contour lines or grading information visible",
+      "No visible cut or fill features"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_896_6272",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Text 'VICINITY M' suggests this is a title or vicinity map section of the plan",
+      "Absence of contour lines or grading information",
+      "No visible symbols indicative of grading"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_896_896",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "The image primarily shows a logo and text, typical of a title block or branding on a civil site plan.",
+      "No grading or contour information is visible.",
+      "No indication of cut or fill areas or depths."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_9856_0",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "Tile contains project information, revision dates, and general plan notes typical of a title block.",
+      "No grading or contour details visible.",
+      "No topographic or cut/fill markings visible."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_9856_1792",
+    "tile_class": "legend",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "The tile contains typical legend elements such as symbols and line styles.",
+      "No contour lines or grading information is visible.",
+      "No title block or data tables are present."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_9856_2688",
+    "tile_class": "legend",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "The tile primarily contains a legend with symbols and text descriptions.",
+      "No grading or contour lines are present.",
+      "Text content is related to notes and legend items rather than site grading."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_9856_3584",
+    "tile_class": "grading",
+    "contour_interval": "2 ft",
+    "cut_present": true,
+    "fill_present": true,
+    "cut_depth_estimate_ft": [
+      1,
+      6
+    ],
+    "fill_depth_estimate_ft": [
+      1,
+      4
+    ],
+    "confidence": 0.9,
+    "assumptions": [
+      "Contours are labeled and indicate elevation changes",
+      "Blue lines represent cut areas",
+      "Red lines represent fill areas",
+      "Depth estimates based on contour spacing and labels"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_9856_4480",
+    "tile_class": "title_block",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "The presence of project name 'VALENCIA' and engineering company logo indicate this is a title block.",
+      "No contour lines or grading symbols are visible in the tile."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_9856_5376",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "Tile contains mainly text and no evident grading or contour information",
+      "No cut or fill areas visible"
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_9856_6272",
+    "tile_class": "legend",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.95,
+    "assumptions": [
+      "The tile contains symbols and their definitions related to site grading and construction.",
+      "No contour lines or grading depth information visible."
+    ]
+  },
+  {
+    "tile_id": "page_001__tile_9856_896",
+    "tile_class": "empty",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 1,
+    "assumptions": [
+      "Tile appears completely white with no visible content"
+    ]
+  },
+  {
+    "tile_id": "page_002__tile_0_0",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile shows aerial image of a field and trees without contour lines or grading symbols",
+      "No visible grading elements such as cut/fill lines, contour intervals or labels"
+    ]
+  },
+  {
+    "tile_id": "page_002__tile_0_1792",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile contains text related to proposed site features and warnings rather than contour or grading information",
+      "No visible contour lines or elevation markers",
+      "No indication of cut or fill areas"
+    ]
+  },
+  {
+    "tile_id": "page_002__tile_0_2688",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile shows annotations related to utility poles and proposed electrical connections.",
+      "No visible grading contour lines or earthwork information.",
+      "Presence of aerial imagery suggests non-grading context."
+    ]
+  },
+  {
+    "tile_id": "page_002__tile_0_3584",
+    "tile_class": "non_grading",
+    "contour_interval": null,
+    "cut_present": false,
+    "fill_present": false,
+    "cut_depth_estimate_ft": null,
+    "fill_depth_estimate_ft": null,
+    "confidence": 0.9,
+    "assumptions": [
+      "Tile shows a site aerial image with property boundaries.",
+      "No visible contour lines for grading estimation.",
+      "Text indicates proposed road but no contour data visible."
     ]
   }
 ]
