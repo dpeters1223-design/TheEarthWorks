@@ -1,0 +1,46 @@
+[
+  {
+    "feature_id": "cut_001",
+    "feature_type": "cut",
+    "feature_class": "volume",
+    "scale_source": "scale_bar",
+    "confidence": 0.793,
+    "min_volume_cy": 5465824.705099727,
+    "max_volume_cy": 13664561.762749318,
+    "depth_source": "type_default",
+    "depth_confidence": 0.6
+  },
+  {
+    "feature_id": "cut_002",
+    "feature_type": "cut",
+    "feature_class": "volume",
+    "scale_source": "scale_bar",
+    "confidence": 0.85,
+    "min_volume_cy": 170474.06487640477,
+    "max_volume_cy": 426185.1621910119,
+    "depth_source": "type_default",
+    "depth_confidence": 0.6
+  },
+  {
+    "feature_id": "fill_003",
+    "feature_type": "fill",
+    "feature_class": "volume",
+    "scale_source": "scale_bar",
+    "confidence": 0.8,
+    "min_volume_cy": 85237.03243820238,
+    "max_volume_cy": 255711.09731460715,
+    "depth_source": "type_default",
+    "depth_confidence": 0.6
+  },
+  {
+    "feature_id": "fill_004",
+    "feature_type": "fill",
+    "feature_class": "volume",
+    "scale_source": "scale_bar",
+    "confidence": 0.85,
+    "min_volume_cy": 85237.03243820238,
+    "max_volume_cy": 255711.09731460715,
+    "depth_source": "type_default",
+    "depth_confidence": 0.6
+  }
+]

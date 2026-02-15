@@ -1,0 +1,12 @@
+[
+  {
+    "file": "site_plan_page_1.png",
+    "sheet_type": "SITE_GRADING_PLAN",
+    "confidence": 1.0
+  },
+  {
+    "file": "site_plan.png",
+    "sheet_type": "ERROR",
+    "confidence": 0.0
+  }
+]

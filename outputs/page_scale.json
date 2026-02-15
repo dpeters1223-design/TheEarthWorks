@@ -1,0 +1,28 @@
+[
+  {
+    "page": "page_001.png",
+    "page_width_px": 6800,
+    "page_height_px": 4400,
+    "scale_bars": [
+      {
+        "bar_detected": true,
+        "bar_pixel_length": 162.0,
+        "bar_feet_length": 240.0,
+        "feet_per_pixel": 1.481481,
+        "bar_bbox": {
+          "x1": 1070.0,
+          "y1": 970.0,
+          "x2": 1232.0,
+          "y2": 990.0
+        },
+        "confidence": 0.95,
+        "assumptions": [
+          "The segmented horizontal bar with labels '0', '120', '240' at the bottom right of the drawing viewport represents a scale bar.",
+          "The pixel length is measured by the bounding box around the scale bar graphic on the page image.",
+          "The feet length is inferred from the numeric labels associated with the scale bar."
+        ]
+      }
+    ],
+    "assumptions": []
+  }
+]

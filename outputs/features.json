@@ -1,0 +1,290 @@
+[
+  {
+    "feature_id": "cut_001",
+    "feature_type": "cut",
+    "geometry_type": "polygon",
+    "geometry": {
+      "points_px": [
+        [
+          1792,
+          0
+        ],
+        [
+          9088,
+          0
+        ],
+        [
+          9088,
+          4608
+        ],
+        [
+          1792,
+          4608
+        ]
+      ],
+      "bbox_px": {
+        "x1": 1792,
+        "y1": 0,
+        "x2": 9088,
+        "y2": 4608
+      },
+      "centroid_px": [
+        5440,
+        2304
+      ]
+    },
+    "page": "page_001.png",
+    "source_tiles": [
+      "page_001__tile_1792_2688",
+      "page_001__tile_2688_1792",
+      "page_001__tile_2688_2688",
+      "page_001__tile_2688_3584",
+      "page_001__tile_2688_896",
+      "page_001__tile_3584_0",
+      "page_001__tile_3584_2688",
+      "page_001__tile_3584_3584",
+      "page_001__tile_3584_896",
+      "page_001__tile_4480_1792",
+      "page_001__tile_4480_2688",
+      "page_001__tile_4480_3584",
+      "page_001__tile_5376_1792",
+      "page_001__tile_5376_2688",
+      "page_001__tile_5376_3584",
+      "page_001__tile_5376_896",
+      "page_001__tile_6272_1792",
+      "page_001__tile_6272_2688",
+      "page_001__tile_6272_3584",
+      "page_001__tile_6272_896",
+      "page_001__tile_7168_1792",
+      "page_001__tile_7168_896",
+      "page_001__tile_8064_1792"
+    ],
+    "confidence": 0.793,
+    "assumptions": [
+      "Contour interval estimated based on numeric differences",
+      "Contour lines are labeled with elevation values increasing in increments of 5",
+      "No distinct fill patterns or symbols observed",
+      "Estimate based on relative contour spacing and labeling",
+      "Thick contour lines with 'X' marks indicate cut areas",
+      "Contours show both upward and downward grading",
+      "Contour interval assumed from typical 5-foot increments.",
+      "Contour lines are in feet",
+      "Contour labels increment by 5 feet",
+      "Presence of thick black lines and cut labels suggest cut areas.",
+      "Contour lines represent elevation gradations",
+      "Hatching and arrows indicate areas of cut and fill",
+      "Depth estimates based on contour difference near graded area",
+      "Estimation of cut depth is inferred by the elevation difference between close contour lines and general topography.",
+      "Typical contour intervals in civil site plans are 5 feet",
+      "The black lines are contours indicating grading changes.",
+      "Contours are in feet.",
+      "Text describing access road and proposed features implies a grading context",
+      "Tile does not contain legend or title block information.",
+      "Contour interval is assumed to be 5 feet based on the elevation labels: 1460, 1465, 1470, etc.",
+      "Green and blue outlining shows grading areas with cut and fill.",
+      "Elevation lines spaced primarily every 5 feet",
+      "Contour lines are labeled with elevations",
+      "Crossed lines indicate cut area",
+      "Shaded and hatched areas indicate cut zones",
+      "Cut is present where contour lines are closely spaced and descending towards lower elevation.",
+      "No clear indication of fill based on visible contours",
+      "The tile shows contour lines with elevation labels indicating grading activities.",
+      "Contour interval estimated from difference between labeled contour lines (e.g., 1450 to 1455).",
+      "Depth estimates are rough based on contour spacing and site features",
+      "No visible fill areas with contour patterns or fill symbols",
+      "Contour interval estimated from elevation differences between lines",
+      "No fill areas or fill contour markings visible.",
+      "Cut depth is estimated based on hatching density and typical grading slopes",
+      "Contour interval estimated from visible labeled contours",
+      "Contour lines represent elevation with labels in feet",
+      "Presence of hatching and contour-like lines indicates grading activity with cut area",
+      "Contour lines indicate elevation changes.",
+      "Cut depth estimated based on difference between contour lines",
+      "No visible signs of fill material or rising elevations in this tile",
+      "There are no obvious fill area indicators in the tile",
+      "Hatched area indicates a graded/cut area",
+      "Cut areas identified by closely spaced contour lines likely indicate cut",
+      "5 ft interval estimation based on contour line spacing",
+      "Tile contains numerous contour lines indicating elevation changes",
+      "Blue and green shaded areas represent fill zones.",
+      "Contour lines represent elevation levels",
+      "Presence of contour lines and slope note indicate grading activity",
+      "Presence of hatching implies cut and fill areas",
+      "No clear indication of fill areas present",
+      "Contour interval estimated based on difference between labeled contour lines (e.g., 1385 to 1390)",
+      "Dashed and cross markings indicate grading boundaries",
+      "Higher to lower elevation indicates cut",
+      "No obvious fill areas detected in tile.",
+      "Contour interval assumed based on typical intervals and elevation labels (e.g., 1460, 1465).",
+      "No visible indication of fill areas",
+      "No visible fill contour features",
+      "Lower elevation numbers indicate cut areas",
+      "Contour lines represent elevation differences of 5 feet",
+      "No clear fill area is visible from contour patterns.",
+      "No fill presence visible based on contour patterns.",
+      "Smaller numbers indicate lower elevation (cut)",
+      "Dense contour lines on left side suggest cut area",
+      "Tile edges may cut off some feature details",
+      "No visible legend or title block in tile",
+      "Contour intervals observed between labeled elevation lines",
+      "Contour lines are labeled with elevation values in feet",
+      "Contour lines represent elevation changes",
+      "Contour lines labeled 1340 represent elevation in feet",
+      "Contours represent elevation in feet",
+      "Cut present due to downward slope and contour spacing pattern.",
+      "No distinct fill zones observed in tile",
+      "Scalloped line indicates fill area",
+      "Cut is indicated by the lowering of elevation from 1455 to 1440 and below",
+      "Contour lines are in 5-foot intervals based on visible elevations",
+      "Depth estimates are based on elevation differences between contour lines",
+      "Presence of contour lines with hatch marks indicating cut and fill areas",
+      "Thick lines represent existing and proposed grade changes",
+      "No numerical values are visible to determine depth or contour interval.",
+      "No fill areas are visible in this tile",
+      "Numbers on contour lines indicate elevation in feet",
+      "Fill is not indicated by hatching or secondary contour lines",
+      "The presence of different line densities and colors suggests both cut and fill areas.",
+      "Presence of cut estimated from close contour lines and topographic changes",
+      "Presence of X marks may be spot elevations or grading points",
+      "Cut presence inferred from closer contour lines and elevation drop",
+      "Presence of cut inferred from lowering of contour lines from 1370 to 1340."
+    ]
+  },
+  {
+    "feature_id": "cut_002",
+    "feature_type": "cut",
+    "geometry_type": "polygon",
+    "geometry": {
+      "points_px": [
+        [
+          1792,
+          6272
+        ],
+        [
+          2816,
+          6272
+        ],
+        [
+          2816,
+          7296
+        ],
+        [
+          1792,
+          7296
+        ]
+      ],
+      "bbox_px": {
+        "x1": 1792,
+        "y1": 6272,
+        "x2": 2816,
+        "y2": 7296
+      },
+      "centroid_px": [
+        2304,
+        6784
+      ]
+    },
+    "page": "page_001.png",
+    "source_tiles": [
+      "page_001__tile_1792_6272"
+    ],
+    "confidence": 0.85,
+    "assumptions": [
+      "Shaded areas labeled as CUT and FILL mark earthwork zones",
+      "Contour intervals appear consistent between 1 and 2 feet",
+      "Contours with elevation labels 14 to 19 indicate grading information"
+    ]
+  },
+  {
+    "feature_id": "fill_003",
+    "feature_type": "fill",
+    "geometry_type": "polygon",
+    "geometry": {
+      "points_px": [
+        [
+          4480,
+          896
+        ],
+        [
+          5504,
+          896
+        ],
+        [
+          5504,
+          1920
+        ],
+        [
+          4480,
+          1920
+        ]
+      ],
+      "bbox_px": {
+        "x1": 4480,
+        "y1": 896,
+        "x2": 5504,
+        "y2": 1920
+      },
+      "centroid_px": [
+        4992,
+        1408
+      ]
+    },
+    "page": "page_001.png",
+    "source_tiles": [
+      "page_001__tile_4480_896"
+    ],
+    "confidence": 0.8,
+    "assumptions": [
+      "Contour interval estimated based on numbering (1415 to 1455) and spacing",
+      "No cut indicators (such as hachures) are visible, so no cut is assumed",
+      "Presence of fill is inferred from direction of elevation increase upward toward the top of the image",
+      "Contour lines indicate elevation changes"
+    ]
+  },
+  {
+    "feature_id": "fill_004",
+    "feature_type": "fill",
+    "geometry_type": "polygon",
+    "geometry": {
+      "points_px": [
+        [
+          8064,
+          896
+        ],
+        [
+          9088,
+          896
+        ],
+        [
+          9088,
+          1920
+        ],
+        [
+          8064,
+          1920
+        ]
+      ],
+      "bbox_px": {
+        "x1": 8064,
+        "y1": 896,
+        "x2": 9088,
+        "y2": 1920
+      },
+      "centroid_px": [
+        8576,
+        1408
+      ]
+    },
+    "page": "page_001.png",
+    "source_tiles": [
+      "page_001__tile_8064_896"
+    ],
+    "confidence": 0.85,
+    "assumptions": [
+      "Green shaded area represents fill zone.",
+      "No contour interval markings visible.",
+      "Blue lines likely indicate grading boundaries.",
+      "No visible cut patterns or hatching."
+    ]
+  }
+]

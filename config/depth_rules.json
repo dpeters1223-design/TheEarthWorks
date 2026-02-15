@@ -1,0 +1,4 @@
+{
+  "cut":  { "min_ft": 2, "max_ft": 5, "confidence": 0.6 },
+  "fill": { "min_ft": 1, "max_ft": 3, "confidence": 0.6 }
+}
