@@ -1,48 +1,36 @@
 # pdf_to_png.py
+# Converts each page of every PDF in Input/ to a PNG using PyMuPDF (no poppler needed).
+# Output: Input/{stem}_page_1.png, Input/{stem}_page_2.png, ...
 
 from pathlib import Path
-from pdf2image import convert_from_path
+import fitz  # PyMuPDF
 
-# Folder containing PDFs
-INPUT_DIR = Path("Input")
-
-# Output PNGs will be saved in same folder
+INPUT_DIR  = Path("Input")
 OUTPUT_DIR = INPUT_DIR
+DPI        = 300
 
-# MacPorts poppler location
-POPPLER_PATH = "/opt/local/bin"
-
-# Find all PDFs
-pdf_files = list(INPUT_DIR.glob("*.pdf"))
+pdf_files = list({p.resolve() for p in INPUT_DIR.glob("*.pdf")} |
+                 {p.resolve() for p in INPUT_DIR.glob("*.PDF")})
 
 if not pdf_files:
-    print("No PDFs found in Input folder.")
+    print("No PDFs found in Input/ folder.")
     exit()
 
 print(f"Found {len(pdf_files)} PDF(s)\n")
 
 for pdf_path in pdf_files:
-
     print(f"Converting: {pdf_path.name}")
-
     try:
-
-        pages = convert_from_path(
-            pdf_path,
-            dpi=300,
-            poppler_path=POPPLER_PATH
-        )
-
-        for i, page in enumerate(pages):
-
-            output_file = OUTPUT_DIR / f"{pdf_path.stem}_page_{i+1}.png"
-
-            page.save(output_file, "PNG")
-
-            print(f"Saved: {output_file.name}")
-
+        doc = fitz.open(str(pdf_path))
+        mat = fitz.Matrix(DPI / 72, DPI / 72)   # scale factor for target DPI
+        for i in range(doc.page_count):
+            page = doc[i]
+            pix  = page.get_pixmap(matrix=mat)
+            out  = OUTPUT_DIR / f"{pdf_path.stem}_page_{i + 1}.png"
+            pix.save(str(out))
+            print(f"  Saved: {out.name}  ({pix.width}×{pix.height}px)")
+        doc.close()
     except Exception as e:
-
-        print(f"ERROR converting {pdf_path.name}: {e}")
+        print(f"  ERROR: {e}")
 
 print("\nDone.")

@@ -1,49 +1,64 @@
 # extract_scale.py
-# Phase 3 scale extraction
-# Extract scale bars anywhere on each PDF page and return feet per pixel plus bar bounding box
-# Output is a per page list of scale bar candidates so later takeoff features can select the nearest scale
+# Detects graphic scale bars on every grading page via OpenAI Vision.
+# Uses PyMuPDF to render pages (no poppler dependency).
+# Page naming matches the new pipeline: {stem}_page_N.png
+#
+# Reads:  outputs/sheet_classification.json  (to limit to grading pages)
+# Output: outputs/page_scale.json
 
-import json
 import base64
 import io
+import json
 import os
+import re
 from pathlib import Path
 
-from pdf2image import convert_from_path
-from PIL import Image
+import fitz
 from dotenv import load_dotenv
 from openai import OpenAI
 
-PDF_PATH = Path("input/site_plan.pdf")
-OUT_DIR = Path("outputs")
-OUT_JSON = OUT_DIR / "page_scale.json"
+BASE_DIR   = Path(__file__).parent
+INPUT_DIR  = BASE_DIR / "Input"
+SHEET_FILE = BASE_DIR / "outputs" / "sheet_classification.json"
+OUT_FILE   = BASE_DIR / "outputs" / "page_scale.json"
 
-DPI = 200
-POPPLER_PATH = "/opt/local/bin"
+DPI   = 200
 MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
 
-def image_to_data_url(img: Image.Image) -> str:
-    buf = io.BytesIO()
-    img.convert("RGB").save(buf, format="PNG")
-    b64 = base64.b64encode(buf.getvalue()).decode("utf-8")
+GRADING_TYPES = {
+    "SITE_GRADING_PLAN", "GRADING_PLAN",
+    "EXISTING_CONDITIONS_PLAN",
+    "BASE_GRADING_PLAN",
+    "FINAL_GRADING_PLAN",
+}
+
+load_dotenv(BASE_DIR / ".env")
+
+
+# ------------------------------------------------------------------
+# Helpers
+# ------------------------------------------------------------------
+
+def image_to_data_url(pix: fitz.Pixmap) -> str:
+    buf = io.BytesIO(pix.tobytes("png"))
+    b64 = base64.b64encode(buf.getvalue()).decode()
     return f"data:image/png;base64,{b64}"
 
-def extract_text(resp) -> str:
-    texts = []
-    for item in resp.output:
-        if hasattr(item, "content"):
-            for c in item.content:
-                if getattr(c, "type", None) == "output_text":
-                    texts.append(c.text)
-    return "\n".join(texts).strip()
 
-def clean_json_text(text: str) -> str:
-    text = text.strip()
-    if text.startswith("```"):
-        parts = text.split("```")
-        if len(parts) >= 2:
-            text = parts[1]
-    return text.strip()
+def parse_page_number(filename: str):
+    m = re.search(r"_page_(\d+)\.png$", filename, re.IGNORECASE)
+    if m:
+        return filename[:m.start()], int(m.group(1))
+    return Path(filename).stem, 1
+
+
+def find_pdf(stem: str) -> Path:
+    for ext in (".pdf", ".PDF"):
+        p = INPUT_DIR / (stem + ext)
+        if p.exists():
+            return p
+    raise FileNotFoundError(f"Cannot find {stem}.pdf in {INPUT_DIR}/")
+
 
 def safe_float(x):
     try:
@@ -51,131 +66,157 @@ def safe_float(x):
     except Exception:
         return None
 
-def compute_feet_per_pixel(bar_feet_length, bar_pixel_length):
-    if bar_feet_length is None or bar_pixel_length is None:
-        return None
-    if bar_pixel_length <= 0:
-        return None
-    return bar_feet_length / bar_pixel_length
 
-def analyze_page(client: OpenAI, img: Image.Image, page_num: int) -> dict:
-    width, height = img.size
+def clean_json(text: str) -> str:
+    text = text.strip()
+    if text.startswith("```"):
+        parts = text.split("```")
+        if len(parts) >= 2:
+            text = parts[1]
+            lines = text.split("\n", 1)
+            if len(lines) == 2 and not lines[0].strip().startswith("{"):
+                text = lines[1]
+    return text.strip()
 
-    prompt = (
-        "You are analyzing a full page from a civil plan set.\n"
-        "Detect graphic scale bars. A scale bar is typically a segmented horizontal bar with labels like 0, 120', 240' or 0, 20, 40.\n"
-        "The scale bar can appear anywhere on the page near the bottom of a drawing viewport.\n\n"
-        "Return ONLY valid JSON.\n"
-        "Return this schema exactly:\n"
-        "{\n"
-        "  \"scale_bars\": [\n"
-        "    {\n"
-        "      \"bar_detected\": true,\n"
-        "      \"bar_pixel_length\": <number>,\n"
-        "      \"bar_feet_length\": <number>,\n"
-        "      \"bar_bbox\": {\"x1\": <number>, \"y1\": <number>, \"x2\": <number>, \"y2\": <number>},\n"
-        "      \"confidence\": <number>,\n"
-        "      \"assumptions\": [<string>, ...]\n"
-        "    }\n"
-        "  ]\n"
-        "}\n\n"
-        "Notes:\n"
-        "bar_bbox is the bounding box around the visible scale bar itself in pixel coordinates on the full page image.\n"
-        "If no scale bars exist, return scale_bars as an empty list.\n"
-        "If there are multiple scale bars, include them all.\n"
-    )
+
+PROMPT = """You are analyzing a civil engineering plan sheet.
+Find all graphic scale bars. A scale bar is a segmented horizontal bar with
+numeric labels like "0  120  240" or "0  50  100" — usually near the bottom
+of a drawing viewport.
+
+Return ONLY valid JSON, no markdown fences:
+{
+  "scale_bars": [
+    {
+      "bar_detected": true,
+      "bar_pixel_length": <number>,
+      "bar_feet_length": <number>,
+      "bar_bbox": {"x1": <n>, "y1": <n>, "x2": <n>, "y2": <n>},
+      "confidence": <0.0–1.0>,
+      "assumptions": ["..."]
+    }
+  ]
+}
+
+If no scale bar is visible, return scale_bars as an empty list.
+If there are multiple scale bars, include them all.
+Pixel coordinates are in the full page image you received."""
+
+
+def analyze_page(client: OpenAI, pix: fitz.Pixmap, file_name: str) -> dict:
+    base = {
+        "page": file_name,
+        "page_width_px":  pix.width,
+        "page_height_px": pix.height,
+        "scale_bars": [],
+        "assumptions": [],
+    }
 
     resp = client.responses.create(
         model=MODEL,
-        input=[{
-            "role": "user",
-            "content": [
-                {"type": "input_text", "text": prompt},
-                {"type": "input_image", "image_url": image_to_data_url(img)},
-            ],
-        }],
+        input=[{"role": "user", "content": [
+            {"type": "input_text",  "text": PROMPT},
+            {"type": "input_image", "image_url": image_to_data_url(pix)},
+        ]}],
     )
 
-    raw = extract_text(resp)
-    cleaned = clean_json_text(raw) if raw else ""
-
-    base = {
-        "page": f"page_{page_num:03d}.png",
-        "page_width_px": width,
-        "page_height_px": height,
-        "scale_bars": [],
-        "assumptions": []
-    }
-
-    if not cleaned:
+    raw = ""
+    for item in resp.output:
+        if hasattr(item, "content"):
+            for c in item.content:
+                if getattr(c, "type", None) == "output_text":
+                    raw += c.text
+    raw = clean_json(raw.strip())
+    if not raw:
         base["assumptions"] = ["Model returned no parsable text"]
         return base
 
     try:
-        data = json.loads(cleaned)
-    except json.JSONDecodeError:
-        base["assumptions"] = ["Model response was not valid JSON", cleaned[:200]]
+        data = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        base["assumptions"] = [f"JSON parse error: {exc}", raw[:200]]
         return base
 
-    bars = data.get("scale_bars", [])
-    if not isinstance(bars, list):
-        base["assumptions"] = ["scale_bars was not a list"]
-        return base
-
-    normalized = []
-    for b in bars:
-        if not isinstance(b, dict):
-            continue
-
-        bar_detected = bool(b.get("bar_detected", False))
-        bar_pixel_length = safe_float(b.get("bar_pixel_length"))
-        bar_feet_length = safe_float(b.get("bar_feet_length"))
-
-        bbox = b.get("bar_bbox", {}) or {}
-        x1 = safe_float(bbox.get("x1"))
-        y1 = safe_float(bbox.get("y1"))
-        x2 = safe_float(bbox.get("x2"))
-        y2 = safe_float(bbox.get("y2"))
-
-        conf = safe_float(b.get("confidence"))
-        if conf is None:
-            conf = 0.0
-
-        fpp = compute_feet_per_pixel(bar_feet_length, bar_pixel_length)
-
-        normalized.append({
-            "bar_detected": bar_detected,
-            "bar_pixel_length": bar_pixel_length,
-            "bar_feet_length": bar_feet_length,
-            "feet_per_pixel": round(fpp, 6) if fpp else None,
-            "bar_bbox": {"x1": x1, "y1": y1, "x2": x2, "y2": y2},
-            "confidence": conf,
-            "assumptions": b.get("assumptions", [])
+    bars = []
+    for b in (data.get("scale_bars") or []):
+        bpl  = safe_float(b.get("bar_pixel_length"))
+        bfl  = safe_float(b.get("bar_feet_length"))
+        fpp  = (bfl / bpl) if (bpl and bfl and bpl > 0) else None
+        bbox = b.get("bar_bbox") or {}
+        bars.append({
+            "bar_detected":    bool(b.get("bar_detected", False)),
+            "bar_pixel_length": bpl,
+            "bar_feet_length":  bfl,
+            "feet_per_pixel":   round(fpp, 6) if fpp else None,
+            "bar_bbox": {
+                "x1": safe_float(bbox.get("x1")),
+                "y1": safe_float(bbox.get("y1")),
+                "x2": safe_float(bbox.get("x2")),
+                "y2": safe_float(bbox.get("y2")),
+            },
+            "confidence": safe_float(b.get("confidence")) or 0.0,
+            "assumptions": b.get("assumptions", []),
         })
 
-    base["scale_bars"] = normalized
+    base["scale_bars"] = bars
     return base
 
+
+# ------------------------------------------------------------------
+# Main
+# ------------------------------------------------------------------
+
 def main():
-    load_dotenv()
+    if not SHEET_FILE.exists():
+        raise FileNotFoundError(f"Missing {SHEET_FILE}. Run classify_sheets.py first.")
 
-    if not PDF_PATH.exists():
-        raise FileNotFoundError("input/site_plan.pdf not found")
+    classifications = json.loads(SHEET_FILE.read_text())
+    grading_entries = [
+        e for e in classifications
+        if e.get("sheet_type") in GRADING_TYPES and e.get("confidence", 0) >= 0.5
+    ]
 
-    OUT_DIR.mkdir(exist_ok=True)
+    if not grading_entries:
+        print("No grading pages found — running scale extraction on all pages.")
+        grading_entries = classifications   # fallback: process everything
 
-    print("Rendering PDF pages for scale extraction...")
-    pages = convert_from_path(PDF_PATH, dpi=DPI, poppler_path=POPPLER_PATH)
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-    client = OpenAI()
+    # Group by PDF stem so each PDF is opened once
+    by_pdf: dict[str, list] = {}
+    for entry in grading_entries:
+        stem, page_num = parse_page_number(entry["file"])
+        by_pdf.setdefault(stem, []).append((page_num, entry["file"]))
+
+    mat = fitz.Matrix(DPI / 72, DPI / 72)
     results = []
 
-    for i, page_img in enumerate(pages, start=1):
-        print(f"Analyzing scale bars on page {i}")
-        results.append(analyze_page(client, page_img, i))
+    for stem, pages in by_pdf.items():
+        pdf_path = find_pdf(stem)
+        print(f"Opening {pdf_path.name} ...")
+        doc = fitz.open(str(pdf_path))
 
-    OUT_JSON.write_text(json.dumps(results, indent=2))
-    print(f"Wrote {OUT_JSON}")
+        for page_num, file_name in sorted(pages):
+            idx = page_num - 1
+            if idx < 0 or idx >= doc.page_count:
+                print(f"  Page {page_num} out of range — skipping")
+                continue
+            print(f"  [page {page_num}] {file_name} — detecting scale bar ...")
+            pix    = doc[idx].get_pixmap(matrix=mat)
+            result = analyze_page(client, pix, file_name)
+            n_bars = len([b for b in result["scale_bars"] if b.get("bar_detected")])
+            best   = next((b["feet_per_pixel"] for b in result["scale_bars"]
+                           if b.get("feet_per_pixel")), None)
+            print(f"    {n_bars} scale bar(s) found"
+                  + (f", best fpp={best:.6f}" if best else ""))
+            results.append(result)
+
+        doc.close()
+
+    OUT_FILE.parent.mkdir(exist_ok=True)
+    OUT_FILE.write_text(json.dumps(results, indent=2))
+    print(f"\nWrote {OUT_FILE}")
+
 
 if __name__ == "__main__":
     main()

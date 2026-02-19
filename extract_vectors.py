@@ -1,4 +1,4 @@
-"""extract_vectors.py
+""""extract_vectors.py
 
 Extracts raw vector geometry and text from grading plan PDF pages using PyMuPDF.
 
@@ -25,7 +25,12 @@ SHEET_CLASS_FILE = BASE_DIR / "outputs" / "sheet_classification.json"
 INPUT_DIR = BASE_DIR / "Input"
 OUTPUT_FILE = BASE_DIR / "outputs" / "vectors.json"
 
-GRADING_TYPES = {"SITE_GRADING_PLAN", "GRADING_PLAN", "FINAL_GRADING_PLAN", "BASE_GRADING_PLAN"}
+GRADING_TYPES = {
+    "SITE_GRADING_PLAN", "GRADING_PLAN",
+    "EXISTING_CONDITIONS_PLAN",
+    "BASE_GRADING_PLAN",
+    "FINAL_GRADING_PLAN",
+}
 MIN_CONFIDENCE = 0.5
 
 # Matches bare 3–4 digit numbers (optionally one decimal place): 570, 1344, 594.5

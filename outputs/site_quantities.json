@@ -1,0 +1,13 @@
+[
+  {
+    "page": "combined",
+    "total_cut_cy": 2040004.9,
+    "total_fill_cy": 352570.4,
+    "net_cy": 1687434.5,
+    "net_type": "cut",
+    "cells_computed": 23439,
+    "cells_undetermined": 15629,
+    "cells_skipped": 49096,
+    "grid_resolution_ft": 25
+  }
+]

@@ -1,12 +1,42 @@
 [
   {
-    "file": "site_plan_page_1.png",
-    "sheet_type": "SITE_GRADING_PLAN",
+    "file": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_1.png",
+    "sheet_type": "TITLE_SHEET",
     "confidence": 1.0
   },
   {
-    "file": "site_plan.png",
-    "sheet_type": "ERROR",
-    "confidence": 0.0
+    "file": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_2.png",
+    "sheet_type": "EXISTING_CONDITIONS_PLAN",
+    "confidence": 1.0
+  },
+  {
+    "file": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_3.png",
+    "sheet_type": "BASE_GRADING_PLAN",
+    "confidence": 1.0
+  },
+  {
+    "file": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_4.png",
+    "sheet_type": "FINAL_GRADING_PLAN",
+    "confidence": 1.0
+  },
+  {
+    "file": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_5.png",
+    "sheet_type": "SEDIMENT_CONTROL_PLAN",
+    "confidence": 1.0
+  },
+  {
+    "file": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_6.png",
+    "sheet_type": "EROSION_CONTROL_PLAN",
+    "confidence": 0.95
+  },
+  {
+    "file": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_7.png",
+    "sheet_type": "DETAILS",
+    "confidence": 0.95
+  },
+  {
+    "file": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_8.png",
+    "sheet_type": "DETAILS",
+    "confidence": 0.95
   }
 ]

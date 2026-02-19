@@ -1,25 +1,59 @@
 [
   {
-    "page": "page_001.png",
-    "page_width_px": 6800,
-    "page_height_px": 4400,
+    "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_2.png",
+    "page_width_px": 7200,
+    "page_height_px": 4800,
+    "scale_bars": [],
+    "assumptions": []
+  },
+  {
+    "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_3.png",
+    "page_width_px": 7200,
+    "page_height_px": 4800,
     "scale_bars": [
       {
         "bar_detected": true,
-        "bar_pixel_length": 162.0,
-        "bar_feet_length": 240.0,
-        "feet_per_pixel": 1.481481,
+        "bar_pixel_length": 151.0,
+        "bar_feet_length": 300.0,
+        "feet_per_pixel": 1.986755,
         "bar_bbox": {
-          "x1": 1070.0,
-          "y1": 970.0,
-          "x2": 1232.0,
-          "y2": 990.0
+          "x1": 1052.0,
+          "y1": 987.0,
+          "x2": 1203.0,
+          "y2": 1007.0
         },
         "confidence": 0.95,
         "assumptions": [
-          "The segmented horizontal bar with labels '0', '120', '240' at the bottom right of the drawing viewport represents a scale bar.",
-          "The pixel length is measured by the bounding box around the scale bar graphic on the page image.",
-          "The feet length is inferred from the numeric labels associated with the scale bar."
+          "The bar is segmented and located near the bottom of the drawing viewport.",
+          "Numeric labels '0', '150', and '300' are visible under the bar.",
+          "The label 'GRAPHIC SCALE' is just above the scale bar.",
+          "Feet units are indicated below the scale numbers."
+        ]
+      }
+    ],
+    "assumptions": []
+  },
+  {
+    "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_4.png",
+    "page_width_px": 7200,
+    "page_height_px": 4800,
+    "scale_bars": [
+      {
+        "bar_detected": true,
+        "bar_pixel_length": 158.0,
+        "bar_feet_length": 300.0,
+        "feet_per_pixel": 1.898734,
+        "bar_bbox": {
+          "x1": 1248.0,
+          "y1": 1371.0,
+          "x2": 1406.0,
+          "y2": 1392.0
+        },
+        "confidence": 0.95,
+        "assumptions": [
+          "Detected a segmented horizontal bar with numeric labels '0 150 300' below the plan near the bottom right.",
+          "Pixel length measured by the bar ends in the image.",
+          "Feet length inferred from numeric labels on the scale bar."
         ]
       }
     ],

@@ -30,6 +30,8 @@ GRID_RESOLUTION_FT   = 25    # ft — size of each grid cell
 IDW_K                = 12    # nearest neighbours for IDW
 IDW_POWER            = 2     # distance weighting exponent
 CHUNK_SIZE           = 1000  # grid points processed per batch (memory control)
+MAX_INTERP_DIST_FT   = 300   # cells farther than this from any sample point → null
+                              # prevents wild extrapolation into data-sparse zones
 
 
 # ------------------------------------------------------------------
@@ -82,12 +84,25 @@ def idw_batch(gx: np.ndarray, gy: np.ndarray,
     return interp
 
 
+def nearest_dist(gx: np.ndarray, gy: np.ndarray,
+                 sx: np.ndarray, sy: np.ndarray) -> np.ndarray:
+    """Return distance (ft) from each grid point to its nearest sample point."""
+    result = np.empty(len(gx))
+    for start in range(0, len(gx), CHUNK_SIZE):
+        end = min(start + CHUNK_SIZE, len(gx))
+        dx  = gx[start:end, np.newaxis] - sx[np.newaxis, :]
+        dy  = gy[start:end, np.newaxis] - sy[np.newaxis, :]
+        result[start:end] = np.sqrt((dx*dx + dy*dy).min(axis=1))
+    return result
+
+
 def interpolate_surface(sample_pts: np.ndarray,
                         inside_mask: np.ndarray,
                         gx_all: np.ndarray,
                         gy_all: np.ndarray) -> np.ndarray:
     """
-    Interpolate for all grid points that are inside the LOD boundary.
+    Interpolate for grid points inside the LOD boundary AND within
+    MAX_INTERP_DIST_FT of a sample point.
     Returns 1-D array of float or NaN (same length as gx_all).
     """
     result = np.full(len(gx_all), np.nan)
@@ -101,6 +116,16 @@ def interpolate_surface(sample_pts: np.ndarray,
     sx    = sample_pts[:, 0]
     sy    = sample_pts[:, 1]
     sz    = sample_pts[:, 2]
+
+    # Mask out cells that are too far from any sample point
+    near_dist = nearest_dist(gx_in, gy_in, sx, sy)
+    in_range  = near_dist <= MAX_INTERP_DIST_FT
+    n_dropped = int((~in_range).sum())
+    if n_dropped:
+        print(f"    {n_dropped:,} cells beyond {MAX_INTERP_DIST_FT} ft — set to null")
+    inside_idx = inside_idx[in_range]
+    gx_in = gx_in[in_range]
+    gy_in = gy_in[in_range]
 
     # Process in chunks to control peak memory
     vals = np.empty(len(inside_idx))
@@ -252,6 +277,36 @@ def build_surface_model(page_entry: dict) -> dict:
     }
 
 
+def filter_by_range(pts: np.ndarray, z_min: float, z_max: float, label: str) -> np.ndarray:
+    """Remove points whose elevation falls outside [z_min, z_max]."""
+    keep = (pts[:, 2] >= z_min) & (pts[:, 2] <= z_max)
+    n_removed = int((~keep).sum())
+    if n_removed > 0:
+        print(f"  Range filter ({label}): removed {n_removed} points "
+              f"outside z=[{z_min:.1f}, {z_max:.1f}] ft")
+    return pts[keep]
+
+
+def lod_covers_site(lod: list, all_pts: np.ndarray, min_fraction: float = 0.25) -> bool:
+    """
+    Return True only if the LOD boundary bounding box covers at least
+    min_fraction of the point-cloud bounding box in both x and y.
+
+    This guards against picking up small annotation elements (title block
+    borders, callout boxes) as the LOD boundary.
+    """
+    if len(lod) < 3 or len(all_pts) == 0:
+        return False
+    lod_arr = np.array(lod, dtype=float)
+    pts_dx  = float(all_pts[:, 0].max() - all_pts[:, 0].min())
+    pts_dy  = float(all_pts[:, 1].max() - all_pts[:, 1].min())
+    lod_dx  = float(lod_arr[:, 0].max() - lod_arr[:, 0].min())
+    lod_dy  = float(lod_arr[:, 1].max() - lod_arr[:, 1].min())
+    if pts_dx < 1 or pts_dy < 1:
+        return True  # degenerate point cloud — accept whatever we have
+    return (lod_dx / pts_dx) >= min_fraction and (lod_dy / pts_dy) >= min_fraction
+
+
 def main():
     if not LABELED_CONTOURS.exists():
         raise FileNotFoundError(
@@ -260,14 +315,87 @@ def main():
 
     pages = json.loads(LABELED_CONTOURS.read_text())
 
-    results = []
-    for entry in pages:
-        print(f"\nReconstructing surface for {entry['page']} ...")
-        result = build_surface_model(entry)
-        results.append(result)
+    # Aggregate existing and proposed points across all pages.
+    # Each page sheet type determines whether its contours are existing or proposed.
+    # A page may contribute to only one surface (e.g. EXISTING_CONDITIONS_PLAN),
+    # so we merge across pages to get both surfaces for the full site.
+    all_existing: list = []
+    all_proposed: list = []
+    lod_candidates: list[list] = []   # collect all non-empty LOD polygons for validation
+    page_names: list[str] = []
+
+    for page in pages:
+        page_names.append(page["page"])
+        ex = page.get("existing_points", [])
+        pr = page.get("proposed_points", [])
+        if ex:
+            all_existing.extend(ex)
+        if pr:
+            all_proposed.extend(pr)
+        lod = page.get("lod_boundary", [])
+        if len(lod) >= 3:
+            lod_candidates.append(lod)
+
+    print(f"Aggregated from {len(pages)} page(s):")
+    print(f"  Raw existing points : {len(all_existing)}")
+    print(f"  Raw proposed points : {len(all_proposed)}")
+
+    # --- Cross-surface elevation filtering -----------------------------------
+    # Remove existing points that fall far outside the proposed elevation range.
+    # This eliminates scale-bar numbers and other annotation text that were
+    # mis-identified as elevation labels on the existing conditions sheet.
+    CROSS_SURFACE_TOLERANCE_FT = 50.0
+
+    if all_existing and all_proposed:
+        pr_arr = np.array(all_proposed, dtype=float)
+        pr_z_min = float(pr_arr[:, 2].min())
+        pr_z_max = float(pr_arr[:, 2].max())
+        ex_arr = np.array(all_existing, dtype=float)
+        ex_arr = filter_by_range(
+            ex_arr,
+            pr_z_min - CROSS_SURFACE_TOLERANCE_FT,
+            pr_z_max + CROSS_SURFACE_TOLERANCE_FT,
+            "existing (cross-surface)"
+        )
+        all_existing = ex_arr.tolist()
+
+    print(f"  Filtered existing   : {len(all_existing)}")
+
+    # --- LOD boundary validation ---------------------------------------------
+    # Use the first LOD polygon whose bounding box covers at least 25 % of the
+    # combined point-cloud extent.  Tiny polygons (e.g. title block borders)
+    # that were mis-classified as LOD are discarded.
+    lod_boundary: list = []
+    all_pts_arr = np.array(all_existing + all_proposed, dtype=float) if (all_existing or all_proposed) else np.empty((0, 3))
+
+    for lod in lod_candidates:
+        if lod_covers_site(lod, all_pts_arr):
+            lod_boundary = lod
+            print(f"  LOD boundary: accepted polygon with {len(lod)} vertices")
+            break
+        else:
+            lod_arr = np.array(lod, dtype=float)
+            print(f"  LOD boundary: rejected polygon with {len(lod)} vertices "
+                  f"(extent {lod_arr[:,0].max()-lod_arr[:,0].min():.0f}x"
+                  f"{lod_arr[:,1].max()-lod_arr[:,1].min():.0f} ft — too small)")
+
+    if not lod_boundary:
+        print("  LOD boundary: none valid — will use point cloud bounding box")
+
+    combined_name = page_names[0] if len(page_names) == 1 else "combined"
+    combined = {
+        "page":            combined_name,
+        "existing_points": all_existing,
+        "proposed_points": all_proposed,
+        "lod_boundary":    lod_boundary,
+    }
+
+    print(f"\nReconstructing surface ...")
+    result = build_surface_model(combined)
 
     OUTPUT_FILE.parent.mkdir(exist_ok=True)
-    OUTPUT_FILE.write_text(json.dumps(results, indent=2))
+    # Wrap in a list for compatibility with compute_cut_fill.py which iterates pages
+    OUTPUT_FILE.write_text(json.dumps([result], indent=2))
     print(f"\nWrote {OUTPUT_FILE}")
 
 

@@ -47,14 +47,24 @@ def classify_page(image_path):
                         "type": "input_text",
                         "text":
                         """
-Classify this civil engineering sheet.
+Classify this civil engineering plan sheet by reading the sheet title, title block, and drawing content.
 
-Return ONLY JSON:
-
+Return ONLY JSON (no markdown fences):
 {
-  "sheet_type": "SITE_GRADING_PLAN | EROSION_CONTROL_PLAN | DETAILS | TITLE_SHEET | OTHER",
+  "sheet_type": "<TYPE>",
   "confidence": 0.0 to 1.0
 }
+
+Sheet types — choose the most specific match:
+  EXISTING_CONDITIONS_PLAN  - shows existing / pre-construction topography or site conditions
+  BASE_GRADING_PLAN         - shows subgrade or intermediate grading (before cap or final surface layers)
+  FINAL_GRADING_PLAN        - shows the finished / proposed grade after all construction
+  SITE_GRADING_PLAN         - generic grading plan where existing and proposed are both on one sheet
+  EROSION_CONTROL_PLAN      - erosion and sediment control
+  SEDIMENT_CONTROL_PLAN     - sediment or stormwater control
+  DETAILS                   - construction details, sections, or typical sections
+  TITLE_SHEET               - cover sheet, general notes, index, or legend
+  OTHER                     - anything else
 """
                     },
                     {
@@ -67,6 +77,13 @@ Return ONLY JSON:
     )
 
     text = response.output_text.strip()
+    if text.startswith("```"):
+        parts = text.split("```")
+        if len(parts) >= 2:
+            inner = parts[1]
+            lines = inner.split("\n", 1)
+            text = lines[1] if len(lines) == 2 and not lines[0].strip().startswith("{") else inner
+        text = text.strip()
 
     try:
         return json.loads(text)
@@ -102,7 +119,7 @@ def main():
                 "confidence": result["confidence"]
             })
 
-            print(f"{image_path.name} → {result}")
+            print(f"{image_path.name} -> {result}")
 
         except Exception as e:
 
@@ -118,7 +135,7 @@ def main():
     with open(OUTPUT_FILE, "w") as f:
         json.dump(results, f, indent=2)
 
-    print(f"\nSaved → {OUTPUT_FILE}")
+    print(f"\nSaved -> {OUTPUT_FILE}")
 
 
 # --------------------------------------------------

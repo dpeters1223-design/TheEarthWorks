@@ -49,17 +49,23 @@ python aggregate.py           # Produce final site_summary.json
 
 ### Contour-Based Pipeline (elevation-accurate)
 
-An alternative, more accurate pipeline reconstructs terrain surfaces from contour data:
+An alternative, more accurate pipeline reconstructs terrain surfaces directly from vector contour data:
 
 ```bash
 python pdf_to_png.py             # Convert PDF pages to PNG (Input/*.png)
 python classify_sheets.py        # Classify pages (outputs/sheet_classification.json)
-python grading_sheet_router.py   # Filter to grading pages (outputs/grading_pages.json)
 python extract_scale.py          # Detect graphic scale bars (outputs/page_scale.json)
-python extract_contours.py       # Extract elevation labels via Vision API (outputs/contours.json)
-python reconstruct_surface.py    # IDW interpolation of existing/proposed surfaces (outputs/surface_model.json)
+python extract_vectors.py        # Extract raw vector paths + text from grading pages (outputs/vectors.json)
+python label_contours.py         # Classify paths by line width, match elevation labels, propagate labels (outputs/labeled_contours.json)
+python reconstruct_surface.py    # Aggregate cross-page, filter outliers, IDW interpolation (outputs/surface_model.json)
 python compute_cut_fill.py       # Diff surfaces → cut/fill volumes (outputs/site_quantities.json)
 ```
+
+**Key design decisions for this pipeline:**
+- `label_contours.py` uses a unified scale (highest-confidence scale bar across all pages) so coordinates from multiple pages are in the same real-world feet space.
+- For landfill closure projects: `BASE_GRADING_PLAN` pages are treated as the "existing" (subgrade baseline) surface and `FINAL_GRADING_PLAN` as the "proposed" (finished cap) surface. This computes the cap-layer earthwork volume.
+- `reconstruct_surface.py` aggregates existing points from all pages that have them and proposed from all proposed-type pages; applies cross-surface elevation filtering to remove noise (scale bar numbers mis-identified as elevation labels); validates LOD boundary size before applying it.
+- `grading_sheet_router.py` and `extract_contours.py` are the Vision-API alternative for sheets where vector extraction fails.
 
 All intermediate and final outputs land in `outputs/` as JSON files.
 

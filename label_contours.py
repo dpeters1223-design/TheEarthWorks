@@ -27,17 +27,24 @@ SCALE_FILE     = BASE_DIR / "outputs" / "page_scale.json"
 OUTPUT_FILE    = BASE_DIR / "outputs" / "labeled_contours.json"
 
 # ------------------------------------------------------------------
-# Width thresholds (PDF points).  Inspect vector_overlay.png and the
-# width histogram printed by extract_vectors.py to tune for your drawing.
+# Width thresholds (PDF points).
+#
+# These vary by CAD office / drawing standard. Run extract_vectors.py
+# first and check the width histogram it prints, then set the ranges
+# to bracket the correct groups.
+#
+# Example values observed:
+#   site_plan.pdf  → proposed=3.36, existing=0.84, LOD=6.0
+#   Palmyra PDF    → proposed=1.26, existing=0.90, LOD=1.62
 # ------------------------------------------------------------------
-PROPOSED_WIDTH_MIN = 3.0
-PROPOSED_WIDTH_MAX = 4.0
+PROPOSED_WIDTH_MIN = 1.10
+PROPOSED_WIDTH_MAX = 1.45
 
-EXISTING_WIDTH_MIN = 0.75
-EXISTING_WIDTH_MAX = 0.92
+EXISTING_WIDTH_MIN = 0.82
+EXISTING_WIDTH_MAX = 0.98
 
-LOD_WIDTH_MIN = 5.0
-LOD_WIDTH_MAX = 7.0
+LOD_WIDTH_MIN = 1.50
+LOD_WIDTH_MAX = 1.75
 
 # A label is matched to the NEAREST contour path.
 # Labels whose closest path is farther than this (pts) are flagged unmatched.
@@ -51,6 +58,28 @@ LOD_CHAIN_GAP_PTS = 40.0
 # two paths are considered connected if any endpoint pair is within this
 # many pts (median gap is ~7 pts; max observed ~18 pts).
 CHAIN_GAP_PTS = 25.0
+
+# ------------------------------------------------------------------
+# Surface role assignment by sheet type
+#
+# Drives whether ALL contours on a page are treated as existing or
+# proposed, regardless of line weight.  Use MIXED for pages that have
+# both on the same sheet (distinguished by line weight).
+# ------------------------------------------------------------------
+# For landfill closure projects the suite of plans is typically:
+#   EXISTING_CONDITIONS_PLAN  — current landfill surface (before work)
+#   BASE_GRADING_PLAN         — proposed SUBGRADE (baseline after initial grading)
+#   FINAL_GRADING_PLAN        — finished surface (top of cap)
+#
+# Comparing BASE vs. FINAL gives the cap-layer fill volume, which is the
+# primary earthwork quantity in a closure.  EXISTING_CONDITIONS_PLAN rarely
+# carries readable elevation labels (contours may be implicit or labeled only
+# at key callout spots), so it is included in EXISTING_SURFACE_TYPES but
+# the BASE_GRADING_PLAN acts as a practical "existing baseline" when the
+# pure existing sheet lacks data.
+EXISTING_SURFACE_TYPES = {"EXISTING_CONDITIONS_PLAN", "BASE_GRADING_PLAN"}
+PROPOSED_SURFACE_TYPES = {"FINAL_GRADING_PLAN"}
+MIXED_SURFACE_TYPES    = {"SITE_GRADING_PLAN", "GRADING_PLAN"}
 
 
 # ------------------------------------------------------------------
@@ -75,19 +104,42 @@ def pt_to_path_dist(lx: float, ly: float, path_points: list) -> float:
 # Scale: PDF points → real-world feet
 # ------------------------------------------------------------------
 
-def compute_feet_per_pt(page_width_pts: float, scale_entries: list) -> float | None:
+def best_feet_per_pt(scale_entries: list, page_width_pts: float) -> float | None:
     """
-    feet_per_pt = feet_per_pixel × (page_width_px / page_width_pts)
+    Compute a single, drawing-set-wide feet_per_pt from the highest-confidence
+    scale bar across ALL pages.
 
-    page_scale.json records feet_per_pixel relative to the PNG render width.
-    We convert to PDF-point scale using the ratio of px to pts widths.
+    All pages in the same drawing set are assumed to share the same physical
+    drawing scale.  Using page-specific measurements introduces coordinate
+    misalignment when the vision model reads slightly different pixel lengths
+    for nominally identical scale bars.
     """
+    best_fpp: float | None = None
+    best_conf: float = -1.0
     for entry in scale_entries:
         pw_px = entry.get("page_width_px")
+        if not pw_px:
+            continue
         for bar in entry.get("scale_bars", []):
             fpp = bar.get("feet_per_pixel")
-            if fpp and pw_px:
-                return fpp * (pw_px / page_width_pts)
+            conf = bar.get("confidence", 0.0)
+            if fpp and conf > best_conf:
+                best_fpp = fpp * (pw_px / page_width_pts)
+                best_conf = conf
+    return best_fpp
+
+
+def compute_feet_per_pt(page_name: str, page_width_pts: float,
+                        scale_entries: list) -> float | None:
+    """
+    Return a UNIFIED feet_per_pt for all pages in the drawing set, derived
+    from the highest-confidence scale bar across all pages.
+
+    Using a single scale ensures that PDF point coordinates from different pages
+    map to the same real-world feet coordinate system, which is required for
+    valid cross-page surface comparison.
+    """
+    return best_feet_per_pt(scale_entries, page_width_pts)
     return None
 
 
@@ -232,36 +284,55 @@ def chain_lod_segments(lod_paths: list) -> list:
 
 def process_page(page_data: dict, scale_entries: list) -> dict:
     page_name    = page_data["page"]
+    sheet_type   = page_data.get("sheet_type", "")
     pw_pts       = page_data["page_width_pts"]
     ph_pts       = page_data["page_height_pts"]
     paths        = page_data["paths"]
     text_elems   = page_data["text_elements"]
 
     # Scale factor
-    fpp = compute_feet_per_pt(pw_pts, scale_entries)
+    fpp = compute_feet_per_pt(page_name, pw_pts, scale_entries)
     if fpp is None:
         print(f"  Warning: no scale found for {page_name} — coordinates in pts")
         fpp = 1.0
 
-    print(f"  Scale: {fpp:.4f} ft/pt  (page {pw_pts:.0f}×{ph_pts:.0f} pts)")
+    print(f"  Sheet type: {sheet_type}")
+    print(f"  Scale: {fpp:.4f} ft/pt  (page {pw_pts:.0f}x{ph_pts:.0f} pts)")
 
-    # Classify paths
+    # Determine surface role mode from sheet type
+    if sheet_type in EXISTING_SURFACE_TYPES:
+        surface_mode = "all_existing"   # every contour = existing surface
+    elif sheet_type in PROPOSED_SURFACE_TYPES:
+        surface_mode = "all_proposed"   # every contour = proposed surface
+    else:
+        surface_mode = "mixed"          # split by line weight (old behaviour)
+
+    # Classify paths by line width
     proposed_paths = []
     existing_paths = []
     lod_paths      = []
 
     for p in paths:
         w = p["width"]
-        if PROPOSED_WIDTH_MIN <= w <= PROPOSED_WIDTH_MAX:
-            proposed_paths.append(p)
-        elif EXISTING_WIDTH_MIN <= w <= EXISTING_WIDTH_MAX:
-            existing_paths.append(p)
-        elif LOD_WIDTH_MIN <= w <= LOD_WIDTH_MAX:
+        if LOD_WIDTH_MIN <= w <= LOD_WIDTH_MAX:
             lod_paths.append(p)
+        elif surface_mode == "all_existing":
+            if PROPOSED_WIDTH_MIN <= w <= PROPOSED_WIDTH_MAX or \
+               EXISTING_WIDTH_MIN <= w <= EXISTING_WIDTH_MAX:
+                existing_paths.append(p)   # all contours go to existing
+        elif surface_mode == "all_proposed":
+            if PROPOSED_WIDTH_MIN <= w <= PROPOSED_WIDTH_MAX or \
+               EXISTING_WIDTH_MIN <= w <= EXISTING_WIDTH_MAX:
+                proposed_paths.append(p)   # all contours go to proposed
+        else:  # mixed
+            if PROPOSED_WIDTH_MIN <= w <= PROPOSED_WIDTH_MAX:
+                proposed_paths.append(p)
+            elif EXISTING_WIDTH_MIN <= w <= EXISTING_WIDTH_MAX:
+                existing_paths.append(p)
 
     print(f"  Classified: {len(proposed_paths)} proposed paths, "
           f"{len(existing_paths)} existing paths, "
-          f"{len(lod_paths)} LOD segments")
+          f"{len(lod_paths)} LOD segments  [mode={surface_mode}]")
 
     # Elevation labels
     elev_labels = [t for t in text_elems if t["is_elevation"]]
