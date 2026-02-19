@@ -47,6 +47,20 @@ python compute_quantities.py  # Calculate volumes (cu yd) and areas (sq ft)
 python aggregate.py           # Produce final site_summary.json
 ```
 
+### Contour-Based Pipeline (elevation-accurate)
+
+An alternative, more accurate pipeline reconstructs terrain surfaces from contour data:
+
+```bash
+python pdf_to_png.py             # Convert PDF pages to PNG (Input/*.png)
+python classify_sheets.py        # Classify pages (outputs/sheet_classification.json)
+python grading_sheet_router.py   # Filter to grading pages (outputs/grading_pages.json)
+python extract_scale.py          # Detect graphic scale bars (outputs/page_scale.json)
+python extract_contours.py       # Extract elevation labels via Vision API (outputs/contours.json)
+python reconstruct_surface.py    # IDW interpolation of existing/proposed surfaces (outputs/surface_model.json)
+python compute_cut_fill.py       # Diff surfaces → cut/fill volumes (outputs/site_quantities.json)
+```
+
 All intermediate and final outputs land in `outputs/` as JSON files.
 
 ## Architecture
@@ -91,3 +105,7 @@ Storage layout: `Storage/uploads/`, `Storage/renders/`, `Storage/polygons/` — 
 | `features_with_depth.json` | Features with depth ranges applied |
 | `quantities.json` | Volumes (cu yd) and areas (sq ft) per feature |
 | `site_summary.json` | Aggregated site totals with weighted confidence |
+| `grading_pages.json` | Filtered list of SITE_GRADING_PLAN pages from `grading_sheet_router.py` |
+| `contours.json` | Elevation readings per grading page from `extract_contours.py` |
+| `surface_model.json` | IDW-interpolated existing/proposed elevation grids from `reconstruct_surface.py` |
+| `site_quantities.json` | Cut/fill volumes (cu yd) per page from `compute_cut_fill.py` |
