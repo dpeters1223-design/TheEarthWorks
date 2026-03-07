@@ -2,867 +2,1884 @@
   {
     "tile": 1,
     "tile_origin_px": [
-      1593,
-      701
+      0,
+      0
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 515,
-        "y_px": 375,
-        "existing_elev_ft": 532.58,
-        "proposed_elev_ft": 525.24,
-        "confidence": 0.9,
-        "x_px_original": 2108,
-        "y_px_original": 1076,
-        "x_ft": 2792.053026666667,
-        "y_ft": 1425.1655866666667
-      },
-      {
-        "x_px": 590,
-        "y_px": 375,
-        "existing_elev_ft": 535.36,
-        "proposed_elev_ft": 528.02,
-        "confidence": 0.9,
-        "x_px_original": 2183,
-        "y_px_original": 1076,
-        "x_ft": 2891.3907766666666,
-        "y_ft": 1425.1655866666667
-      },
-      {
-        "x_px": 655,
-        "y_px": 375,
-        "existing_elev_ft": 535.28,
-        "proposed_elev_ft": 528.68,
-        "confidence": 0.9,
-        "x_px_original": 2248,
-        "y_px_original": 1076,
-        "x_ft": 2977.4834933333336,
-        "y_ft": 1425.1655866666667
-      },
-      {
-        "x_px": 1280,
-        "y_px": 385,
-        "existing_elev_ft": null,
-        "proposed_elev_ft": 558.0,
-        "confidence": 0.9,
-        "x_px_original": 2873,
-        "y_px_original": 1086,
-        "x_ft": 3805.298076666667,
-        "y_ft": 1438.41062
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "Spot elevation symbols located near numeric values with stacked or single elevations examined for readings.",
-      "Elevations outside expected range (520-570 ft) ignored.",
-      "Markers closely adjacent to elevation text used for pixel coordinates."
+      "No visible spot elevation markers or associated numbers found within the provided tile image.",
+      "Tile appears to be mostly blank or containing irrelevant elements outside expected elevation data."
     ]
   },
   {
     "tile": 2,
     "tile_origin_px": [
-      2243,
-      701
+      1000,
+      0
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "No valid spot elevations found in the tile; the only elevation value present is part of a coordinate label and not near a recognized spot elevation marker symbol.",
-      "Elevation value '567.85' is ignored because it is not isolated near a symbol but part of text with N and E coordinates.",
-      "No paired or single elevation values next to markers (+, x, \u25cb, \u25b3, \u00b7) were detected in the tile."
+      "The provided tile image is entirely blank with no visible marker symbols or elevation values.",
+      "No spot elevations could be identified due to absence of any discernible grading information."
     ]
   },
   {
     "tile": 3,
     "tile_origin_px": [
-      2893,
-      701
+      2000,
+      0
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 391,
-        "y_px": 61,
-        "existing_elev_ft": 552.39,
-        "proposed_elev_ft": 551.0,
-        "confidence": 0.9,
-        "x_px_original": 3284,
-        "y_px_original": 762,
-        "x_ft": 4349.668946666667,
-        "y_ft": 1009.2715400000001
-      },
-      {
-        "x_px": 430,
-        "y_px": 102,
-        "existing_elev_ft": null,
-        "proposed_elev_ft": 547.81,
-        "confidence": 0.6,
-        "x_px_original": 3323,
-        "y_px_original": 803,
-        "x_ft": 4401.324576666667,
-        "y_ft": 1063.5761766666667
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "The '+' and triangle symbols at indicated pixels represent spot elevation markers.",
-      "Exact pixel coordinates center on the symbol marks with numeric elevation values adjacent.",
-      "Existing elevations are usually above proposed if paired; parentheses indicate existing grade only.",
-      "Some text is partially small or unclear, reducing confidence in proposed-only spot elevation."
+      "No specific spot elevation points marked with grade values and grade symbols (+, x, circle, triangle, dot) were found in the tile.",
+      "Elevation noted as ELEV: 567.85 is part of a coordinate/location label rather than a spot elevation marker.",
+      "No paired or single spot elevation values matching the expected elevation range with associated marker symbols are visible."
     ]
   },
   {
     "tile": 4,
     "tile_origin_px": [
-      3543,
-      701
+      3000,
+      0
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [],
+    "spot_elevations": [
+      {
+        "x_px": 283,
+        "y_px": 468,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 537.0,
+        "confidence": 0.9,
+        "x_px_original": 3283,
+        "y_px_original": 468,
+        "x_ft": 4348.344443333333,
+        "y_ft": 619.86756
+      },
+      {
+        "x_px": 830,
+        "y_px": 514,
+        "existing_elev_ft": 547.5,
+        "proposed_elev_ft": 537.9,
+        "confidence": 0.9,
+        "x_px_original": 3830,
+        "y_px_original": 514,
+        "x_ft": 5072.847766666667,
+        "y_ft": 680.7947133333333
+      },
+      {
+        "x_px": 1116,
+        "y_px": 454,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 555.2,
+        "confidence": 0.9,
+        "x_px_original": 4116,
+        "y_px_original": 454,
+        "x_ft": 5451.65572,
+        "y_ft": 601.3245133333334
+      }
+    ],
     "assumptions": [
-      "No spot elevation grade values (existing or proposed) are visible or legible next to the marker symbols in this tile.",
-      "Only location markers with text labels (e.g., TP-16, TP-17) and contour lines are visible without specific elevation numbers.",
-      "No paired or single spot elevation values in the range 520-570 ft are identified."
+      "Marker symbols identified as circles with cross inside.",
+      "Paired elevations shown as existing above and proposed below or side by side.",
+      "Single elevations without parentheses considered proposed grades.",
+      "Numbers in range 520-570 ft accepted as valid elevations.",
+      "Contour line labels and notes ignored."
     ]
   },
   {
     "tile": 5,
     "tile_origin_px": [
-      4193,
-      701
+      4000,
+      0
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 276,
-        "y_px": 318,
-        "existing_elev_ft": 531.5,
-        "proposed_elev_ft": 525.0,
-        "confidence": 0.9,
-        "x_px_original": 4469,
-        "y_px_original": 1019,
-        "x_ft": 5919.205396666667,
-        "y_ft": 1349.6688966666668
-      },
-      {
-        "x_px": 294,
-        "y_px": 358,
-        "existing_elev_ft": 529.4,
-        "proposed_elev_ft": 523.0,
-        "confidence": 0.9,
-        "x_px_original": 4487,
-        "y_px_original": 1059,
-        "x_ft": 5943.046456666667,
-        "y_ft": 1402.64903
-      },
-      {
-        "x_px": 527,
-        "y_px": 404,
-        "existing_elev_ft": null,
-        "proposed_elev_ft": 525.6,
-        "confidence": 0.6,
-        "x_px_original": 4720,
-        "y_px_original": 1105,
-        "x_ft": 6251.655733333333,
-        "y_ft": 1463.5761833333333
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "Coordinates represent the center of the marker symbol.",
-      "Elevations are in feet and written adjacent to markers.",
-      "Numbers near '+' markers without parentheses represent proposed elevations.",
-      "Numbers in parentheses indicate existing elevations.",
-      "Partial obscuration or faintness lowers confidence to 0.6."
+      "No spot elevations with numeric values within expected elevation range (520-570 ft) are found near symbol markers in this tile.",
+      "Visible 'TP-16', 'TP-15', and 'MW-04' labels correspond to survey points or markers but do not display spot elevation numbers.",
+      "Small cross marks and other symbols do not have adjacent elevation numbers clearly associated in this tile."
     ]
   },
   {
     "tile": 6,
     "tile_origin_px": [
-      1593,
-      1351
+      5000,
+      0
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 334,
-        "y_px": 755,
-        "existing_elev_ft": 544.75,
-        "proposed_elev_ft": 542.75,
-        "confidence": 0.9,
-        "x_px_original": 1927,
-        "y_px_original": 2106,
-        "x_ft": 2552.3179233333335,
-        "y_ft": 2789.40402
-      },
-      {
-        "x_px": 127,
-        "y_px": 664,
-        "existing_elev_ft": null,
-        "proposed_elev_ft": 543.81,
-        "confidence": 0.9,
-        "x_px_original": 1720,
-        "y_px_original": 2015,
-        "x_ft": 2278.1457333333333,
-        "y_ft": 2668.8742166666666
-      },
-      {
-        "x_px": 345,
-        "y_px": 609,
-        "existing_elev_ft": 541.48,
-        "proposed_elev_ft": 539.11,
-        "confidence": 0.9,
-        "x_px_original": 1938,
-        "y_px_original": 1960,
-        "x_ft": 2566.88746,
-        "y_ft": 2596.026533333333
-      },
-      {
-        "x_px": 213,
-        "y_px": 509,
-        "existing_elev_ft": 537.88,
-        "proposed_elev_ft": null,
-        "confidence": 0.9,
-        "x_px_original": 1806,
-        "y_px_original": 1860,
-        "x_ft": 2392.05302,
-        "y_ft": 2463.5762
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "Markers are identified by 'x' symbols adjacent to numeric elevation values.",
-      "Both existing and proposed grades are assumed to be valid spot elevations where values are stacked or paired.",
-      "Single unpaired numbers near marker symbols are taken as either existing (if in parentheses) or proposed elevations otherwise.",
-      "The pixel coordinates correspond to center of marker symbols within the provided tile."
+      "The provided tile does not contain any visible spot elevation markers with associated elevation values within the specified range of 520-570 ft.",
+      "No symbols such as cross '+', circle '\u25cb', triangle '\u25b3', or dot '\u00b7' with corresponding elevation numbers were identified in this tile."
     ]
   },
   {
     "tile": 7,
     "tile_origin_px": [
-      2243,
-      1351
+      6000,
+      0
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "The provided tile image is completely blank and contains no symbols or numbers to analyze.",
-      "No spot elevation markers or numeric values are present in the image."
+      "No spot elevations or marker symbols with elevation values were found in the provided tile."
     ]
   },
   {
     "tile": 8,
     "tile_origin_px": [
-      2893,
-      1351
+      7000,
+      0
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 263,
-        "y_px": 233,
-        "existing_elev_ft": 547.55,
-        "proposed_elev_ft": 544.85,
-        "confidence": 0.9,
-        "x_px_original": 3156,
-        "y_px_original": 1584,
-        "x_ft": 4180.13252,
-        "y_ft": 2098.01328
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "The symbol at (263, 233) with '547.55' above and 'PR. 544.85' below is interpreted as a paired spot elevation with existing and proposed grades.",
-      "Only the isolated grade point near the diamond marker is considered; contour line labels have been ignored.",
-      "The text 'PR.' indicates the proposed elevation.",
-      "All elevation values fall within the expected range of 520-570 ft."
+      "No spot elevation marker symbols or corresponding elevation numbers were found within this tile.",
+      "Only blank or non-relevant areas are visible in this tile."
     ]
   },
   {
     "tile": 9,
     "tile_origin_px": [
-      3543,
-      1351
+      8000,
+      0
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 347,
-        "y_px": 286,
-        "existing_elev_ft": null,
-        "proposed_elev_ft": null,
-        "confidence": 0.0,
-        "x_px_original": 3890,
-        "y_px_original": 1637,
-        "x_ft": 5152.3179666666665,
-        "y_ft": 2168.2119566666665
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "No clear spot elevation values are shown adjacent to any marker symbol within this tile.",
-      "The numbers visible (550, 560) appear to be contour line labels, which should be ignored as per the instructions.",
-      "Marker symbols like the diamond shapes are present but do not have associated grades in text form nearby in this image."
+      "No spot elevations with marker symbols and numeric grades are visible within this tile.",
+      "The tile contains only a portion of a drawing with a north arrow symbol and no grading-related text or markers."
     ]
   },
   {
     "tile": 10,
     "tile_origin_px": [
-      4193,
-      1351
+      0,
+      1000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "No isolated grade point markers with numeric spot elevations were found on this tile.",
-      "Visible numbers (e.g., 530, 540) appear to be contour line labels and thus are ignored.",
-      "Symbols with TP-xx labels do not have associated spot elevation numbers nearby."
+      "No spot elevation markers or associated elevation values were detected within the tile provided."
     ]
   },
   {
     "tile": 11,
     "tile_origin_px": [
-      1593,
-      2001
+      1000,
+      1000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 144,
-        "y_px": 160,
-        "existing_elev_ft": 548.16,
-        "proposed_elev_ft": 547.92,
-        "confidence": 0.9,
-        "x_px_original": 1737,
-        "y_px_original": 2161,
-        "x_ft": 2300.66229,
-        "y_ft": 2862.2517033333334
-      },
-      {
-        "x_px": 329,
-        "y_px": 171,
-        "existing_elev_ft": null,
-        "proposed_elev_ft": 544.76,
-        "confidence": 0.9,
-        "x_px_original": 1922,
-        "y_px_original": 2172,
-        "x_ft": 2545.6954066666667,
-        "y_ft": 2876.82124
-      },
-      {
-        "x_px": 517,
-        "y_px": 203,
-        "existing_elev_ft": 542.7,
-        "proposed_elev_ft": 542.5,
-        "confidence": 0.9,
-        "x_px_original": 2110,
-        "y_px_original": 2204,
-        "x_ft": 2794.7020333333335,
-        "y_ft": 2919.2053466666666
-      },
-      {
-        "x_px": 73,
-        "y_px": 368,
-        "existing_elev_ft": 542.64,
-        "proposed_elev_ft": 542.85,
-        "confidence": 0.9,
-        "x_px_original": 1666,
-        "y_px_original": 2369,
-        "x_ft": 2206.6225533333336,
-        "y_ft": 3137.748396666667
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "Symbols are identified as small black crosses '+'.",
-      "Only clearly legible paired or single spot elevations inside the expected elevation range (520-570 ft) are recorded.",
-      "No contour line labels or other text are included.",
-      "Coordinates (x,y) correspond to approximate pixel locations of each marker center within the tile."
+      "The provided tile image is completely blank and does not contain any marker symbols or elevation values.",
+      "No spot elevations could be identified due to the absence of any visual data in the image."
     ]
   },
   {
     "tile": 12,
     "tile_origin_px": [
-      2243,
-      2001
+      2000,
+      1000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "This tile does not contain any visible spot elevation markers with numeric elevation values within the expected range.",
-      "There are no small symbols (+, x, \u25cb, \u25b3, \u00b7) paired closely with numeric elevations between 520 and 570 ft."
+      "No spot elevation markers detected in the visible tile area.",
+      "Text 'ELEV: 567.85' appears as coordinate info or general elevation, not isolated spot elevation marker.",
+      "No distinct symbols (+, x, \u25cb, \u25b3, \u00b7) with paired or single grade values detected."
     ]
   },
   {
     "tile": 13,
     "tile_origin_px": [
-      2893,
-      2001
+      3000,
+      1000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 381,
-        "y_px": 238,
-        "existing_elev_ft": 568.34,
-        "proposed_elev_ft": null,
-        "confidence": 0.9,
-        "x_px_original": 3274,
-        "y_px_original": 2239,
-        "x_ft": 4336.423913333333,
-        "y_ft": 2965.5629633333333
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "The 'FH' symbol with a square marker indicates the spot elevation point.",
-      "The elevation 568.34 is existing grade as no proposed grade is shown.",
-      "This point is isolated and not part of a contour line label."
+      "No isolated grade points with numeric elevations are visible near the marker symbols.",
+      "Contour line labels (e.g., 550, 560) are present but these are ignored as per instructions.",
+      "Only marker symbols visible are various ticks and TP labels without associated spot elevation values."
     ]
   },
   {
     "tile": 14,
     "tile_origin_px": [
-      3543,
-      2001
+      4000,
+      1000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "No isolated spot elevation markers with numeric elevations were found in this tile.",
-      "Only symbols and labels without associated elevation numbers are present."
+      "No spot elevation values (existing or proposed) are visible adjacent to the marker symbols in this tile.",
+      "The tile mainly shows marker symbols (crosses with squares) labeled with TP or TR numbers but lacks numeric grade annotations next to these markers.",
+      "Contour line elevation labels (e.g., 530, 540, 550) are present but are excluded from spot elevation extraction as per instruction."
     ]
   },
   {
     "tile": 15,
     "tile_origin_px": [
-      4193,
-      2001
+      5000,
+      1000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [],
+    "spot_elevations": [
+      {
+        "x_px": 141,
+        "y_px": 136,
+        "existing_elev_ft": 561.1,
+        "proposed_elev_ft": 555.0,
+        "confidence": 0.9,
+        "x_px_original": 5141,
+        "y_px_original": 1136,
+        "x_ft": 6809.271636666666,
+        "y_ft": 1504.6357866666667
+      }
+    ],
     "assumptions": [
-      "No spot elevations with numeric values near marker symbols are visible in this tile.",
-      "Only markers labeled TP-38, TP-55, OPL-TP-10 are visible without associated elevation numbers.",
-      "Contour lines are present but no isolated spot elevation text found within expected range."
+      "The paired elevation at (141,136) is identified from the stacked text '561.10' (existing) above '555.00' (proposed) near the '+' marker symbol.",
+      "No other valid spot elevations within expected range (520-570 ft) were found in this tile.",
+      "Contour line labels and other non-symbol labels were ignored as per instructions."
     ]
   },
   {
     "tile": 16,
     "tile_origin_px": [
-      1593,
-      2651
+      6000,
+      1000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [],
+    "spot_elevations": [
+      {
+        "x_px": 275,
+        "y_px": 176,
+        "existing_elev_ft": 552.18,
+        "proposed_elev_ft": 552.0,
+        "confidence": 0.9,
+        "x_px_original": 6275,
+        "y_px_original": 1176,
+        "x_ft": 8311.258416666667,
+        "y_ft": 1557.61592
+      },
+      {
+        "x_px": 466,
+        "y_px": 274,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 547.0,
+        "confidence": 0.9,
+        "x_px_original": 6466,
+        "y_px_original": 1274,
+        "x_ft": 8564.238553333333,
+        "y_ft": 1687.4172466666666
+      },
+      {
+        "x_px": 306,
+        "y_px": 379,
+        "existing_elev_ft": 550.09,
+        "proposed_elev_ft": 547.0,
+        "confidence": 0.9,
+        "x_px_original": 6306,
+        "y_px_original": 1379,
+        "x_ft": 8352.31802,
+        "y_ft": 1826.4900966666667
+      }
+    ],
     "assumptions": [
-      "The tile image is completely white or blank with no visible grading plan details, symbols, or text present.",
-      "No spot elevation markers (+, x, \u25cb, \u25b3, \u00b7) or elevation values are visible to analyze or record."
+      "Symbols '+', 'x', or 'o' represent spot elevation points associated with grade values.",
+      "Elevations are in the range 520-570 ft as specified, values outside this are ignored.",
+      "Paired elevations where both existing and proposed are shown have higher confidence (0.9).",
+      "Single values with no existing elevation or indicated existing elevation in parentheses were interpreted as proposed elevations.",
+      "Contour line labels and other labels are not considered as spot elevations."
     ]
   },
   {
     "tile": 17,
     "tile_origin_px": [
-      2243,
-      2651
+      7000,
+      1000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "The image provided is blank or too light to identify any markings including symbols or elevations.",
-      "No spot elevation symbols or numbers were visible within this tile."
+      "No visible spot elevation markers or values found in the provided image tile.",
+      "Image appears to be blank or lacking any discernible grade points or elevation numbers."
     ]
   },
   {
     "tile": 18,
     "tile_origin_px": [
-      2893,
-      2651
+      8000,
+      1000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 888,
-        "y_px": 165,
-        "existing_elev_ft": null,
-        "proposed_elev_ft": 567.44,
-        "confidence": 0.9,
-        "x_px_original": 3781,
-        "y_px_original": 2816,
-        "x_ft": 5007.947103333334,
-        "y_ft": 3729.801386666667
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "The only spot elevation found is in the coordinate note block near the triangle marker symbol at top-right quadrant.",
-      "The ELEV label next to the triangle marker is interpreted as proposed grade because no existing grade is shown stacked or in parentheses.",
-      "The large 'ELEV: 568.34' text at top left is considered a general elevation label, not tied to a spot marker, so ignored."
+      "No spot elevation markers or related isolated grade points were visible in the provided tile.",
+      "The visible portion of the document contains only decorative or non-relevant elements to spot elevations."
     ]
   },
   {
     "tile": 19,
     "tile_origin_px": [
-      3543,
-      2651
+      0,
+      2000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 28,
-        "y_px": 86,
-        "existing_elev_ft": 548.18,
-        "proposed_elev_ft": 567.44,
-        "confidence": 0.9,
-        "x_px_original": 3571,
-        "y_px_original": 2737,
-        "x_ft": 4729.801403333334,
-        "y_ft": 3625.1656233333333
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "The numbers 548.18 and 567.44 near the triangle with a dot marker '\u25b3' are spot elevations.",
-      "These values are paired with the existing grade (548.18) above and proposed grade (567.44) below.",
-      "Other numbers such as 10781.93 and 1110716.04 represent other data (coordinates, IDs) and are ignored as elevations outside expected range.",
-      "No other clear isolated spot elevation markers with qualifying elevation values are visible in the image."
+      "No spot elevation markers or values are visible in this tile image."
     ]
   },
   {
     "tile": 20,
     "tile_origin_px": [
-      4193,
-      2651
+      1000,
+      2000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "There are no spot elevation values adjacent to the marker symbols in this tile.",
-      "The numbers '560' on contour lines are contour line labels, not isolated spot elevations, and thus ignored."
+      "No visible marker symbols ('+', 'x', '\u25cb', '\u25b3', '\u00b7') with associated numerical elevations were found on the tile.",
+      "No isolated or paired spot elevations within the expected range of 520\u2013570 ft were detected.",
+      "Text visible appears to be general annotations or references rather than spot elevation data."
     ]
   },
   {
     "tile": 21,
     "tile_origin_px": [
-      1593,
-      3301
+      2000,
+      2000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "The image contains no visible spot elevation markers or elevation values within the expected range.",
-      "No symbols with associated elevation values were detected in the tile."
+      "No spot elevation markers or grade points with numeric elevation values are visible in this tile.",
+      "Only text related to a benchmark is present, which is excluded per instructions."
     ]
   },
   {
     "tile": 22,
     "tile_origin_px": [
-      2243,
-      3301
+      3000,
+      2000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [],
+    "spot_elevations": [
+      {
+        "x_px": 700,
+        "y_px": 525,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 567.44,
+        "confidence": 0.9,
+        "x_px_original": 3700,
+        "y_px_original": 2525,
+        "x_ft": 4900.662333333334,
+        "y_ft": 3344.3709166666667
+      }
+    ],
     "assumptions": [
-      "The tile contains no visible marker symbols or associated spot elevation numbers within the expected range 520\u2013570 ft.",
-      "There are no isolated grade point labels or paired existing/proposed elevations visible on this tile.",
-      "No spot elevation data is present to record."
+      "The 'ELEV: 567.44' near the triangle symbol at N: 1110781.93, E: 660548.18 represents a single proposed spot elevation.",
+      "Other numeric values shown (568.34) near benchmark and 20, N, E coordinates are not paired with a spot elevation marker symbol."
     ]
   },
   {
     "tile": 23,
     "tile_origin_px": [
-      2893,
-      3301
+      4000,
+      2000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "No spot elevation symbols or numbers were detected in the provided tile image.",
-      "The visible text relates only to coordinate and elevation reference info, not isolated grade points."
+      "No spot elevation markers with associated elevation values (existing or proposed) are visible in this tile.",
+      "Numbers visible appear to be labels (TP-xx) and contour lines, which are ignored.",
+      "All isolated grade points with elevation values are outside the visible area of this tile."
     ]
   },
   {
     "tile": 24,
     "tile_origin_px": [
-      3543,
-      3301
+      5000,
+      2000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 286,
-        "y_px": 47,
-        "existing_elev_ft": 567.7,
-        "proposed_elev_ft": null,
-        "confidence": 0.9,
-        "x_px_original": 3829,
-        "y_px_original": 3348,
-        "x_ft": 5071.5232633333335,
-        "y_ft": 4434.43716
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "The elevation '567.70' next to 'ELEV:' is considered a spot elevation marker for existing grade.",
-      "No paired or proposed elevation is visible near the marker symbol.",
-      "Other numbers like 'N:' and 'E:' are coordinate values, not spot elevations.",
-      "No contour line labels or other isolated grade points marked with relevant symbols were found in the tile."
+      "No spot elevation markers with isolated grade points or clearly paired existing/proposed grades are visible in this tile.",
+      "Visible numbers on contour lines or associated with text labels are excluded as per instructions."
     ]
   },
   {
     "tile": 25,
     "tile_origin_px": [
-      4193,
-      3301
+      6000,
+      2000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "No numeric elevation values (existing or proposed) are present near the marker symbols within this tile.",
-      "All visible numbers are labels or references, not spot elevations.",
-      "Contours depicted by dashed lines have labels but these are ignored as per instructions."
+      "No spot elevation markers with grade values were present in the visible area of the tile.",
+      "Visible text is general notes and does not contain any isolated spot elevation data."
     ]
   },
   {
     "tile": 26,
     "tile_origin_px": [
-      1593,
-      3951
+      7000,
+      2000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [
       {
-        "x_px": 126,
-        "y_px": 141,
-        "existing_elev_ft": 544.53,
-        "proposed_elev_ft": 540.68,
+        "x_px": 137,
+        "y_px": 125,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 540.5,
         "confidence": 0.9,
-        "x_px_original": 1719,
-        "y_px_original": 4092,
-        "x_ft": 2276.82123,
-        "y_ft": 5419.86764
+        "x_px_original": 7137,
+        "y_px_original": 2125,
+        "x_ft": 9452.98029,
+        "y_ft": 2814.5695833333334
       },
       {
-        "x_px": 466,
-        "y_px": 351,
-        "existing_elev_ft": 547.74,
-        "proposed_elev_ft": 541.8,
+        "x_px": 230,
+        "y_px": 321,
+        "existing_elev_ft": 538.26,
+        "proposed_elev_ft": null,
         "confidence": 0.9,
-        "x_px_original": 2059,
-        "y_px_original": 4302,
-        "x_ft": 2727.1523633333336,
-        "y_ft": 5698.01334
+        "x_px_original": 7230,
+        "y_px_original": 2321,
+        "x_ft": 9576.1591,
+        "y_ft": 3074.172236666667
       },
       {
-        "x_px": 825,
-        "y_px": 66,
-        "existing_elev_ft": 545.2,
-        "proposed_elev_ft": 542.05,
+        "x_px": 378,
+        "y_px": 78,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 544.76,
         "confidence": 0.9,
-        "x_px_original": 2418,
-        "y_px_original": 4017,
-        "x_ft": 3202.64906,
-        "y_ft": 5320.52989
-      },
-      {
-        "x_px": 965,
-        "y_px": 314,
-        "existing_elev_ft": 547.08,
-        "proposed_elev_ft": 538.23,
-        "confidence": 0.9,
-        "x_px_original": 2558,
-        "y_px_original": 4265,
-        "x_ft": 3388.079526666667,
-        "y_ft": 5649.006716666667
+        "x_px_original": 7378,
+        "y_px_original": 2078,
+        "x_ft": 9772.185593333334,
+        "y_ft": 2752.3179266666666
       }
     ],
     "assumptions": [
-      "All identified markers with paired elevation numbers correspond to spot elevation points.",
-      "Numbers near these markers within expected elevation range (520-570 ft) are considered valid spot elevations.",
-      "No contour line labels or non-isolated numbers were included.",
-      "Coordinates are approximate pixel centers of the spot elevation marker symbols."
+      "Elevation values are interpreted as feet within the expected elevation range of 520\u2013570 ft.",
+      "Marker symbols identified as small crosses indicate spot elevation points with nearby numeric values.",
+      "Single elevation value near a marker symbol without parentheses or dashed box is considered proposed grade.",
+      "Single elevation value near a marker inside parentheses is considered existing grade.",
+      "No paired existing and proposed grades were found at the same coordinates."
     ]
   },
   {
     "tile": 27,
     "tile_origin_px": [
-      2243,
-      3951
+      8000,
+      2000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "This tile contains no visible spot elevation markers or elevation values within the expected range.",
-      "No symbols (+, x, \u25cb, \u25b3, \u00b7) with associated elevations were found in the image.",
-      "No isolated grade points or paired existing/proposed grade stacks are present."
+      "No spot elevation markers or isolated grade points with valid elevation values are visible in the provided tile image.",
+      "Contours and text numbers visible are either contour labels, cycle numbers, notes, or other non-spot elevation annotations and thus ignored."
     ]
   },
   {
     "tile": 28,
     "tile_origin_px": [
-      2893,
-      3951
+      0,
+      3000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "The image contains no visible spot elevation markers or corresponding elevation values within the expected range.",
-      "No isolated grade points with specific elevation values are present on this tile."
+      "No spot elevation markers or numeric elevation values within the expected range of 520\u2013570 ft were found in this tile.",
+      "The tile appears to be blank or does not contain grading spot elevation information."
     ]
   },
   {
     "tile": 29,
     "tile_origin_px": [
-      3543,
-      3951
+      1000,
+      3000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
     ],
-    "spot_elevations": [
-      {
-        "x_px": 234,
-        "y_px": 343,
-        "existing_elev_ft": 539.5,
-        "proposed_elev_ft": 537.0,
-        "confidence": 0.9,
-        "x_px_original": 3777,
-        "y_px_original": 4294,
-        "x_ft": 5002.64909,
-        "y_ft": 5687.417313333333
-      },
-      {
-        "x_px": 492,
-        "y_px": 289,
-        "existing_elev_ft": 542.0,
-        "proposed_elev_ft": null,
-        "confidence": 0.9,
-        "x_px_original": 4035,
-        "y_px_original": 4240,
-        "x_ft": 5344.37095,
-        "y_ft": 5615.894133333333
-      },
-      {
-        "x_px": 715,
-        "y_px": 437,
-        "existing_elev_ft": null,
-        "proposed_elev_ft": 534.2,
-        "confidence": 0.9,
-        "x_px_original": 4258,
-        "y_px_original": 4388,
-        "x_ft": 5639.735193333334,
-        "y_ft": 5811.920626666667
-      },
-      {
-        "x_px": 630,
-        "y_px": 589,
-        "existing_elev_ft": 545.8,
-        "proposed_elev_ft": 544.5,
-        "confidence": 0.9,
-        "x_px_original": 4173,
-        "y_px_original": 4540,
-        "x_ft": 5527.15241,
-        "y_ft": 6013.245133333334
-      }
-    ],
+    "spot_elevations": [],
     "assumptions": [
-      "Markers identified as small crosses + near text labels with elevation numbers.",
-      "Parentheses indicate existing grade when only one elevation shown.",
-      "Labels with 'PR.' indicate proposed grade below existing.",
-      "Elevation numbers within project range 520-570 feet are valid spot elevations.",
-      "No contour line labels or legend text were misinterpreted as spot elevations."
+      "No visible marker symbols ('+', 'x', '\u25cb', '\u25b3', '\u00b7') or associated spot elevation values within the expected range (520-570 ft) were detected in the provided tile image.",
+      "No isolated grade point elevations (existing or proposed) were found; any text visible is either part of contour labels, notes, or too faint/absent to be confidently read.",
+      "Only spot elevations with clear marker symbols and legible numeric values are considered valid."
     ]
   },
   {
     "tile": 30,
     "tile_origin_px": [
-      4193,
-      3951
+      2000,
+      3000
     ],
     "tile_size_px": [
-      800,
-      800
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 134,
+        "y_px": 142,
+        "existing_elev_ft": 550.25,
+        "proposed_elev_ft": 547.25,
+        "confidence": 0.9,
+        "x_px_original": 2134,
+        "y_px_original": 3142,
+        "x_ft": 2826.4901133333333,
+        "y_ft": 4161.589473333333
+      },
+      {
+        "x_px": 20,
+        "y_px": 215,
+        "existing_elev_ft": 548.53,
+        "proposed_elev_ft": 546.4,
+        "confidence": 0.9,
+        "x_px_original": 2020,
+        "y_px_original": 3215,
+        "x_ft": 2675.4967333333334,
+        "y_ft": 4258.278216666667
+      },
+      {
+        "x_px": 186,
+        "y_px": 279,
+        "existing_elev_ft": 543.28,
+        "proposed_elev_ft": 538.6,
+        "confidence": 0.9,
+        "x_px_original": 2186,
+        "y_px_original": 3279,
+        "x_ft": 2895.364286666667,
+        "y_ft": 4343.04643
+      },
+      {
+        "x_px": 193,
+        "y_px": 70,
+        "existing_elev_ft": 543.28,
+        "proposed_elev_ft": 538.6,
+        "confidence": 0.9,
+        "x_px_original": 2193,
+        "y_px_original": 3070,
+        "x_ft": 2904.63581,
+        "y_ft": 4066.2252333333336
+      },
+      {
+        "x_px": 235,
+        "y_px": 160,
+        "existing_elev_ft": 544.53,
+        "proposed_elev_ft": 543.6,
+        "confidence": 0.9,
+        "x_px_original": 2235,
+        "y_px_original": 3160,
+        "x_ft": 2960.26495,
+        "y_ft": 4185.430533333333
+      },
+      {
+        "x_px": 283,
+        "y_px": 85,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 539.1,
+        "confidence": 0.6,
+        "x_px_original": 2283,
+        "y_px_original": 3085,
+        "x_ft": 3023.8411100000003,
+        "y_ft": 4086.0927833333335
+      }
+    ],
+    "assumptions": [
+      "Elevation values with two numbers stacked vertically with clear 'EX.' and 'PR.' labels are considered paired spot elevations.",
+      "Single values without labels or in parentheses were interpreted as either existing or proposed based on text style, with assumed proposed grade if no parentheses.",
+      "Only visually isolated elevation markers with symbols (+, x, circle, triangle, dot) were considered, contour line labels and other text were excluded.",
+      "Confidence was set as 0.9 when both existing and proposed grades were legible; 0.6 when only one grade was visible or legible.",
+      "Pixel coordinates were estimated from symbol center positions in this tile."
+    ]
+  },
+  {
+    "tile": 31,
+    "tile_origin_px": [
+      3000,
+      3000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 856,
+        "y_px": 288,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 567.7,
+        "confidence": 0.9,
+        "x_px_original": 3856,
+        "y_px_original": 3288,
+        "x_ft": 5107.284853333334,
+        "y_ft": 4354.96696
+      }
+    ],
+    "assumptions": [
+      "The triangle with a circle symbol marks the spot elevation location.",
+      "The value 'ELEV: 567.70' is assumed proposed elevation as it is not in parentheses or boxed.",
+      "No existing elevation is shown explicitly near this marker."
+    ]
+  },
+  {
+    "tile": 32,
+    "tile_origin_px": [
+      4000,
+      3000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
     ],
     "spot_elevations": [],
     "assumptions": [
-      "No visible spot elevation markers or grade numbers are present in the provided tile image.",
-      "Only marker symbols without associated elevation values are visible.",
-      "Contour line labels and text annotations are ignored as per instructions."
+      "No spot elevation values (numerical grades) are visible adjacent to the marker symbols (crosses) in this tile.",
+      "Visible numbers are contour labels or point labels, not isolated spot elevations.",
+      "Elevation values 520-570 ft range not found near markers."
+    ]
+  },
+  {
+    "tile": 33,
+    "tile_origin_px": [
+      5000,
+      3000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No specific spot elevation values (existing or proposed) are visible near marker symbols on this tile.",
+      "Contour line labels are not considered spot elevations and thus ignored.",
+      "Only clearly isolated grade points with elevation numeric values are recorded; none found in this image."
+    ]
+  },
+  {
+    "tile": 34,
+    "tile_origin_px": [
+      6000,
+      3000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 141,
+        "y_px": 180,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 547.71,
+        "confidence": 0.9,
+        "x_px_original": 6141,
+        "y_px_original": 3180,
+        "x_ft": 8133.77497,
+        "y_ft": 4211.9206
+      },
+      {
+        "x_px": 192,
+        "y_px": 223,
+        "existing_elev_ft": 547.82,
+        "proposed_elev_ft": 546.04,
+        "confidence": 0.9,
+        "x_px_original": 6192,
+        "y_px_original": 3223,
+        "x_ft": 8201.32464,
+        "y_ft": 4268.874243333334
+      }
+    ],
+    "assumptions": [
+      "Markers are identified as small 'x' cross symbols in the drawing.",
+      "Elevations near the markers fitting within the expected 520-570 ft range are spot elevations rather than contour labels.",
+      "Only isolated paired or single spot elevations near symbol markers are recorded, contour line labels are ignored."
+    ]
+  },
+  {
+    "tile": 35,
+    "tile_origin_px": [
+      7000,
+      3000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No visible spot elevation markers or numbers discernible in the provided image tile.",
+      "Image appears mostly white or blank, no grading plan detail to extract spot elevations from."
+    ]
+  },
+  {
+    "tile": 36,
+    "tile_origin_px": [
+      8000,
+      3000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "The provided image is entirely white and contains no visible markers or elevation values.",
+      "No spot elevation symbols or text can be detected within the tile."
+    ]
+  },
+  {
+    "tile": 37,
+    "tile_origin_px": [
+      0,
+      4000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "The image does not contain any visible spot elevation markers or numbers within the expected elevation range."
+    ]
+  },
+  {
+    "tile": 38,
+    "tile_origin_px": [
+      1000,
+      4000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "The provided image is completely white and does not contain any visible symbols or elevation numbers.",
+      "No spot elevations or grading markers are detectable in the given tile."
+    ]
+  },
+  {
+    "tile": 39,
+    "tile_origin_px": [
+      2000,
+      4000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 120,
+        "y_px": 110,
+        "existing_elev_ft": 540.21,
+        "proposed_elev_ft": 538.0,
+        "confidence": 0.9,
+        "x_px_original": 2120,
+        "y_px_original": 4110,
+        "x_ft": 2807.9470666666666,
+        "y_ft": 5443.7087
+      },
+      {
+        "x_px": 310,
+        "y_px": 205,
+        "existing_elev_ft": 559.33,
+        "proposed_elev_ft": null,
+        "confidence": 0.9,
+        "x_px_original": 2310,
+        "y_px_original": 4205,
+        "x_ft": 3059.6027,
+        "y_ft": 5569.536516666667
+      },
+      {
+        "x_px": 450,
+        "y_px": 90,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 542.15,
+        "confidence": 0.9,
+        "x_px_original": 2450,
+        "y_px_original": 4090,
+        "x_ft": 3245.0331666666666,
+        "y_ft": 5417.218633333334
+      },
+      {
+        "x_px": 400,
+        "y_px": 330,
+        "existing_elev_ft": 520.55,
+        "proposed_elev_ft": 540.1,
+        "confidence": 0.9,
+        "x_px_original": 2400,
+        "y_px_original": 4330,
+        "x_ft": 3178.808,
+        "y_ft": 5735.099433333334
+      }
+    ],
+    "assumptions": [
+      "Pixel coordinates were estimated from marker symbol centers.",
+      "Numbers with parentheses are considered existing grades.",
+      "Numbers without decoration are considered proposed grades.",
+      "All identified spot elevations are within the expected elevation range of 520 to 570 ft.",
+      "Spot elevations associated with a marker symbol (+, x) were chosen over contour line numbers."
+    ]
+  },
+  {
+    "tile": 40,
+    "tile_origin_px": [
+      3000,
+      4000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 312,
+        "y_px": 320,
+        "existing_elev_ft": 547.32,
+        "proposed_elev_ft": 546.0,
+        "confidence": 0.9,
+        "x_px_original": 3312,
+        "y_px_original": 4320,
+        "x_ft": 4386.75504,
+        "y_ft": 5721.8544
+      },
+      {
+        "x_px": 416,
+        "y_px": 420,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 546.5,
+        "confidence": 0.9,
+        "x_px_original": 3416,
+        "y_px_original": 4420,
+        "x_ft": 4524.503386666667,
+        "y_ft": 5854.304733333333
+      },
+      {
+        "x_px": 520,
+        "y_px": 500,
+        "existing_elev_ft": 548.75,
+        "proposed_elev_ft": null,
+        "confidence": 0.9,
+        "x_px_original": 3520,
+        "y_px_original": 4500,
+        "x_ft": 4662.2517333333335,
+        "y_ft": 5960.265
+      }
+    ],
+    "assumptions": [
+      "Coordinates approximated by placement of marker symbols with clearly legible elevation text nearby.",
+      "Markers selected are isolated spot elevation symbols not associated with contour lines.",
+      "Elevations within expected project range 520-570 feet were considered valid."
+    ]
+  },
+  {
+    "tile": 41,
+    "tile_origin_px": [
+      4000,
+      4000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No spot elevation markers with specific elevation values are visible on this tile.",
+      "Visible symbols are mostly labeled as TP-xx and OPL-TP-xx without associated elevation numbers.",
+      "No isolated or paired elevation values detected near marker symbols."
+    ]
+  },
+  {
+    "tile": 42,
+    "tile_origin_px": [
+      5000,
+      4000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No spot elevation values (existing or proposed grades) are visible near the marker symbols.",
+      "Numbers visible such as 560, 550 are contour lines, not spot elevations."
+    ]
+  },
+  {
+    "tile": 43,
+    "tile_origin_px": [
+      6000,
+      4000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No spot elevation values were found near the marker symbols in the visible tile area.",
+      "All visible numbers correspond to contour lines or text labels, not isolated grade point elevations."
+    ]
+  },
+  {
+    "tile": 44,
+    "tile_origin_px": [
+      7000,
+      4000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 410,
+        "y_px": 470,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": null,
+        "confidence": 0.0,
+        "x_px_original": 7410,
+        "y_px_original": 4470,
+        "x_ft": 9814.5697,
+        "y_ft": 5920.5299
+      }
+    ],
+    "assumptions": [
+      "No valid spot elevations with readable numeric values in the expected elevation range (520-570 ft) were found in this tile.",
+      "Markers/symbols alone without accompanying elevation numbers are ignored as incomplete data."
+    ]
+  },
+  {
+    "tile": 45,
+    "tile_origin_px": [
+      8000,
+      4000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 230,
+        "y_px": 240,
+        "existing_elev_ft": 539.01,
+        "proposed_elev_ft": 535.56,
+        "confidence": 0.9,
+        "x_px_original": 8230,
+        "y_px_original": 4240,
+        "x_ft": 10900.662433333333,
+        "y_ft": 5615.894133333333
+      },
+      {
+        "x_px": 460,
+        "y_px": 230,
+        "existing_elev_ft": 546.47,
+        "proposed_elev_ft": 544.29,
+        "confidence": 0.9,
+        "x_px_original": 8460,
+        "y_px_original": 4230,
+        "x_ft": 11205.298200000001,
+        "y_ft": 5602.6491000000005
+      },
+      {
+        "x_px": 599,
+        "y_px": 245,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 544.0,
+        "confidence": 0.9,
+        "x_px_original": 8599,
+        "y_px_original": 4245,
+        "x_ft": 11389.404163333335,
+        "y_ft": 5622.5166500000005
+      }
+    ],
+    "assumptions": [
+      "Marker symbols are small crosses '+' near the elevation numbers.",
+      "Paired spot elevations are stacked numbers, with existing elevation at top and proposed at bottom.",
+      "Single spot elevation without parentheses indicates proposed elevation.",
+      "Isolated numbers in parentheses are interpreted as existing elevations only.",
+      "Contour line labels along lines are ignored as requested."
+    ]
+  },
+  {
+    "tile": 46,
+    "tile_origin_px": [
+      0,
+      5000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No spot elevation markers or associated elevation numbers were detected within the provided tile.",
+      "Numbers visible appear to be label, note, or baseline text, not spot elevations."
+    ]
+  },
+  {
+    "tile": 47,
+    "tile_origin_px": [
+      1000,
+      5000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No visible spot elevation markers with clearly legible elevation values were found in the provided tile image.",
+      "The image appears to be mostly blank or white with no discernible grading symbols or elevation numbers."
+    ]
+  },
+  {
+    "tile": 48,
+    "tile_origin_px": [
+      2000,
+      5000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "This tile appears to contain no visible spot elevation markers or grade point values as per the defined symbols (+, x, circle, triangle, or dot) and elevation format.",
+      "No isolated or paired existing/proposed elevations within expected range (520-570 ft) are visible or legible.",
+      "Likely this tile is empty or a blank part of the plan without grading spot elevations."
+    ]
+  },
+  {
+    "tile": 49,
+    "tile_origin_px": [
+      3000,
+      5000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 109,
+        "y_px": 261,
+        "existing_elev_ft": 544.4,
+        "proposed_elev_ft": 544.07,
+        "confidence": 0.9,
+        "x_px_original": 3109,
+        "y_px_original": 5261,
+        "x_ft": 4117.880863333334,
+        "y_ft": 6968.212036666667
+      },
+      {
+        "x_px": 232,
+        "y_px": 167,
+        "existing_elev_ft": 545.33,
+        "proposed_elev_ft": 545.04,
+        "confidence": 0.9,
+        "x_px_original": 3232,
+        "y_px_original": 5167,
+        "x_ft": 4280.794773333333,
+        "y_ft": 6843.708723333333
+      },
+      {
+        "x_px": 407,
+        "y_px": 305,
+        "existing_elev_ft": 546.73,
+        "proposed_elev_ft": 546.58,
+        "confidence": 0.9,
+        "x_px_original": 3407,
+        "y_px_original": 5305,
+        "x_ft": 4512.582856666667,
+        "y_ft": 7026.490183333333
+      },
+      {
+        "x_px": 572,
+        "y_px": 434,
+        "existing_elev_ft": 546.89,
+        "proposed_elev_ft": 546.7,
+        "confidence": 0.9,
+        "x_px_original": 3572,
+        "y_px_original": 5434,
+        "x_ft": 4731.125906666667,
+        "y_ft": 7197.351113333333
+      },
+      {
+        "x_px": 95,
+        "y_px": 710,
+        "existing_elev_ft": 545.17,
+        "proposed_elev_ft": null,
+        "confidence": 0.6,
+        "x_px_original": 3095,
+        "y_px_original": 5710,
+        "x_ft": 4099.337816666667,
+        "y_ft": 7562.9140333333335
+      },
+      {
+        "x_px": 586,
+        "y_px": 643,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 548.16,
+        "confidence": 0.6,
+        "x_px_original": 3586,
+        "y_px_original": 5643,
+        "x_ft": 4749.668953333334,
+        "y_ft": 7474.17231
+      },
+      {
+        "x_px": 598,
+        "y_px": 731,
+        "existing_elev_ft": 548.26,
+        "proposed_elev_ft": 547.94,
+        "confidence": 0.9,
+        "x_px_original": 3598,
+        "y_px_original": 5731,
+        "x_ft": 4765.562993333333,
+        "y_ft": 7590.728603333334
+      },
+      {
+        "x_px": 413,
+        "y_px": 740,
+        "existing_elev_ft": 545.17,
+        "proposed_elev_ft": 544.88,
+        "confidence": 0.9,
+        "x_px_original": 3413,
+        "y_px_original": 5740,
+        "x_ft": 4520.5298766666665,
+        "y_ft": 7602.649133333333
+      }
+    ],
+    "assumptions": [
+      "Spot elevations are identified by small cross (+) symbols.",
+      "Elevations are paired with 'existing' generally above and 'proposed' below or single values indicate either existing or proposed.",
+      "Parentheses indicate existing grade when only one elevation is shown.",
+      "Elevations outside expected range or those in contour lines are ignored.",
+      "Coordinates refer to symbol center within the image tile."
+    ]
+  },
+  {
+    "tile": 50,
+    "tile_origin_px": [
+      4000,
+      5000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 183,
+        "y_px": 215,
+        "existing_elev_ft": 536.89,
+        "proposed_elev_ft": 535.5,
+        "confidence": 0.9,
+        "x_px_original": 4183,
+        "y_px_original": 5215,
+        "x_ft": 5540.397443333333,
+        "y_ft": 6907.284883333334
+      },
+      {
+        "x_px": 196,
+        "y_px": 225,
+        "existing_elev_ft": 537.45,
+        "proposed_elev_ft": 536.1,
+        "confidence": 0.9,
+        "x_px_original": 4196,
+        "y_px_original": 5225,
+        "x_ft": 5557.615986666667,
+        "y_ft": 6920.529916666666
+      }
+    ],
+    "assumptions": [
+      "The cross symbols '+' near the numbers indicate spot elevation markers.",
+      "Both existing and proposed grades are clearly legible and paired as per grading plan conventions.",
+      "Contours and line labels were ignored as requested."
+    ]
+  },
+  {
+    "tile": 51,
+    "tile_origin_px": [
+      5000,
+      5000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 110,
+        "y_px": 140,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 558.38,
+        "confidence": 0.9,
+        "x_px_original": 5110,
+        "y_px_original": 5140,
+        "x_ft": 6768.212033333333,
+        "y_ft": 6807.947133333333
+      }
+    ],
+    "assumptions": [
+      "The single elevation 'ELEV: 558.38' near the triangle marker is a proposed grade spot elevation.",
+      "No other explicit spot elevations with paired or single values were found near other markers in the tile.",
+      "Text blocks such as 'N:', 'E:', and '10' were ignored as they are not isolated spot elevation points."
+    ]
+  },
+  {
+    "tile": 52,
+    "tile_origin_px": [
+      6000,
+      5000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No spot elevations are marked with grade numbers near the specific marker symbols in the visible tile area.",
+      "Contour line labels or text like 'TP-29' are not considered spot elevations.",
+      "Symbols resembling diamonds with crosses inside are likely test point markers but have no adjacent grade numbers visible."
+    ]
+  },
+  {
+    "tile": 53,
+    "tile_origin_px": [
+      7000,
+      5000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 403,
+        "y_px": 218,
+        "existing_elev_ft": 544.3,
+        "proposed_elev_ft": 535.4,
+        "confidence": 0.9,
+        "x_px_original": 7403,
+        "y_px_original": 5218,
+        "x_ft": 9805.298176666667,
+        "y_ft": 6911.2583933333335
+      },
+      {
+        "x_px": 202,
+        "y_px": 306,
+        "existing_elev_ft": 541.8,
+        "proposed_elev_ft": 534.2,
+        "confidence": 0.9,
+        "x_px_original": 7202,
+        "y_px_original": 5306,
+        "x_ft": 9539.073006666667,
+        "y_ft": 7027.814686666667
+      },
+      {
+        "x_px": 553,
+        "y_px": 304,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 544.2,
+        "confidence": 0.6,
+        "x_px_original": 7553,
+        "y_px_original": 5304,
+        "x_ft": 10003.973676666667,
+        "y_ft": 7025.16568
+      }
+    ],
+    "assumptions": [
+      "Spot elevations considered only if an isolated marker symbol with nearby number.",
+      "Elevations in expected range 520-570 feet are valid; others ignored.",
+      "Text blocks like TP-xx ignored for elevation data.",
+      "Elevation pairs (existing above, proposed below) identified when stacked.",
+      "Single elevations considered proposed if no brackets or parentheses.",
+      "Pixel coordinates approximated visually from image for symbol positions."
+    ]
+  },
+  {
+    "tile": 54,
+    "tile_origin_px": [
+      8000,
+      5000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 49,
+        "y_px": 179,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 545.7,
+        "confidence": 0.9,
+        "x_px_original": 8049,
+        "y_px_original": 5179,
+        "x_ft": 10660.92733,
+        "y_ft": 6859.602763333333
+      }
+    ],
+    "assumptions": [
+      "The circle marker with a dot inside near the label 'TP-01' represents a spot elevation point.",
+      "The number 545.70 next to this marker is the proposed elevation, as it has no parentheses or other notation indicating existing grade.",
+      "No existing elevation is given at this marker."
+    ]
+  },
+  {
+    "tile": 55,
+    "tile_origin_px": [
+      0,
+      6000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "The provided tile image contains no visible symbols or numeric values representing spot elevations within the elevation range 520-570 ft."
+    ]
+  },
+  {
+    "tile": 56,
+    "tile_origin_px": [
+      1000,
+      6000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No spot elevation marker symbols or elevation numbers were detected in the tile provided.",
+      "Tile appears blank or contains no visible grading points within the expected elevation range."
+    ]
+  },
+  {
+    "tile": 57,
+    "tile_origin_px": [
+      2000,
+      6000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "The provided tile image contains no visible spot elevation markers or elevation values within the expected range."
+    ]
+  },
+  {
+    "tile": 58,
+    "tile_origin_px": [
+      3000,
+      6000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No spot elevation markers with legible elevation values were found on this tile image.",
+      "The image appears to be mostly blank or white space with no grading symbols or numbers."
+    ]
+  },
+  {
+    "tile": 59,
+    "tile_origin_px": [
+      4000,
+      6000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "The provided tile contains no visible spot elevation markers or elevation values within the expected range of 520\u2013570 ft.",
+      "Any contour line labels, notes, or unrelated text are ignored as per instructions."
+    ]
+  },
+  {
+    "tile": 60,
+    "tile_origin_px": [
+      5000,
+      6000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No spot elevations are visible on this tile of the grading plan.",
+      "The image only shows lines and no symbols or isolated numbers corresponding to spot elevations."
+    ]
+  },
+  {
+    "tile": 61,
+    "tile_origin_px": [
+      6000,
+      6000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No spot elevation values were detected near the marker symbols in the visible area of this tile.",
+      "Only markers labeled TP-30, TP-31, TP-32, and TP-33 are present without associated elevation numbers.",
+      "Elevation values may be located outside the visible portion of this tile or not labeled near the markers."
+    ]
+  },
+  {
+    "tile": 62,
+    "tile_origin_px": [
+      7000,
+      6000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No visible spot elevation markers with numeric elevation values within the visible tile.",
+      "All detected elevation numbers appear to be contour line labels, not isolated grade points.",
+      "No paired or single spot elevations present as per instruction."
+    ]
+  },
+  {
+    "tile": 63,
+    "tile_origin_px": [
+      8000,
+      6000
+    ],
+    "tile_size_px": [
+      1200,
+      1200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "This tile contains no spot elevations or grade point markers within the expected elevation range or format.",
+      "The visible content includes only a graphic scale and some line work without specific elevation callouts."
+    ]
+  },
+  {
+    "tile": 64,
+    "tile_origin_px": [
+      0,
+      7000
+    ],
+    "tile_size_px": [
+      1200,
+      200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 250,
+        "y_px": 220,
+        "existing_elev_ft": 544.2,
+        "proposed_elev_ft": 541.25,
+        "confidence": 0.9,
+        "x_px_original": 250,
+        "y_px_original": 7220,
+        "x_ft": 331.12583333333333,
+        "y_ft": 9562.914066666666
+      },
+      {
+        "x_px": 610,
+        "y_px": 480,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 540.6,
+        "confidence": 0.9,
+        "x_px_original": 610,
+        "y_px_original": 7480,
+        "x_ft": 807.9470333333334,
+        "y_ft": 9907.284933333334
+      },
+      {
+        "x_px": 770,
+        "y_px": 185,
+        "existing_elev_ft": 545.76,
+        "proposed_elev_ft": 544.2,
+        "confidence": 0.9,
+        "x_px_original": 770,
+        "y_px_original": 7185,
+        "x_ft": 1019.8675666666667,
+        "y_ft": 9516.55645
+      },
+      {
+        "x_px": 299,
+        "y_px": 625,
+        "existing_elev_ft": 543.0,
+        "proposed_elev_ft": 538.8,
+        "confidence": 0.9,
+        "x_px_original": 299,
+        "y_px_original": 7625,
+        "x_ft": 396.0264966666667,
+        "y_ft": 10099.337916666667
+      },
+      {
+        "x_px": 488,
+        "y_px": 565,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 537.78,
+        "confidence": 0.9,
+        "x_px_original": 488,
+        "y_px_original": 7565,
+        "x_ft": 646.3576266666666,
+        "y_ft": 10019.867716666668
+      },
+      {
+        "x_px": 620,
+        "y_px": 765,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 533.0,
+        "confidence": 0.9,
+        "x_px_original": 620,
+        "y_px_original": 7765,
+        "x_ft": 821.1920666666667,
+        "y_ft": 10284.768383333334
+      },
+      {
+        "x_px": 770,
+        "y_px": 763,
+        "existing_elev_ft": 529.3,
+        "proposed_elev_ft": 521.78,
+        "confidence": 0.9,
+        "x_px_original": 770,
+        "y_px_original": 7763,
+        "x_ft": 1019.8675666666667,
+        "y_ft": 10282.119376666667
+      },
+      {
+        "x_px": 770,
+        "y_px": 700,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 533.6,
+        "confidence": 0.9,
+        "x_px_original": 770,
+        "y_px_original": 7700,
+        "x_ft": 1019.8675666666667,
+        "y_ft": 10198.675666666666
+      }
+    ],
+    "assumptions": [
+      "Spot elevations with paired values are recorded only when both existing and proposed grades appear stacked or clearly paired.",
+      "Single elevations without parentheses are taken as proposed grades; single elevations in parentheses or dashed boxes are taken as existing elevations.",
+      "Contour line labels are ignored; only isolated spot grades near marker symbols are considered.",
+      "Pixel locations (x_px, y_px) approximate the position of the associated marker symbols on the tile."
+    ]
+  },
+  {
+    "tile": 65,
+    "tile_origin_px": [
+      1000,
+      7000
+    ],
+    "tile_size_px": [
+      1200,
+      200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No visible spot elevation markers or values were detected within the provided tile image.",
+      "Only blank space and grid lines are present in the image with no relevant elevation information."
+    ]
+  },
+  {
+    "tile": 66,
+    "tile_origin_px": [
+      2000,
+      7000
+    ],
+    "tile_size_px": [
+      1200,
+      200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No visible spot elevation markers with numeric values were detected in the provided image tile.",
+      "Contours and labels on contour lines were ignored as per instructions.",
+      "The image tile might not contain any isolated grade point markers or elevations."
+    ]
+  },
+  {
+    "tile": 67,
+    "tile_origin_px": [
+      3000,
+      7000
+    ],
+    "tile_size_px": [
+      1200,
+      200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 285,
+        "y_px": 318,
+        "existing_elev_ft": 532.6,
+        "proposed_elev_ft": 530.5,
+        "confidence": 0.9,
+        "x_px_original": 3285,
+        "y_px_original": 7318,
+        "x_ft": 4350.99345,
+        "y_ft": 9692.715393333334
+      },
+      {
+        "x_px": 512,
+        "y_px": 322,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 517.6,
+        "confidence": 0.9,
+        "x_px_original": 3512,
+        "y_px_original": 7322,
+        "x_ft": 4651.655706666666,
+        "y_ft": 9698.013406666667
+      }
+    ],
+    "assumptions": [
+      "Marker symbols are identified as small crosses '+' located very close to the numeric elevation text.",
+      "Paired spot elevations show the existing grade on top and proposed grade below without any extra symbols for these two paired sets.",
+      "Single spot elevation includes proposed grade only without parentheses or other markings.",
+      "Contour line numbers are ignored because they are in dashed or broken lines and not associated with spot markers.",
+      "Title block and general notes are ignored as unrelated to spot elevations.",
+      "All elevations are assumed in feet and fall within expected project range of 520-570 ft."
+    ]
+  },
+  {
+    "tile": 68,
+    "tile_origin_px": [
+      4000,
+      7000
+    ],
+    "tile_size_px": [
+      1200,
+      200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "The image tile provided is entirely blank with no visible symbols or numerical values.",
+      "No spot elevation markings or text present to analyze or record."
+    ]
+  },
+  {
+    "tile": 69,
+    "tile_origin_px": [
+      5000,
+      7000
+    ],
+    "tile_size_px": [
+      1200,
+      200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No visible symbols with numeric elevations were found in the tile provided.",
+      "The tile appears to be either empty or only contains line work without isolated grade points."
+    ]
+  },
+  {
+    "tile": 70,
+    "tile_origin_px": [
+      6000,
+      7000
+    ],
+    "tile_size_px": [
+      1200,
+      200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "No spot elevation markers (cross, circle, triangle, or dot) were visible in the provided tile image.",
+      "No isolated grade point numbers indicating existing or proposed elevations were detected within the expected range of 520-570 ft.",
+      "Only the top border of the tile with partial grid and no grading details was provided."
+    ]
+  },
+  {
+    "tile": 71,
+    "tile_origin_px": [
+      7000,
+      7000
+    ],
+    "tile_size_px": [
+      1200,
+      200
+    ],
+    "spot_elevations": [],
+    "assumptions": [
+      "The provided image does not contain any visible marker symbols or numeric values representing spot elevations within the expected range.",
+      "No valid spot elevations could be identified due to the blank or non-informative nature of the image."
+    ]
+  },
+  {
+    "tile": 72,
+    "tile_origin_px": [
+      8000,
+      7000
+    ],
+    "tile_size_px": [
+      1200,
+      200
+    ],
+    "spot_elevations": [
+      {
+        "x_px": 610,
+        "y_px": 1100,
+        "existing_elev_ft": 547.32,
+        "proposed_elev_ft": 546.0,
+        "confidence": 0.9,
+        "x_px_original": 8610,
+        "y_px_original": 8100,
+        "x_ft": 11403.9737,
+        "y_ft": 10728.477
+      },
+      {
+        "x_px": 1395,
+        "y_px": 1655,
+        "existing_elev_ft": 547.86,
+        "proposed_elev_ft": null,
+        "confidence": 0.9,
+        "x_px_original": 9395,
+        "y_px_original": 8655,
+        "x_ft": 12443.708816666667,
+        "y_ft": 11463.576350000001
+      },
+      {
+        "x_px": 990,
+        "y_px": 995,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 531.0,
+        "confidence": 0.9,
+        "x_px_original": 8990,
+        "y_px_original": 7995,
+        "x_ft": 11907.284966666666,
+        "y_ft": 10589.40415
+      },
+      {
+        "x_px": 1125,
+        "y_px": 1045,
+        "existing_elev_ft": null,
+        "proposed_elev_ft": 529.0,
+        "confidence": 0.9,
+        "x_px_original": 9125,
+        "y_px_original": 8045,
+        "x_ft": 12086.092916666666,
+        "y_ft": 10655.629316666667
+      }
+    ],
+    "assumptions": [
+      "Values within parentheses are treated as existing grade elevations.",
+      "Values without parentheses or special indicators are treated as proposed grades.",
+      "The small cross '+' symbols mark the spot elevation points.",
+      "Numbers along contour lines are ignored as they are not isolated grade points."
     ]
   }
 ]

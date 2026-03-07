@@ -26,9 +26,11 @@ LOD_FILE         = BASE_DIR / "outputs" / "lod_boundary.json"
 OUTPUT_SPOTS     = BASE_DIR / "outputs" / "spot_elevations.json"
 OUTPUT_CUTFILL   = BASE_DIR / "outputs" / "spot_cut_fill.json"
 
-TILE_PX  = 800   # tile side in original image px — labels render at full size
-OVERLAP  = 150   # overlap between tiles
-MARGIN   = 300   # extra px around LOD bbox
+TILE_PX       = 1200  # tile side in original image px — labels render at full size
+OVERLAP       = 200   # overlap between tiles
+TITLE_BLOCK   = 0.83  # fraction of page width that is drawing (rest is title block)
+FULL_DRAWING  = True  # True = search full drawing area; False = LOD region + MARGIN only
+MARGIN        = 300   # extra px around LOD bbox (only used when FULL_DRAWING=False)
 
 TARGET_SHEET_TYPES = {"BASE_GRADING_PLAN", "FINAL_GRADING_PLAN", "SITE_GRADING_PLAN", "GRADING_PLAN"}
 
@@ -137,21 +139,21 @@ def main():
     fpp = fpp_ref * (ref_w / orig_w) if fpp_ref and ref_w and orig_w != ref_w else fpp_ref
     print(f"Image: {orig_w}x{orig_h} px, fpp={fpp:.6f} ft/px")
 
-    # LOD region in pixel space (with margin)
+    # Search region in pixel space
     lod_data = json.loads(LOD_FILE.read_text()) if LOD_FILE.exists() else {}
     verts_ft = lod_data.get("vertices_ft", [])
-    if verts_ft and fpp:
+    if FULL_DRAWING or not verts_ft or not fpp:
+        # Full drawing area excluding title block
+        rx0, ry0 = 0, 0
+        rx1 = round(orig_w * TITLE_BLOCK)
+        ry1 = orig_h
+    else:
         xs = [v[0] for v in verts_ft]
         ys = [v[1] for v in verts_ft]
         rx0 = max(0, int(min(xs) / fpp) - MARGIN)
         ry0 = max(0, int(min(ys) / fpp) - MARGIN)
         rx1 = min(orig_w, int(max(xs) / fpp) + MARGIN)
         ry1 = min(orig_h, int(max(ys) / fpp) + MARGIN)
-    else:
-        # Fall back to full drawing area (exclude title block)
-        rx0, ry0 = 0, 0
-        rx1 = round(orig_w * 0.83)
-        ry1 = orig_h
 
     print(f"Search region: px x=[{rx0},{rx1}], y=[{ry0},{ry1}] "
           f"({(rx1-rx0)*fpp:.0f}x{(ry1-ry0)*fpp:.0f} ft)")
