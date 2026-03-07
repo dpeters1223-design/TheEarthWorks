@@ -1,0 +1,603 @@
+{
+  "boundary_found": true,
+  "boundary_label": "LIMITS OF WASTE",
+  "confidence": 0.9,
+  "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_3.png",
+  "render_scale": 0.18963,
+  "feet_per_pixel_original": 1.324503,
+  "vertices_ft": [
+    [
+      2507.5,
+      1613.46
+    ],
+    [
+      2570.36,
+      1885.86
+    ],
+    [
+      2619.25,
+      2388.76
+    ],
+    [
+      2724.02,
+      2926.58
+    ],
+    [
+      2870.7,
+      3401.54
+    ],
+    [
+      3052.3,
+      3848.55
+    ],
+    [
+      3233.9,
+      4183.82
+    ],
+    [
+      3492.34,
+      4519.08
+    ],
+    [
+      3771.72,
+      4770.53
+    ],
+    [
+      4079.05,
+      4931.18
+    ],
+    [
+      4414.31,
+      4994.04
+    ],
+    [
+      4735.61,
+      4910.22
+    ],
+    [
+      4994.04,
+      4728.62
+    ],
+    [
+      5238.5,
+      4512.1
+    ],
+    [
+      5448.04,
+      4295.57
+    ],
+    [
+      5622.66,
+      4037.14
+    ],
+    [
+      5762.35,
+      3673.94
+    ],
+    [
+      5783.31,
+      3317.72
+    ],
+    [
+      5671.55,
+      2968.49
+    ],
+    [
+      5469.0,
+      2772.91
+    ],
+    [
+      5140.72,
+      2703.07
+    ],
+    [
+      4777.52,
+      2647.19
+    ],
+    [
+      4421.3,
+      2514.48
+    ],
+    [
+      4127.94,
+      2360.82
+    ],
+    [
+      3834.58,
+      2074.45
+    ],
+    [
+      3611.08,
+      1843.95
+    ],
+    [
+      3317.72,
+      1571.55
+    ],
+    [
+      3059.29,
+      1375.98
+    ],
+    [
+      2772.91,
+      1327.09
+    ]
+  ],
+  "area_acres_approx": 159.884,
+  "assumptions": [
+    "Boundary is traced following the heavy dashed polyline surrounding the project footprint",
+    "Label 'LIMITS OF WASTE' is visible on the drawing confirming boundary identity",
+    "Vertices picked at polyline curve points for clarity and adherence to boundary shape",
+    "Coordinate origin top-left with x right, y down as per image"
+  ],
+  "all_pages": [
+    {
+      "boundary_found": false,
+      "boundary_label": null,
+      "confidence": 0.0,
+      "vertices_px": [],
+      "assumptions": [
+        "This image appears to be a legend or notes sheet for the civil engineering plan and contains no visible LIMITS OF DISTURBANCE (LOD) boundary lines or related labels."
+      ],
+      "original_size_px": [
+        10800,
+        7200
+      ],
+      "render_size_px": [
+        2048,
+        1365
+      ],
+      "render_scale": 0.18963,
+      "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_2.png",
+      "vertices_ft": [],
+      "area_acres_approx": null
+    },
+    {
+      "boundary_found": true,
+      "boundary_label": "LIMITS OF WASTE",
+      "confidence": 0.9,
+      "vertices_px": [
+        [
+          359,
+          231
+        ],
+        [
+          368,
+          270
+        ],
+        [
+          375,
+          342
+        ],
+        [
+          390,
+          419
+        ],
+        [
+          411,
+          487
+        ],
+        [
+          437,
+          551
+        ],
+        [
+          463,
+          599
+        ],
+        [
+          500,
+          647
+        ],
+        [
+          540,
+          683
+        ],
+        [
+          584,
+          706
+        ],
+        [
+          632,
+          715
+        ],
+        [
+          678,
+          703
+        ],
+        [
+          715,
+          677
+        ],
+        [
+          750,
+          646
+        ],
+        [
+          780,
+          615
+        ],
+        [
+          805,
+          578
+        ],
+        [
+          825,
+          526
+        ],
+        [
+          828,
+          475
+        ],
+        [
+          812,
+          425
+        ],
+        [
+          783,
+          397
+        ],
+        [
+          736,
+          387
+        ],
+        [
+          684,
+          379
+        ],
+        [
+          633,
+          360
+        ],
+        [
+          591,
+          338
+        ],
+        [
+          549,
+          297
+        ],
+        [
+          517,
+          264
+        ],
+        [
+          475,
+          225
+        ],
+        [
+          438,
+          197
+        ],
+        [
+          397,
+          190
+        ]
+      ],
+      "assumptions": [
+        "Boundary is traced following the heavy dashed polyline surrounding the project footprint",
+        "Label 'LIMITS OF WASTE' is visible on the drawing confirming boundary identity",
+        "Vertices picked at polyline curve points for clarity and adherence to boundary shape",
+        "Coordinate origin top-left with x right, y down as per image"
+      ],
+      "original_size_px": [
+        10800,
+        7200
+      ],
+      "render_size_px": [
+        2048,
+        1365
+      ],
+      "render_scale": 0.18963,
+      "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_3.png",
+      "feet_per_pixel_original": 1.324503,
+      "vertices_ft": [
+        [
+          2507.5,
+          1613.46
+        ],
+        [
+          2570.36,
+          1885.86
+        ],
+        [
+          2619.25,
+          2388.76
+        ],
+        [
+          2724.02,
+          2926.58
+        ],
+        [
+          2870.7,
+          3401.54
+        ],
+        [
+          3052.3,
+          3848.55
+        ],
+        [
+          3233.9,
+          4183.82
+        ],
+        [
+          3492.34,
+          4519.08
+        ],
+        [
+          3771.72,
+          4770.53
+        ],
+        [
+          4079.05,
+          4931.18
+        ],
+        [
+          4414.31,
+          4994.04
+        ],
+        [
+          4735.61,
+          4910.22
+        ],
+        [
+          4994.04,
+          4728.62
+        ],
+        [
+          5238.5,
+          4512.1
+        ],
+        [
+          5448.04,
+          4295.57
+        ],
+        [
+          5622.66,
+          4037.14
+        ],
+        [
+          5762.35,
+          3673.94
+        ],
+        [
+          5783.31,
+          3317.72
+        ],
+        [
+          5671.55,
+          2968.49
+        ],
+        [
+          5469.0,
+          2772.91
+        ],
+        [
+          5140.72,
+          2703.07
+        ],
+        [
+          4777.52,
+          2647.19
+        ],
+        [
+          4421.3,
+          2514.48
+        ],
+        [
+          4127.94,
+          2360.82
+        ],
+        [
+          3834.58,
+          2074.45
+        ],
+        [
+          3611.08,
+          1843.95
+        ],
+        [
+          3317.72,
+          1571.55
+        ],
+        [
+          3059.29,
+          1375.98
+        ],
+        [
+          2772.91,
+          1327.09
+        ]
+      ],
+      "area_sq_ft": 6964563.7,
+      "area_acres_approx": 159.884
+    },
+    {
+      "boundary_found": true,
+      "boundary_label": "LIMITS OF WASTE",
+      "confidence": 0.9,
+      "vertices_px": [
+        [
+          175,
+          253
+        ],
+        [
+          204,
+          207
+        ],
+        [
+          238,
+          168
+        ],
+        [
+          267,
+          133
+        ],
+        [
+          285,
+          95
+        ],
+        [
+          302,
+          55
+        ],
+        [
+          342,
+          42
+        ],
+        [
+          384,
+          44
+        ],
+        [
+          433,
+          69
+        ],
+        [
+          469,
+          108
+        ],
+        [
+          507,
+          147
+        ],
+        [
+          532,
+          191
+        ],
+        [
+          525,
+          233
+        ],
+        [
+          502,
+          275
+        ],
+        [
+          466,
+          300
+        ],
+        [
+          433,
+          323
+        ],
+        [
+          395,
+          330
+        ],
+        [
+          327,
+          313
+        ],
+        [
+          269,
+          295
+        ],
+        [
+          214,
+          278
+        ]
+      ],
+      "assumptions": [
+        "The thick dashed line clearly outlining the project footprint is labeled 'LIMITS OF WASTE'.",
+        "The line surrounds the main grading area inside the plan.",
+        "Vertices are selected in a near-clockwise order tracing the boundary."
+      ],
+      "original_size_px": [
+        10800,
+        7200
+      ],
+      "render_size_px": [
+        2048,
+        1365
+      ],
+      "render_scale": 0.18963,
+      "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_4.png",
+      "feet_per_pixel_original": 1.324503,
+      "vertices_ft": [
+        [
+          1222.32,
+          1767.12
+        ],
+        [
+          1424.87,
+          1445.83
+        ],
+        [
+          1662.35,
+          1173.42
+        ],
+        [
+          1864.91,
+          928.96
+        ],
+        [
+          1990.63,
+          663.54
+        ],
+        [
+          2109.37,
+          384.16
+        ],
+        [
+          2388.76,
+          293.36
+        ],
+        [
+          2682.11,
+          307.33
+        ],
+        [
+          3024.36,
+          481.94
+        ],
+        [
+          3275.81,
+          754.34
+        ],
+        [
+          3541.23,
+          1026.75
+        ],
+        [
+          3715.85,
+          1334.07
+        ],
+        [
+          3666.95,
+          1627.43
+        ],
+        [
+          3506.31,
+          1920.78
+        ],
+        [
+          3254.86,
+          2095.4
+        ],
+        [
+          3024.36,
+          2256.05
+        ],
+        [
+          2758.95,
+          2304.94
+        ],
+        [
+          2283.99,
+          2186.2
+        ],
+        [
+          1878.88,
+          2060.48
+        ],
+        [
+          1494.72,
+          1941.74
+        ]
+      ],
+      "area_sq_ft": 3242365.3,
+      "area_acres_approx": 74.434
+    }
+  ]
+}

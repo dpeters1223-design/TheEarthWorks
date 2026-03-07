@@ -24,14 +24,18 @@ import numpy as np
 
 BASE_DIR             = Path(__file__).parent
 LABELED_CONTOURS     = BASE_DIR / "outputs" / "labeled_contours.json"
+TILED_CONTOURS       = BASE_DIR / "outputs" / "contours_tiled.json"
+LOD_CONTOURS         = BASE_DIR / "outputs" / "contours_lod.json"
+LOD_BOUNDARY_FILE    = BASE_DIR / "outputs" / "lod_boundary.json"
 OUTPUT_FILE          = BASE_DIR / "outputs" / "surface_model.json"
 
 GRID_RESOLUTION_FT   = 25    # ft — size of each grid cell
 IDW_K                = 12    # nearest neighbours for IDW
 IDW_POWER            = 2     # distance weighting exponent
 CHUNK_SIZE           = 1000  # grid points processed per batch (memory control)
-MAX_INTERP_DIST_FT   = 300   # cells farther than this from any sample point → null
-                              # prevents wild extrapolation into data-sparse zones
+MAX_INTERP_DIST_FT   = 2000  # cells farther than this from any sample point → null
+                              # increased for sparse existing-conditions data (Vision API
+                              # extracts only ~5 labeled contours inside the LOD boundary)
 
 
 # ------------------------------------------------------------------
@@ -277,6 +281,32 @@ def build_surface_model(page_entry: dict) -> dict:
     }
 
 
+def load_vision_lod() -> list | None:
+    """
+    Read outputs/lod_boundary.json (produced by extract_lod_boundary.py).
+    Returns the vertices_ft list if boundary_found is true and vertices exist,
+    otherwise returns None.
+    """
+    if not LOD_BOUNDARY_FILE.exists():
+        return None
+    try:
+        data = json.loads(LOD_BOUNDARY_FILE.read_text())
+    except Exception as exc:
+        print(f"  Warning: could not read {LOD_BOUNDARY_FILE}: {exc}")
+        return None
+    if not data.get("boundary_found"):
+        return None
+    verts = data.get("vertices_ft", [])
+    if len(verts) < 3:
+        return None
+    area = data.get("area_acres_approx")
+    label = data.get("boundary_label") or "LOD"
+    conf  = data.get("confidence", 0.0)
+    print(f"  Vision LOD: '{label}'  confidence={conf:.2f}  "
+          f"vertices={len(verts)}  area~{area} acres")
+    return verts
+
+
 def filter_by_range(pts: np.ndarray, z_min: float, z_max: float, label: str) -> np.ndarray:
     """Remove points whose elevation falls outside [z_min, z_max]."""
     keep = (pts[:, 2] >= z_min) & (pts[:, 2] <= z_max)
@@ -336,6 +366,9 @@ def main():
         if len(lod) >= 3:
             lod_candidates.append(lod)
 
+    # Load Vision-detected LOD boundary (highest priority source)
+    vision_lod = load_vision_lod()
+
     print(f"Aggregated from {len(pages)} page(s):")
     print(f"  Raw existing points : {len(all_existing)}")
     print(f"  Raw proposed points : {len(all_proposed)}")
@@ -361,26 +394,53 @@ def main():
 
     print(f"  Filtered existing   : {len(all_existing)}")
 
-    # --- LOD boundary validation ---------------------------------------------
-    # Use the first LOD polygon whose bounding box covers at least 25 % of the
-    # combined point-cloud extent.  Tiny polygons (e.g. title block borders)
-    # that were mis-classified as LOD are discarded.
+    # --- Inject Vision-tiled existing surface points -------------------------
+    # Two Vision API tile passes over the existing conditions page (page 2):
+    #   contours_tiled.json — 4x3 coarse grid over the full drawing area
+    #   contours_lod.json   — 6x7 fine-grained grid focused on the LOD region
+    # Both files have x_ft/y_ft in the same coordinate space as labeled_contours
+    # (unified fpp calibration). We inject all readings and let the cross-surface
+    # filter and LOD mask handle outliers.
+    for tiled_file in [TILED_CONTOURS, LOD_CONTOURS]:
+        if tiled_file.exists():
+            tiled = json.loads(tiled_file.read_text())
+            tiled_pts = [
+                [r["x_ft"], r["y_ft"], r["elevation_ft"]]
+                for tile in tiled
+                for r in tile.get("elevation_readings", [])
+                if r.get("x_ft") is not None and r.get("y_ft") is not None
+            ]
+            if tiled_pts:
+                print(f"  Injecting {len(tiled_pts)} Vision-tiled existing points from {tiled_file.name}")
+                all_existing.extend(tiled_pts)
+        else:
+            print(f"  Note: {tiled_file.name} not found — skipping")
+
+    # --- LOD boundary selection (priority order) -----------------------------
+    # 1. Vision-detected boundary from lod_boundary.json  (highest priority)
+    # 2. Vector-extracted boundary from labeled_contours.json (fallback)
+    # 3. Point-cloud bounding box (last resort — no LOD at all)
     lod_boundary: list = []
     all_pts_arr = np.array(all_existing + all_proposed, dtype=float) if (all_existing or all_proposed) else np.empty((0, 3))
 
-    for lod in lod_candidates:
-        if lod_covers_site(lod, all_pts_arr):
-            lod_boundary = lod
-            print(f"  LOD boundary: accepted polygon with {len(lod)} vertices")
-            break
-        else:
-            lod_arr = np.array(lod, dtype=float)
-            print(f"  LOD boundary: rejected polygon with {len(lod)} vertices "
-                  f"(extent {lod_arr[:,0].max()-lod_arr[:,0].min():.0f}x"
-                  f"{lod_arr[:,1].max()-lod_arr[:,1].min():.0f} ft — too small)")
+    if vision_lod is not None:
+        lod_boundary = vision_lod
+        print(f"  LOD boundary: using Vision-detected polygon ({len(lod_boundary)} vertices) [priority 1]")
+    else:
+        # Fall back to vector-extracted LOD candidates
+        for lod in lod_candidates:
+            if lod_covers_site(lod, all_pts_arr):
+                lod_boundary = lod
+                print(f"  LOD boundary: accepted vector polygon with {len(lod)} vertices [priority 2]")
+                break
+            else:
+                lod_arr = np.array(lod, dtype=float)
+                print(f"  LOD boundary: rejected vector polygon with {len(lod)} vertices "
+                      f"(extent {lod_arr[:,0].max()-lod_arr[:,0].min():.0f}x"
+                      f"{lod_arr[:,1].max()-lod_arr[:,1].min():.0f} ft — too small)")
 
     if not lod_boundary:
-        print("  LOD boundary: none valid — will use point cloud bounding box")
+        print("  LOD boundary: none valid — will use point cloud bounding box [priority 3]")
 
     combined_name = page_names[0] if len(page_names) == 1 else "combined"
     combined = {

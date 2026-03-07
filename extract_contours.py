@@ -69,27 +69,29 @@ def clean_json_text(text: str) -> str:
 
 
 def pick_feet_per_pixel(scale_entries: list, page_index: int) -> tuple[float | None, int | None]:
-    """Positional match: grading page N → page_scale.json entry N.
+    """Return the best feet_per_pixel from ANY scale entry (unified-scale approach).
+
+    Pages that share a drawing set use the same physical scale, so we pick the
+    highest-confidence scale bar regardless of which page it came from.  This
+    handles pages (like the existing-conditions sheet) that have no scale bar of
+    their own.
 
     Returns (feet_per_pixel, ref_width_px) where ref_width_px is the pixel width
-    of the image on which the scale bar was measured.  The caller must apply a
-    correction if the actual processing image has a different width:
-
-        fpp_corrected = fpp_ref * (ref_width_px / actual_width_px)
+    of the image on which the scale bar was measured.  The caller applies a
+    correction if the actual processing image has a different pixel width.
     """
-    if not scale_entries or page_index >= len(scale_entries):
-        return None, None
-    entry = scale_entries[page_index]
-    ref_width = entry.get("page_width_px")
-    bars = entry.get("scale_bars", [])
     best = None
     best_conf = -1.0
-    for bar in bars:
-        fpp = bar.get("feet_per_pixel")
-        conf = bar.get("confidence", 0.0)
-        if fpp and conf > best_conf:
-            best = fpp
-            best_conf = conf
+    ref_width = None
+    for entry in scale_entries:
+        pw_px = entry.get("page_width_px")
+        for bar in entry.get("scale_bars", []):
+            fpp = bar.get("feet_per_pixel")
+            conf = bar.get("confidence", 0.0)
+            if fpp and conf > best_conf:
+                best = fpp
+                best_conf = conf
+                ref_width = pw_px
     return best, ref_width
 
 

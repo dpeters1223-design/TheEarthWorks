@@ -1,0 +1,35 @@
+[
+  {
+    "table_found": false,
+    "confidence": 1.0,
+    "quantities": [],
+    "total_cut_cy": null,
+    "total_fill_cy": null,
+    "assumptions": [
+      "No earthwork quantity table or earthwork schedule visible on this drawing sheet."
+    ],
+    "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_2.png"
+  },
+  {
+    "table_found": false,
+    "confidence": 1.0,
+    "quantities": [],
+    "total_cut_cy": null,
+    "total_fill_cy": null,
+    "assumptions": [
+      "No earthwork quantity table or earthwork schedule is visible on this drawing."
+    ],
+    "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_3.png"
+  },
+  {
+    "table_found": false,
+    "confidence": 1.0,
+    "quantities": [],
+    "total_cut_cy": null,
+    "total_fill_cy": null,
+    "assumptions": [
+      "No earthwork quantity table or earthwork schedule found on the drawing."
+    ],
+    "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_4.png"
+  }
+]

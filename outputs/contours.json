@@ -1,0 +1,37 @@
+[
+  {
+    "original_size_px": [
+      10800,
+      7200
+    ],
+    "render_size_px": [
+      2048,
+      1365
+    ],
+    "scale_factor": 0.18963,
+    "feet_per_pixel_original": 1.3245033333333334,
+    "contour_interval_ft": 2,
+    "elevation_readings": [
+      {
+        "elevation_ft": 14.7,
+        "x_px": 662,
+        "y_px": 632,
+        "type": "spot",
+        "confidence": 0.9
+      },
+      {
+        "elevation_ft": 14.7,
+        "x_px": 880,
+        "y_px": 635,
+        "type": "spot",
+        "confidence": 0.9
+      }
+    ],
+    "assumptions": [
+      "The spot elevations are indicated by a small 'x' marker as shown in the legend.",
+      "No other contour elevation labels are visible on this legend and notes sheet.",
+      "The contour interval noted in the survey notes is assumed to be 2 feet."
+    ],
+    "page": "Town of Palmyra_Old Palmyra Landfill Closure Remediation_Landfill Closure_Plans_REBID_06.06.25 +_page_2.png"
+  }
+]

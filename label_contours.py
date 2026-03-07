@@ -71,14 +71,20 @@ CHAIN_GAP_PTS = 25.0
 #   BASE_GRADING_PLAN         — proposed SUBGRADE (baseline after initial grading)
 #   FINAL_GRADING_PLAN        — finished surface (top of cap)
 #
-# Comparing BASE vs. FINAL gives the cap-layer fill volume, which is the
-# primary earthwork quantity in a closure.  EXISTING_CONDITIONS_PLAN rarely
-# carries readable elevation labels (contours may be implicit or labeled only
-# at key callout spots), so it is included in EXISTING_SURFACE_TYPES but
-# the BASE_GRADING_PLAN acts as a practical "existing baseline" when the
-# pure existing sheet lacks data.
-EXISTING_SURFACE_TYPES = {"EXISTING_CONDITIONS_PLAN", "BASE_GRADING_PLAN"}
-PROPOSED_SURFACE_TYPES = {"FINAL_GRADING_PLAN"}
+# NOTE on Palmyra plan set: the sheet classifier may mis-label a Notes/Legend
+# sheet as EXISTING_CONDITIONS_PLAN because both have no topographic contours.
+# Such sheets contain only symbol illustrations with non-terrain elevation
+# numbers (e.g. "100" for scale bar, "558-568" in the title block).  Including
+# them in the existing surface contaminates the IDW with spurious high-z points
+# far off the site.  They are therefore placed in SKIP_SURFACE_TYPES.
+#
+# EXISTING_CONDITIONS_PLAN has no vector-extractable elevation labels; its
+# contours are read by extract_contours_tiled.py (Vision API) and injected
+# into reconstruct_surface.py directly.  BASE_GRADING_PLAN provides the
+# proposed (target) subgrade surface from vector extraction.
+SKIP_SURFACE_TYPES     = {"FINAL_GRADING_PLAN"}                  # cap layers only
+EXISTING_SURFACE_TYPES = {"EXISTING_CONDITIONS_PLAN"}            # injected via tiled Vision
+PROPOSED_SURFACE_TYPES = {"BASE_GRADING_PLAN"}
 MIXED_SURFACE_TYPES    = {"SITE_GRADING_PLAN", "GRADING_PLAN"}
 
 
@@ -290,13 +296,36 @@ def process_page(page_data: dict, scale_entries: list) -> dict:
     paths        = page_data["paths"]
     text_elems   = page_data["text_elements"]
 
+    print(f"  Sheet type: {sheet_type}")
+
+    # Skip non-terrain sheets (notes, legends, details) entirely
+    if sheet_type in SKIP_SURFACE_TYPES:
+        print(f"  Skipping — sheet type is in SKIP_SURFACE_TYPES (no terrain data)")
+        return {
+            "page": page_name,
+            "page_width_pts":  pw_pts,
+            "page_height_pts": ph_pts,
+            "feet_per_pt":     None,
+            "contour_interval_ft": None,
+            "elevation_range_ft": {"min": None, "max": None},
+            "existing_points": [],
+            "proposed_points": [],
+            "lod_boundary":    [],
+            "diagnostics": {
+                "labels_matched": 0, "labels_unmatched": 0,
+                "existing_paths_labeled": 0, "existing_paths_skipped": 0,
+                "proposed_paths_labeled": 0, "proposed_paths_skipped": 0,
+                "lod_segments": 0, "lod_boundary_vertices": 0,
+                "skipped": True,
+            },
+        }
+
     # Scale factor
     fpp = compute_feet_per_pt(page_name, pw_pts, scale_entries)
     if fpp is None:
         print(f"  Warning: no scale found for {page_name} — coordinates in pts")
         fpp = 1.0
 
-    print(f"  Sheet type: {sheet_type}")
     print(f"  Scale: {fpp:.4f} ft/pt  (page {pw_pts:.0f}x{ph_pts:.0f} pts)")
 
     # Determine surface role mode from sheet type

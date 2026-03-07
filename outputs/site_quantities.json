@@ -1,13 +1,13 @@
 [
   {
     "page": "combined",
-    "total_cut_cy": 2040004.9,
-    "total_fill_cy": 352570.4,
-    "net_cy": 1687434.5,
-    "net_type": "cut",
-    "cells_computed": 23439,
-    "cells_undetermined": 15629,
-    "cells_skipped": 49096,
+    "total_cut_cy": 0.0,
+    "total_fill_cy": 3869185.2,
+    "net_cy": 3869185.2,
+    "net_type": "fill",
+    "cells_computed": 10995,
+    "cells_undetermined": 148,
+    "cells_skipped": 8261,
     "grid_resolution_ft": 25
   }
 ]

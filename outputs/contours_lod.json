@@ -1,0 +1,1347 @@
+[
+  {
+    "tile": 1,
+    "tile_origin_px": [
+      1693,
+      801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on contour lines in this tile."
+    ]
+  },
+  {
+    "tile": 2,
+    "tile_origin_px": [
+      2193,
+      801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on contour lines within this tile image.",
+      "The tile mainly shows textual notes and line graphics unrelated to contour elevation."
+    ]
+  },
+  {
+    "tile": 3,
+    "tile_origin_px": [
+      2693,
+      801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible within this tile.",
+      "The word 'PROPOSED' indicates this tile shows proposed conditions rather than existing conditions, so contour lines with elevations might be absent or not labeled.",
+      "The bottom part with dashed lines may represent features but contains no text labels."
+    ]
+  },
+  {
+    "tile": 4,
+    "tile_origin_px": [
+      3193,
+      801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels visible on contour lines within this tile image.",
+      "Only partial text 'CO' is present, likely from an unrelated annotation or title."
+    ]
+  },
+  {
+    "tile": 5,
+    "tile_origin_px": [
+      3693,
+      801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels visible on any contour lines in this small tile image.",
+      "Title block, notes, and legend texts are ignored as per instructions."
+    ]
+  },
+  {
+    "tile": 6,
+    "tile_origin_px": [
+      4193,
+      801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels found on contour lines within the image tile."
+    ]
+  },
+  {
+    "tile": 7,
+    "tile_origin_px": [
+      1693,
+      1301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on this tile.",
+      "The lines appear to be contour lines with some dashed lines indicating existing conditions.",
+      "Text seen ('R/W', 'X', 'OHE') is not numeric contour elevation labeling."
+    ]
+  },
+  {
+    "tile": 8,
+    "tile_origin_px": [
+      2193,
+      1301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 10,
+    "elevation_readings": [
+      {
+        "elevation_ft": 550,
+        "x_px": 47,
+        "y_px": 33,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2240,
+        "y_px_original": 1334,
+        "x_ft": 2966.8874666666666,
+        "y_ft": 1766.8874466666666
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 65,
+        "y_px": 50,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2258,
+        "y_px_original": 1351,
+        "x_ft": 2990.7285266666668,
+        "y_ft": 1789.4040033333333
+      },
+      {
+        "elevation_ft": 530,
+        "x_px": 40,
+        "y_px": 62,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2233,
+        "y_px_original": 1363,
+        "x_ft": 2957.6159433333332,
+        "y_ft": 1805.2980433333335
+      }
+    ],
+    "assumptions": [
+      "The contour lines represent 10 ft intervals in elevation.",
+      "All numeric labels are associated with existing (thin/dashed) contour lines as no spot elevations were identified."
+    ]
+  },
+  {
+    "tile": 9,
+    "tile_origin_px": [
+      2693,
+      1301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible in this tile.",
+      "Only line symbols and text such as 'R/W' and 'OHE' are present, which are not elevation labels."
+    ]
+  },
+  {
+    "tile": 10,
+    "tile_origin_px": [
+      3193,
+      1301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 10,
+    "elevation_readings": [
+      {
+        "elevation_ft": 520,
+        "x_px": 15,
+        "y_px": 11,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3208,
+        "y_px_original": 1312,
+        "x_ft": 4249.006693333334,
+        "y_ft": 1737.7483733333333
+      },
+      {
+        "elevation_ft": 530,
+        "x_px": 15,
+        "y_px": 42,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3208,
+        "y_px_original": 1343,
+        "x_ft": 4249.006693333334,
+        "y_ft": 1778.8079766666667
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 14,
+        "y_px": 71,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3207,
+        "y_px_original": 1372,
+        "x_ft": 4247.68219,
+        "y_ft": 1817.2185733333333
+      },
+      {
+        "elevation_ft": 550,
+        "x_px": 14,
+        "y_px": 100,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3207,
+        "y_px_original": 1401,
+        "x_ft": 4247.68219,
+        "y_ft": 1855.6291700000002
+      },
+      {
+        "elevation_ft": 560,
+        "x_px": 14,
+        "y_px": 129,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3207,
+        "y_px_original": 1430,
+        "x_ft": 4247.68219,
+        "y_ft": 1894.0397666666668
+      }
+    ],
+    "assumptions": [
+      "Contour interval is 10 ft based on the consistent elevation label increments.",
+      "All elevation labels appear to be on existing (thin, dashed) contour lines.",
+      "No spot elevations were observed on this tile."
+    ]
+  },
+  {
+    "tile": 11,
+    "tile_origin_px": [
+      3693,
+      1301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels visible on contour lines within this tile image."
+    ]
+  },
+  {
+    "tile": 12,
+    "tile_origin_px": [
+      4193,
+      1301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels on contour lines are visible in this tile image."
+    ]
+  },
+  {
+    "tile": 13,
+    "tile_origin_px": [
+      1693,
+      1801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on the contour lines in this tile image",
+      "Only dashed and solid utility line labels are visible, not topographic labels"
+    ]
+  },
+  {
+    "tile": 14,
+    "tile_origin_px": [
+      2193,
+      1801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on contour lines in this tile image."
+    ]
+  },
+  {
+    "tile": 15,
+    "tile_origin_px": [
+      2693,
+      1801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels visible in this tile.",
+      "Only text labels related to utilities and features are present, not elevation contours."
+    ]
+  },
+  {
+    "tile": 16,
+    "tile_origin_px": [
+      3193,
+      1801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 10,
+    "elevation_readings": [
+      {
+        "elevation_ft": 530,
+        "x_px": 226,
+        "y_px": 27,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3419,
+        "y_px_original": 1828,
+        "x_ft": 4528.476896666667,
+        "y_ft": 2421.1920933333336
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 232,
+        "y_px": 62,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3425,
+        "y_px_original": 1863,
+        "x_ft": 4536.423916666667,
+        "y_ft": 2467.5497100000002
+      },
+      {
+        "elevation_ft": 550,
+        "x_px": 237,
+        "y_px": 93,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3430,
+        "y_px_original": 1894,
+        "x_ft": 4543.046433333334,
+        "y_ft": 2508.6093133333334
+      },
+      {
+        "elevation_ft": 560,
+        "x_px": 237,
+        "y_px": 130,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3430,
+        "y_px_original": 1931,
+        "x_ft": 4543.046433333334,
+        "y_ft": 2557.6159366666666
+      }
+    ],
+    "assumptions": [
+      "Elevation labels correspond to contour lines as indicated by dashes and spacing.",
+      "Contour interval is 10 ft based on numeric label increments."
+    ]
+  },
+  {
+    "tile": 17,
+    "tile_origin_px": [
+      3693,
+      1801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on this tile image.",
+      "Text present is legend or note text, which is ignored according to the rules."
+    ]
+  },
+  {
+    "tile": 18,
+    "tile_origin_px": [
+      4193,
+      1801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "This image tile contains no visible numeric elevation labels on contour lines.",
+      "Only text labels unrelated to elevation are present (e.g., equipment names)."
+    ]
+  },
+  {
+    "tile": 19,
+    "tile_origin_px": [
+      1693,
+      2301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on existing contours in this tile image.",
+      "The visible lines do not contain any clearly legible elevation values."
+    ]
+  },
+  {
+    "tile": 20,
+    "tile_origin_px": [
+      2193,
+      2301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 10,
+    "elevation_readings": [
+      {
+        "elevation_ft": 560,
+        "x_px": 83,
+        "y_px": 476,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2276,
+        "y_px_original": 2777,
+        "x_ft": 3014.569586666667,
+        "y_ft": 3678.145756666667
+      }
+    ],
+    "assumptions": [
+      "Only labels on dashed thin contour lines are considered existing contour labels as per rules.",
+      "No spot elevation markers visible in the tile image.",
+      "Contour interval assumed from numeric labels visible (560 and line pattern)."
+    ]
+  },
+  {
+    "tile": 21,
+    "tile_origin_px": [
+      2693,
+      2301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on the contour lines in this tile.",
+      "The visible lines and text are not elevation labels relevant to grading."
+    ]
+  },
+  {
+    "tile": 22,
+    "tile_origin_px": [
+      3193,
+      2301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 10,
+    "elevation_readings": [
+      {
+        "elevation_ft": 520,
+        "x_px": 115,
+        "y_px": 84,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3308,
+        "y_px_original": 2385,
+        "x_ft": 4381.457026666667,
+        "y_ft": 3158.94045
+      },
+      {
+        "elevation_ft": 530,
+        "x_px": 186,
+        "y_px": 174,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3379,
+        "y_px_original": 2475,
+        "x_ft": 4475.496763333334,
+        "y_ft": 3278.14575
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 267,
+        "y_px": 283,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3460,
+        "y_px_original": 2584,
+        "x_ft": 4582.781533333334,
+        "y_ft": 3422.516613333333
+      },
+      {
+        "elevation_ft": 550,
+        "x_px": 306,
+        "y_px": 588,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3499,
+        "y_px_original": 2889,
+        "x_ft": 4634.437163333333,
+        "y_ft": 3826.49013
+      },
+      {
+        "elevation_ft": 560,
+        "x_px": 393,
+        "y_px": 694,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3586,
+        "y_px_original": 2995,
+        "x_ft": 4749.668953333334,
+        "y_ft": 3966.8874833333334
+      }
+    ],
+    "assumptions": [
+      "Contour interval is 10 feet based on consistent spacing of labels 520, 530, 540, 550, and 560.",
+      "All labels are on thin/dashed lines so 'existing' type is assigned.",
+      "Labels in the range 520-560 ft are readable and clearly belong to contour lines."
+    ]
+  },
+  {
+    "tile": 23,
+    "tile_origin_px": [
+      3693,
+      2301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible within the provided tile image."
+    ]
+  },
+  {
+    "tile": 24,
+    "tile_origin_px": [
+      4193,
+      2301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels on contour lines are visible in this tile.",
+      "The visible text is legend or notes unrelated to contour elevations."
+    ]
+  },
+  {
+    "tile": 25,
+    "tile_origin_px": [
+      1693,
+      2801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on contour lines within the tile.",
+      "The visible text '100' is part of a scale bar or legend and is not an elevation label.",
+      "All contour lines in the tile are unmarked without numeric labels, so no elevation data can be extracted."
+    ]
+  },
+  {
+    "tile": 26,
+    "tile_origin_px": [
+      2193,
+      2801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible within this tile."
+    ]
+  },
+  {
+    "tile": 27,
+    "tile_origin_px": [
+      2693,
+      2801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on contour lines in this tile image.",
+      "Visible text '100' is a dimension, not an elevation label."
+    ]
+  },
+  {
+    "tile": 28,
+    "tile_origin_px": [
+      3193,
+      2801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels visible on contour lines in this tile image.",
+      "Only line symbols and text not related to numeric elevations are present."
+    ]
+  },
+  {
+    "tile": 29,
+    "tile_origin_px": [
+      3693,
+      2801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on contour lines in this tile.",
+      "Text present is legend or legend-related, not contour elevation labels."
+    ]
+  },
+  {
+    "tile": 30,
+    "tile_origin_px": [
+      4193,
+      2801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible on the contour lines within this tile.",
+      "The visible text consists solely of notes and instructions unrelated to contour elevations."
+    ]
+  },
+  {
+    "tile": 31,
+    "tile_origin_px": [
+      1693,
+      3301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 10,
+    "elevation_readings": [
+      {
+        "elevation_ft": 550,
+        "x_px": 424,
+        "y_px": 241,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2117,
+        "y_px_original": 3542,
+        "x_ft": 2803.973556666667,
+        "y_ft": 4691.390806666667
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 243,
+        "y_px": 372,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 1936,
+        "y_px_original": 3673,
+        "x_ft": 2564.2384533333334,
+        "y_ft": 4864.900743333334
+      },
+      {
+        "elevation_ft": 560,
+        "x_px": 710,
+        "y_px": 210,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2403,
+        "y_px_original": 3511,
+        "x_ft": 3182.7815100000003,
+        "y_ft": 4650.331203333333
+      }
+    ],
+    "assumptions": [
+      "All numbered labels are on dashed contour lines indicating 'existing' elevation contours.",
+      "Contour interval inferred as 10 ft based on the difference between visible labels 540, 550, and 560."
+    ]
+  },
+  {
+    "tile": 32,
+    "tile_origin_px": [
+      2193,
+      3301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 5,
+    "elevation_readings": [
+      {
+        "elevation_ft": 530,
+        "x_px": 125,
+        "y_px": 40,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2318,
+        "y_px_original": 3341,
+        "x_ft": 3070.1987266666665,
+        "y_ft": 4425.165636666667
+      },
+      {
+        "elevation_ft": 535,
+        "x_px": 150,
+        "y_px": 100,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2343,
+        "y_px_original": 3401,
+        "x_ft": 3103.31131,
+        "y_ft": 4504.635836666666
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 180,
+        "y_px": 140,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2373,
+        "y_px_original": 3441,
+        "x_ft": 3143.04641,
+        "y_ft": 4557.61597
+      },
+      {
+        "elevation_ft": 555,
+        "x_px": 90,
+        "y_px": 180,
+        "type": "existing",
+        "confidence": 0.6,
+        "x_px_original": 2283,
+        "y_px_original": 3481,
+        "x_ft": 3023.8411100000003,
+        "y_ft": 4610.596103333333
+      },
+      {
+        "elevation_ft": 560,
+        "x_px": 110,
+        "y_px": 195,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2303,
+        "y_px_original": 3496,
+        "x_ft": 3050.3311766666666,
+        "y_ft": 4630.463653333333
+      }
+    ],
+    "assumptions": [
+      "Contour interval is assumed based on the regular 5 ft increments visible between labeled contours.",
+      "All labels are from topographic contour lines, no spot elevations detected in this tile."
+    ]
+  },
+  {
+    "tile": 33,
+    "tile_origin_px": [
+      2693,
+      3301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 10,
+    "elevation_readings": [
+      {
+        "elevation_ft": 560,
+        "x_px": 31,
+        "y_px": 36,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2724,
+        "y_px_original": 3337,
+        "x_ft": 3607.94708,
+        "y_ft": 4419.8676233333335
+      },
+      {
+        "elevation_ft": 560,
+        "x_px": 59,
+        "y_px": 61,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2752,
+        "y_px_original": 3362,
+        "x_ft": 3645.0331733333333,
+        "y_ft": 4452.980206666667
+      },
+      {
+        "elevation_ft": 560,
+        "x_px": 72,
+        "y_px": 92,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2765,
+        "y_px_original": 3393,
+        "x_ft": 3662.2517166666667,
+        "y_ft": 4494.03981
+      },
+      {
+        "elevation_ft": 550,
+        "x_px": 39,
+        "y_px": 73,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2732,
+        "y_px_original": 3374,
+        "x_ft": 3618.543106666667,
+        "y_ft": 4468.874246666667
+      },
+      {
+        "elevation_ft": 550,
+        "x_px": 51,
+        "y_px": 54,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2744,
+        "y_px_original": 3355,
+        "x_ft": 3634.4371466666666,
+        "y_ft": 4443.708683333333
+      },
+      {
+        "elevation_ft": 550,
+        "x_px": 20,
+        "y_px": 82,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2713,
+        "y_px_original": 3383,
+        "x_ft": 3593.3775433333335,
+        "y_ft": 4480.794776666667
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 13,
+        "y_px": 95,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2706,
+        "y_px_original": 3396,
+        "x_ft": 3584.10602,
+        "y_ft": 4498.01332
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 54,
+        "y_px": 91,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2747,
+        "y_px_original": 3392,
+        "x_ft": 3638.410656666667,
+        "y_ft": 4492.715306666667
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 35,
+        "y_px": 115,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2728,
+        "y_px_original": 3416,
+        "x_ft": 3613.2450933333334,
+        "y_ft": 4524.503386666667
+      }
+    ],
+    "assumptions": [
+      "Contour interval is 10 ft based on numerical labels visible for 540, 550, and 560 elevations",
+      "All labels on thin dashed lines are existing contours",
+      "No spot elevations identified as isolated markers within the tile"
+    ]
+  },
+  {
+    "tile": 34,
+    "tile_origin_px": [
+      3193,
+      3301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 10,
+    "elevation_readings": [
+      {
+        "elevation_ft": 530,
+        "x_px": 404,
+        "y_px": 591,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3597,
+        "y_px_original": 3892,
+        "x_ft": 4764.23849,
+        "y_ft": 5154.966973333333
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 259,
+        "y_px": 718,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3452,
+        "y_px_original": 4019,
+        "x_ft": 4572.185506666667,
+        "y_ft": 5323.178896666667
+      },
+      {
+        "elevation_ft": 560,
+        "x_px": 199,
+        "y_px": 389,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3392,
+        "y_px_original": 3690,
+        "x_ft": 4492.715306666667,
+        "y_ft": 4887.4173
+      },
+      {
+        "elevation_ft": 560,
+        "x_px": 230,
+        "y_px": 129,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3423,
+        "y_px_original": 3430,
+        "x_ft": 4533.77491,
+        "y_ft": 4543.046433333334
+      },
+      {
+        "elevation_ft": 550,
+        "x_px": 66,
+        "y_px": 71,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3259,
+        "y_px_original": 3372,
+        "x_ft": 4316.556363333333,
+        "y_ft": 4466.22524
+      }
+    ],
+    "assumptions": [
+      "Contour interval assumed to be 10 ft based on numeric labels provided (530, 540, 550, 560).",
+      "All numeric labels read are on dashed thin lines, indicating 'existing' topographic contours.",
+      "No spot elevations or isolated markers seen in this tile."
+    ]
+  },
+  {
+    "tile": 35,
+    "tile_origin_px": [
+      3693,
+      3301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels are visible in the tile.",
+      "Only utility and equipment labels are present, not contour elevations.",
+      "No contour lines with numeric elevation markers appear in this image."
+    ]
+  },
+  {
+    "tile": 36,
+    "tile_origin_px": [
+      4193,
+      3301
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels visible within this tile image.",
+      "Text visible is part of title block, notes, or legend, which are excluded from consideration."
+    ]
+  },
+  {
+    "tile": 37,
+    "tile_origin_px": [
+      1693,
+      3801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [
+      {
+        "elevation_ft": 530,
+        "x_px": 599,
+        "y_px": 734,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2292,
+        "y_px_original": 4535,
+        "x_ft": 3035.76164,
+        "y_ft": 6006.6226166666665
+      }
+    ],
+    "assumptions": [
+      "The elevation label '530' is part of an existing contour line based on the font style and placement.",
+      "No other numeric elevation labels were discernible within this tile."
+    ]
+  },
+  {
+    "tile": 38,
+    "tile_origin_px": [
+      2193,
+      3801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 10,
+    "elevation_readings": [
+      {
+        "elevation_ft": 520,
+        "x_px": 121,
+        "y_px": 306,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2314,
+        "y_px_original": 4107,
+        "x_ft": 3064.9007133333334,
+        "y_ft": 5439.73519
+      },
+      {
+        "elevation_ft": 530,
+        "x_px": 325,
+        "y_px": 356,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2518,
+        "y_px_original": 4157,
+        "x_ft": 3335.0993933333334,
+        "y_ft": 5505.9603566666665
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 327,
+        "y_px": 475,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2520,
+        "y_px_original": 4276,
+        "x_ft": 3337.7484,
+        "y_ft": 5663.576253333334
+      },
+      {
+        "elevation_ft": 550,
+        "x_px": 516,
+        "y_px": 453,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2709,
+        "y_px_original": 4254,
+        "x_ft": 3588.07953,
+        "y_ft": 5634.43718
+      }
+    ],
+    "assumptions": [
+      "Elevation labels correspond to existing contour lines which are thin/dashed",
+      "Contour interval is deduced from the evenly spaced numeric elevations increasing by 10 ft",
+      "No spot elevations were detected; all labels are on lines",
+      "Only contour elevation labels within tile frame have been reported"
+    ]
+  },
+  {
+    "tile": 39,
+    "tile_origin_px": [
+      2693,
+      3801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 10,
+    "elevation_readings": [
+      {
+        "elevation_ft": 530,
+        "x_px": 93,
+        "y_px": 171,
+        "type": "existing",
+        "confidence": 0.6,
+        "x_px_original": 2786,
+        "y_px_original": 3972,
+        "x_ft": 3690.0662866666667,
+        "y_ft": 5260.92724
+      },
+      {
+        "elevation_ft": 540,
+        "x_px": 151,
+        "y_px": 209,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2844,
+        "y_px_original": 4010,
+        "x_ft": 3766.88748,
+        "y_ft": 5311.258366666667
+      },
+      {
+        "elevation_ft": 550,
+        "x_px": 198,
+        "y_px": 232,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2891,
+        "y_px_original": 4033,
+        "x_ft": 3829.1391366666667,
+        "y_ft": 5341.721943333334
+      },
+      {
+        "elevation_ft": 560,
+        "x_px": 210,
+        "y_px": 270,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 2903,
+        "y_px_original": 4071,
+        "x_ft": 3845.033176666667,
+        "y_ft": 5392.05307
+      }
+    ],
+    "assumptions": [
+      "Contour labels are associated with thin dashed lines, indicating existing topography.",
+      "Contour interval is inferred as 10 ft based on difference between adjacent contour labels.",
+      "No spot elevations were found, only existing contour elevations."
+    ]
+  },
+  {
+    "tile": 40,
+    "tile_origin_px": [
+      3193,
+      3801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": 2,
+    "elevation_readings": [
+      {
+        "elevation_ft": 520,
+        "x_px": 434,
+        "y_px": 362,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3627,
+        "y_px_original": 4163,
+        "x_ft": 4803.9735900000005,
+        "y_ft": 5513.907376666667
+      },
+      {
+        "elevation_ft": 522,
+        "x_px": 252,
+        "y_px": 485,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3445,
+        "y_px_original": 4286,
+        "x_ft": 4562.913983333334,
+        "y_ft": 5676.821286666667
+      },
+      {
+        "elevation_ft": 526,
+        "x_px": 722,
+        "y_px": 368,
+        "type": "existing",
+        "confidence": 0.9,
+        "x_px_original": 3915,
+        "y_px_original": 4169,
+        "x_ft": 5185.43055,
+        "y_ft": 5521.854396666667
+      }
+    ],
+    "assumptions": [
+      "Contour elevation labels correspond to nearby contour lines",
+      "Contour interval assumed from visible elevation differences between contours"
+    ]
+  },
+  {
+    "tile": 41,
+    "tile_origin_px": [
+      3693,
+      3801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels on contour lines are visible in the provided tile."
+    ]
+  },
+  {
+    "tile": 42,
+    "tile_origin_px": [
+      4193,
+      3801
+    ],
+    "tile_size_px": [
+      600,
+      600
+    ],
+    "feet_per_pixel": 1.3245033333333334,
+    "contour_interval_ft": null,
+    "elevation_readings": [],
+    "assumptions": [
+      "No numeric elevation labels were visible on contour lines in this tile image.",
+      "Text present in image is part of notes or legend and not elevation labels on contour lines."
+    ]
+  }
+]
