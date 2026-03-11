@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import OpenAI  # used with Ollama's OpenAI-compatible endpoint
 from PIL import Image
 
 BASE_DIR           = Path(__file__).parent
@@ -37,7 +37,8 @@ NOTE_SHEET_TYPES = {
 MAX_RENDER_PX = 2048
 
 load_dotenv(BASE_DIR / ".env")
-MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+MODEL = os.getenv("OLLAMA_MODEL", "gemma3:27b")
 
 
 # --------------------------------------------------
@@ -134,24 +135,18 @@ def extract_page_notes(client: OpenAI, image_path: str, page_name: str) -> dict:
     img = Image.open(image_path)
     render_img = resize_to_max(img, MAX_RENDER_PX)
 
-    resp = client.responses.create(
+    resp = client.chat.completions.create(
         model=MODEL,
-        input=[{
+        messages=[{
             "role": "user",
             "content": [
-                {"type": "input_text",  "text": PROMPT},
-                {"type": "input_image", "image_url": image_to_data_url(render_img)},
+                {"type": "text", "text": PROMPT},
+                {"type": "image_url", "image_url": {"url": image_to_data_url(render_img)}},
             ],
         }],
     )
 
-    raw = ""
-    for item in resp.output:
-        if hasattr(item, "content"):
-            for c in item.content:
-                if getattr(c, "type", None) == "output_text":
-                    raw += c.text
-    raw = raw.strip()
+    raw = (resp.choices[0].message.content or "").strip()
 
     base = {
         "page": page_name,
@@ -275,7 +270,7 @@ def main():
 
     print(f"Scanning {len(note_pages)} page(s) for plan notes ...\n")
 
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = OpenAI(base_url=OLLAMA_BASE_URL, api_key="ollama")
 
     page_results = []
     for idx, page in enumerate(note_pages):

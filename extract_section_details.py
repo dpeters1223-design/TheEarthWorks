@@ -31,7 +31,8 @@ TILE_SIZE     = 1024
 TILE_OVERLAP  = 128
 
 load_dotenv(BASE_DIR / ".env")
-MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+MODEL = os.getenv("OLLAMA_MODEL", "gemma3:27b")
 
 
 # --------------------------------------------------
@@ -145,24 +146,18 @@ If no cross-section is visible, return sections_found as an empty array.
 def extract_tile_sections(client: OpenAI, tile: Image.Image,
                           page_name: str, tile_label: str) -> list:
     """Return list of section dicts found in this tile."""
-    resp = client.responses.create(
+    resp = client.chat.completions.create(
         model=MODEL,
-        input=[{
+        messages=[{
             "role": "user",
             "content": [
-                {"type": "input_text",  "text": PROMPT},
-                {"type": "input_image", "image_url": image_to_data_url(tile)},
+                {"type": "text", "text": PROMPT},
+                {"type": "image_url", "image_url": {"url": image_to_data_url(tile)}},
             ],
         }],
     )
 
-    raw = ""
-    for item in resp.output:
-        if hasattr(item, "content"):
-            for c in item.content:
-                if getattr(c, "type", None) == "output_text":
-                    raw += c.text
-    raw = raw.strip()
+    raw = (resp.choices[0].message.content or "").strip()
 
     if not raw:
         return []
@@ -256,7 +251,7 @@ def main():
 
     print(f"Scanning {len(detail_pages)} DETAILS page(s) for cross-section layer stacks ...\n")
 
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = OpenAI(base_url=OLLAMA_BASE_URL, api_key="ollama")
 
     all_sections = []
     for idx, page in enumerate(detail_pages):
