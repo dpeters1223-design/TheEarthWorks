@@ -64,6 +64,8 @@ Sheet types — choose the most specific match:
   SEDIMENT_CONTROL_PLAN     - sediment or stormwater control
   DETAILS                   - construction details, sections, or typical sections
   TITLE_SHEET               - cover sheet, general notes, index, or legend
+  GENERAL_NOTES             - sheet primarily containing general notes, specifications, or construction requirements (text-heavy, may include material layer specs, stripping depth, seeding notes)
+  GEOTECH_SUMMARY           - geotechnical recommendations table or summary page (soil borings, bearing capacity, material classifications)
   OTHER                     - anything else
 """
                     },

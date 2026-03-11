@@ -1,0 +1,37 @@
+{
+  "strip_depth_ft": 0.5,
+  "strip_depth_source": "default (6 inches)",
+  "cap_area_sf": 229476,
+  "outside_cap_area_sf": 14202,
+  "total_disturbed_area_sf": 243678,
+  "area_sources": {
+    "cap_area": "spot_volume.json",
+    "outside_cap": "default"
+  },
+  "layers": [
+    {
+      "name": "infiltration",
+      "zone": "cap_area",
+      "depth_ft": 1.5,
+      "source": "default"
+    },
+    {
+      "name": "vegetative_support",
+      "zone": "cap_area",
+      "depth_ft": 0.5,
+      "source": "default"
+    },
+    {
+      "name": "topsoil",
+      "zone": "outside_cap",
+      "depth_ft": 0.5,
+      "source": "default"
+    }
+  ],
+  "assumptions": [
+    "Precedence: section_details > plan_notes > defaults",
+    "cap_area from spot_volume.json",
+    "outside_cap from default",
+    "strip_depth from default (6 inches)"
+  ]
+}

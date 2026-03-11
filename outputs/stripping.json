@@ -1,0 +1,9 @@
+{
+  "strip_depth_ft": 0.5,
+  "strip_depth_in": 6.0,
+  "strip_depth_source": "default (6 inches)",
+  "area_sf": 243678,
+  "area_source": "spot_volume.json",
+  "stripping_cy": 4512.6,
+  "formula": "total_disturbed_area_sf * strip_depth_ft / 27"
+}

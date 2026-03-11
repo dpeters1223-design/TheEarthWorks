@@ -1,0 +1,154 @@
+{
+  "line_items": [
+    {
+      "item": 10,
+      "description": "Unclassified Excavation (Cut) to Reach Finish Grade",
+      "qty": 6974,
+      "unit": "CY",
+      "source": "spot_volume.json (trimmed mean of spot elevations)",
+      "range": "5,857\u20138,091 CY"
+    },
+    {
+      "item": 20,
+      "description": "Unclassified Embankment (Fill) to Reach Finish Grade",
+      "qty": null,
+      "unit": "CY",
+      "source": "not yet computed (spot elevation fill pipeline needed)",
+      "note": "engineer reference: 161 CY"
+    },
+    {
+      "item": 30,
+      "description": "Finegrade Intermediate Cover Area",
+      "qty": 229476,
+      "unit": "SF",
+      "source": "materials.json (cap area)"
+    },
+    {
+      "item": 40,
+      "description": "Cut to Reach Subgrade for Infiltration/Topsoil",
+      "qty": null,
+      "unit": "CY",
+      "source": "not yet computed (BASE\u2192FINAL spot elev delta needed)",
+      "note": "engineer reference: 791 CY"
+    },
+    {
+      "item": 50,
+      "description": "Fill to Reach Subgrade for Infiltration/Topsoil",
+      "qty": null,
+      "unit": "CY",
+      "source": "not yet computed (BASE\u2192FINAL spot elev delta needed)",
+      "note": "engineer reference: 513 CY"
+    },
+    {
+      "item": 60,
+      "description": "Finegrade Outside Cap (Topsoil/Seed Area)",
+      "qty": 14202,
+      "unit": "SF",
+      "source": "materials.json (outside_cap area)"
+    },
+    {
+      "item": 70,
+      "description": "Finegrade Final Cap",
+      "qty": 229476,
+      "unit": "SF",
+      "source": "materials.json (cap area)"
+    },
+    {
+      "item": 80,
+      "description": "Topsoil Between Cap Area and Grading Limits @ 6\"",
+      "qty": 263,
+      "unit": "CY",
+      "source": "materials.json (outside_cap_sf \u00d7 0.5 ft / 27)"
+    },
+    {
+      "item": 90,
+      "description": "Infiltration Layer @ 18\"",
+      "qty": 12749,
+      "unit": "CY",
+      "source": "materials.json (cap_area_sf \u00d7 1.5 ft / 27)"
+    },
+    {
+      "item": 100,
+      "description": "Vegetative Support Layer @ 6\"",
+      "qty": 4250,
+      "unit": "CY",
+      "source": "materials.json (cap_area_sf \u00d7 0.5 ft / 27)"
+    },
+    {
+      "item": 110,
+      "description": "Seed/Fertilize/Mulch \u2014 Outside Cap",
+      "qty": 14202,
+      "unit": "SF",
+      "source": "materials.json (outside_cap area)"
+    },
+    {
+      "item": 120,
+      "description": "Seed/Fertilize/Mulch \u2014 Final Cap Area",
+      "qty": 229476,
+      "unit": "SF",
+      "source": "materials.json (cap area)"
+    },
+    {
+      "item": "S",
+      "description": "Stripping @ 6\" Depth",
+      "qty": 4513,
+      "unit": "CY",
+      "source": "stripping.json (243,678 SF \u00d7 0.500 ft / 27)"
+    }
+  ],
+  "areas": {
+    "cap_area_sf": 229476,
+    "outside_cap_area_sf": 14202,
+    "total_disturbed_area_sf": 243678
+  },
+  "reference": {
+    "10": {
+      "qty": 7054,
+      "unit": "CY"
+    },
+    "20": {
+      "qty": 161,
+      "unit": "CY"
+    },
+    "30": {
+      "qty": 229476,
+      "unit": "SF"
+    },
+    "40": {
+      "qty": 791,
+      "unit": "CY"
+    },
+    "50": {
+      "qty": 513,
+      "unit": "CY"
+    },
+    "60": {
+      "qty": 14202,
+      "unit": "SF"
+    },
+    "70": {
+      "qty": 229476,
+      "unit": "SF"
+    },
+    "80": {
+      "qty": 264,
+      "unit": "CY"
+    },
+    "90": {
+      "qty": 12749,
+      "unit": "CY"
+    },
+    "100": {
+      "qty": 4250,
+      "unit": "CY"
+    },
+    "110": {
+      "qty": 14202,
+      "unit": "SF"
+    },
+    "120": {
+      "qty": 229476,
+      "unit": "SF"
+    }
+  }
+}

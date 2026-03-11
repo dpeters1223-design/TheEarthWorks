@@ -1,0 +1,58 @@
+{
+  "cap_area_sf": 229476,
+  "outside_cap_sf": 14202,
+  "total_sf": 243678,
+  "items": [
+    {
+      "description": "Infiltration Layer @ 18\"",
+      "qty": 12749,
+      "unit": "CY",
+      "zone": "cap_area",
+      "area_sf": 229476,
+      "depth_ft": 1.5,
+      "formula": "229476 SF \u00d7 1.5 ft / 27"
+    },
+    {
+      "description": "Vegetative Support Layer @ 6\"",
+      "qty": 4250,
+      "unit": "CY",
+      "zone": "cap_area",
+      "area_sf": 229476,
+      "depth_ft": 0.5,
+      "formula": "229476 SF \u00d7 0.5 ft / 27"
+    },
+    {
+      "description": "Topsoil @ 6\"",
+      "qty": 263,
+      "unit": "CY",
+      "zone": "outside_cap",
+      "area_sf": 14202,
+      "depth_ft": 0.5,
+      "formula": "14202 SF \u00d7 0.5 ft / 27"
+    },
+    {
+      "description": "Finegrade Final Cap / Intermediate Cover Area",
+      "qty": 229476,
+      "unit": "SF",
+      "zone": "cap_area"
+    },
+    {
+      "description": "Finegrade Outside Cap (Topsoil/Seed Area)",
+      "qty": 14202,
+      "unit": "SF",
+      "zone": "outside_cap"
+    },
+    {
+      "description": "Seed/Fertilize/Mulch \u2014 Final Cap Area",
+      "qty": 229476,
+      "unit": "SF",
+      "zone": "cap_area"
+    },
+    {
+      "description": "Seed/Fertilize/Mulch \u2014 Outside Cap (Seeding Area)",
+      "qty": 14202,
+      "unit": "SF",
+      "zone": "outside_cap"
+    }
+  ]
+}
